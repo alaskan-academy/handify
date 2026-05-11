@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Páginas principais -->
+  <url><loc>https://www.handify.com.br/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.handify.com.br/cursos.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.handify.com.br/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.handify.com.br/contato.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.handify.com.br/termos-de-uso.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- Cursos -->
+  <url><loc>https://www.handify.com.br/curso-velaroma-artesanal.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.handify.com.br/curso-workshop-buque-velas.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.handify.com.br/curso-saponaria-brasil.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.handify.com.br/curso-flores-alto-padrao.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.handify.com.br/curso-atelie-caixas-florais.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.handify.com.br/curso-embalagens-premium.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.handify.com.br/curso-vendas-artesanato.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.handify.com.br/curso-decoracao-baloes.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.handify.com.br/curso-primeira-venda-7-dias.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- E-books -->
+  <url><loc>https://www.handify.com.br/ebook-100-assinaturas-aromaticas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.handify.com.br/ebook-loja-velas-online.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.handify.com.br/ebook-difusores-aromas-casa.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.handify.com.br/ebook-lista-fornecedores-premium.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.handify.com.br/ebook-pomadas-medicinais.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.handify.com.br/ebook-aromaterapia-plantas-medicinais.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.handify.com.br/ebook-arte-floral-sabonetes.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.handify.com.br/ebook-saboaria-energetica.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.handify.com.br/ebook-beleza-natural-plantas-medicinais.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.handify.com.br/ebook-embalagens-que-encantam.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.handify.com.br/ebook-kit-natal-artesanal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.handify.com.br/ebook-natural-dermatologica.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Artigos do blog -->
+  <url><loc>https://www.handify.com.br/buque-de-velas.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.handify.com.br/sabonetes-arte-floral.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.handify.com.br/vela-embalagens.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.handify.com.br/primeira-venda-7-dias.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+</urlset>

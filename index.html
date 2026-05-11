@@ -1,0 +1,1012 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handify — Aprenda artesanato com quem faz de verdade</title>
+<meta name="description" content="Cursos práticos de velas, saboaria, flores, embalagens e vendas — ensinados por artesãs que vivem do que fazem. Do primeiro produto à primeira venda.">
+<meta property="og:title" content="Handify — Aprenda artesanato com quem faz de verdade">
+<meta property="og:description" content="Cursos práticos de velas, saboaria, flores, embalagens e vendas — ensinados por artesãs que vivem do que fazem.">
+<meta property="og:image" content="https://www.handify.com.br/og-image.jpg">
+<meta property="og:url" content="https://www.handify.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.handify.com.br/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue: #5288EF;
+  --green: #A8E8A9;
+  --black: #0F0F0F;
+  --gray-dark: #2D2D2D;
+  --gray-mid: #6B7280;
+  --off-white: #F5F5F0;
+  --blue-light: #EEF3FD;
+  --yellow: #F5CE3E;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--gray-dark);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ── BRAND STRIPE ── */
+.brand-stripe {
+  height: 6px;
+  background: linear-gradient(90deg, var(--blue) 33.3%, var(--green) 33.3% 66.6%, var(--yellow) 66.6%);
+}
+
+/* ── NAV ── */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  z-index: 100;
+  box-shadow: 0 1px 12px rgba(0,0,0,0.05);
+}
+.nav-brand {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: var(--black);
+  text-decoration: none;
+}
+.nav-brand span { color: var(--blue); }
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--gray-mid);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  transition: color .15s;
+}
+.nav-links a:hover { color: var(--blue); }
+.nav-links a.active { color: var(--black); }
+.nav-cta {
+  background: var(--blue);
+  color: var(--white) !important;
+  padding: 9px 22px;
+  border-radius: 6px;
+  font-weight: 700 !important;
+  transition: background .15s !important;
+}
+.nav-cta:hover { background: #3A72D4 !important; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--black);
+  padding: 100px 60px 90px;
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+.hero-bg-accent {
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(82,136,239,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-bg-accent2 {
+  position: absolute;
+  bottom: -150px; left: -100px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168,232,169,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-content { position: relative; z-index: 1; max-width: 780px; }
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--blue);
+  margin-bottom: 24px;
+}
+.hero-eyebrow-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.hero h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--off-white);
+  letter-spacing: -1.5px;
+  margin-bottom: 28px;
+}
+.hero h1 .h-blue { color: var(--blue); }
+.hero h1 .h-green { color: var(--green); }
+.hero h1 .h-yellow { color: var(--yellow); }
+.hero-sub {
+  font-size: 19px;
+  color: #9CA3AF;
+  line-height: 1.7;
+  max-width: 580px;
+  margin-bottom: 44px;
+}
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.btn-primary {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  padding: 15px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background .15s;
+}
+.btn-primary:hover { background: #3A72D4; }
+.btn-ghost {
+  display: inline-block;
+  color: var(--off-white);
+  padding: 15px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  transition: border-color .15s, color .15s;
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.stat-item .stat-num {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.stat-item .stat-num span { color: var(--blue); }
+.stat-item .stat-label {
+  font-size: 12px;
+  color: var(--gray-mid);
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* ── SECTION BASE ── */
+section { padding: 80px 60px; }
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1.15;
+  letter-spacing: -.5px;
+  margin-bottom: 16px;
+}
+.section-sub {
+  font-size: 17px;
+  color: var(--gray-mid);
+  max-width: 560px;
+  line-height: 1.7;
+}
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.see-all {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.see-all:hover { text-decoration: underline; }
+
+/* ── ABOUT / HOW IT WORKS ── */
+.about-section { background: var(--white); }
+.about-grid {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.about-text p {
+  font-size: 16px;
+  color: var(--gray-dark);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.about-text p:last-of-type { margin-bottom: 0; }
+.pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+.pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.pillar-icon {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  background: var(--blue-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.pillar-text strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 2px;
+}
+.pillar-text span { font-size: 13px; color: var(--gray-mid); }
+
+/* ── COURSES ── */
+.courses-section { background: var(--off-white); }
+.courses-inner { max-width: 1140px; margin: 0 auto; }
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.course-card {
+  background: var(--white);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.07);
+  transition: transform .2s, box-shadow .2s;
+}
+.course-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+.course-thumb {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  position: relative;
+}
+.course-badge {
+  position: absolute;
+  top: 12px; left: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--blue);
+  color: var(--white);
+}
+.course-badge.new { background: var(--green); color: var(--black); }
+.course-body { padding: 22px; }
+.course-category {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.course-body h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+.course-body p {
+  font-size: 13px;
+  color: var(--gray-mid);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.course-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.course-meta {
+  font-size: 12px;
+  color: var(--gray-mid);
+}
+.course-price {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--blue);
+}
+.course-price span {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gray-mid);
+}
+
+/* ── HOW IT WORKS ── */
+.how-section { background: var(--black); }
+.how-inner { max-width: 1140px; margin: 0 auto; }
+.how-section .section-title { color: var(--off-white); }
+.how-section .section-label { color: var(--green); }
+.how-section .section-sub { color: var(--gray-mid); }
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+  position: relative;
+}
+.how-steps::before {
+  content: '';
+  position: absolute;
+  top: 28px; left: 60px; right: 60px;
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+}
+.how-step { text-align: center; position: relative; }
+.how-step-num {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 1;
+}
+.how-step h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.how-step p {
+  font-size: 13px;
+  color: var(--gray-mid);
+  line-height: 1.6;
+}
+
+/* ── TESTIMONIALS ── */
+.testimonials-section { background: var(--white); }
+.testimonials-inner { max-width: 1140px; margin: 0 auto; }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.testimonial-card {
+  background: var(--off-white);
+  border-radius: 14px;
+  padding: 28px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.testimonial-stars {
+  color: var(--yellow);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.testimonial-card p {
+  font-size: 14px;
+  color: var(--gray-dark);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.testimonial-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--blue-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--blue);
+  flex-shrink: 0;
+}
+.testimonial-author strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--black);
+}
+.testimonial-author span {
+  font-size: 11px;
+  color: var(--gray-mid);
+}
+
+/* ── BLOG PREVIEW ── */
+.blog-section { background: var(--off-white); }
+.blog-inner { max-width: 1140px; margin: 0 auto; }
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.blog-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform .2s;
+}
+.blog-card-link:hover { transform: translateY(-4px); }
+.blog-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.07);
+  height: 100%;
+}
+.blog-card-img {
+  height: 140px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px;
+}
+.blog-card-body { padding: 22px; }
+.blog-tag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--blue);
+  margin-bottom: 8px;
+  display: block;
+}
+.blog-card-body h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.blog-card-body p {
+  font-size: 13px;
+  color: var(--gray-mid);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.blog-read-time {
+  font-size: 11px;
+  color: var(--gray-mid);
+  font-weight: 600;
+}
+
+/* ── CTA SECTION ── */
+.cta-section {
+  background: var(--blue);
+  padding: 80px 60px;
+  text-align: center;
+}
+.cta-section h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: -.5px;
+  margin-bottom: 16px;
+}
+.cta-section p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 36px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-white {
+  display: inline-block;
+  background: var(--white);
+  color: var(--blue);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 16px;
+  text-decoration: none;
+  transition: opacity .15s;
+}
+.btn-white:hover { opacity: .9; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--black);
+  padding: 64px 60px 36px;
+}
+.footer-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand-col .footer-brand {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: -.5px;
+  margin-bottom: 12px;
+  display: block;
+  text-decoration: none;
+}
+.footer-brand-col .footer-brand span { color: var(--blue); }
+.footer-brand-col p {
+  font-size: 13px;
+  color: var(--gray-mid);
+  line-height: 1.7;
+  max-width: 260px;
+}
+.footer-col h4 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--gray-mid);
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color .15s;
+}
+.footer-col ul li a:hover { color: var(--white); }
+.footer-bottom {
+  max-width: 1140px;
+  margin: 32px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom p {
+  font-size: 12px;
+  color: var(--gray-mid);
+}
+.footer-social { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+.footer-social-link { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.65); text-decoration: none; font-size: 13px; transition: color .15s; }
+.footer-social-link:hover { color: var(--white); }
+.footer-email { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray-mid); }
+
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .how-steps { grid-template-columns: repeat(2, 1fr); }
+  .how-steps::before { display: none; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  section { padding: 56px 24px; }
+  .nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .hero { padding: 72px 24px 64px; min-height: auto; }
+  .hero-stats { gap: 28px; flex-wrap: wrap; }
+
+  .courses-grid, .blog-grid, .testimonials-grid { grid-template-columns: 1fr; }
+  .how-steps { grid-template-columns: 1fr; }
+  .cta-section { padding: 60px 24px; }
+  footer { padding: 48px 24px 28px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="brand-stripe"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">HANDIFY<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="cursos.html">Cursos</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="cursos.html" class="nav-cta">Começar agora</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-accent"></div>
+  <div class="hero-bg-accent2"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Plataforma brasileira de artesanato
+    </div>
+    <h1>
+      Aprenda a criar<br>
+      produtos que as<br>
+      pessoas <span class="h-yellow">param para perguntar</span><br>
+      <span class="h-green">"onde comprou?"</span>
+    </h1>
+    <p class="hero-sub">
+      A Handify reúne cursos práticos de velas artesanais, saboaria, flores, caixas florais, embalagens, balões e vendas — ensinados por artesãs que vivem do que fazem. Do primeiro produto à primeira venda.
+    </p>
+    <div class="hero-actions">
+      <a href="cursos.html" class="btn-primary">Ver todos os cursos</a>
+      <a href="blog.html" class="btn-ghost">Ler o blog grátis</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">12<span>k+</span></div>
+        <div class="stat-label">Alunas ativas</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" id="cursos-count">9</div>
+        <div class="stat-label">Cursos disponíveis</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4<span>.9</span></div>
+        <div class="stat-label">Avaliação média</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="section-label">O que é a Handify</div>
+      <h2 class="section-title">Uma plataforma feita por quem faz, para quem quer começar.</h2>
+      <p>
+        A Handify nasceu de uma constatação simples: existem muitas artesãs talentosas no Brasil que não conseguem transformar sua habilidade em renda porque falta acesso a conhecimento prático, honesto e estruturado.
+      </p>
+      <p>
+        Aqui você aprende a técnica certa, no momento certo — com quem já percorreu o mesmo caminho e sabe exatamente onde estão os erros que custam tempo e material.
+      </p>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-icon">🎯</div>
+          <div class="pillar-text">
+            <strong>Cursos práticos e diretos</strong>
+            <span>Sem enrolação. Do material ao produto final.</span>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">💡</div>
+          <div class="pillar-text">
+            <strong>Técnica + estratégia de venda</strong>
+            <span>Aprender a fazer é metade. A outra metade é vender.</span>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🤝</div>
+          <div class="pillar-text">
+            <strong>Comunidade ativa</strong>
+            <span>Troca, feedback e parceria entre quem está na mesma jornada.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="courses-section">
+  <div class="courses-inner">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Cursos em destaque</div>
+        <h2 class="section-title">Aprenda o que vende.</h2>
+        <p class="section-sub">Selecionamos os cursos com maior demanda de mercado e melhor avaliação das alunas.</p>
+      </div>
+      <a href="cursos.html" class="see-all">Ver todos os cursos →</a>
+    </div>
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.44)), url('https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=600&q=80&fit=crop') center/cover no-repeat">
+          <span class="course-badge">Mais vendido</span>
+        </div>
+        <div class="course-body">
+          <div class="course-category">Saboaria</div>
+          <h3>Saponaria Brasil</h3>
+          <p>13 vídeos completos de saboaria artesanal com calculadora de receitas inclusa — do básico ao produto premium.</p>
+          <div class="course-footer">
+            <span class="course-meta">⏱ 13 vídeos · Prof. Viviane Dornelles</span>
+            <div class="course-price">R$67 <span>/ acesso vitalício</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.48)), url('https://images.unsplash.com/photo-1676959137657-7e26409c6669?w=600&q=80&fit=crop') center/cover no-repeat">
+          <span class="course-badge new">Novo</span>
+        </div>
+        <div class="course-body">
+          <div class="course-category">Velas Artesanais</div>
+          <h3>Workshop Buquê de Velas</h3>
+          <p>Do zero ao buquê finalizado em 2 aulas objetivas — técnica, aroma, montagem e embalagem profissional incluída.</p>
+          <div class="course-footer">
+            <span class="course-meta">⏱ 2 aulas · Prof. Laura Martins</span>
+            <div class="course-price">R$47 <span>/ acesso vitalício</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.50)), url('https://images.unsplash.com/photo-1724570568441-9755d8e8b6e2?w=600&q=80&fit=crop') center/cover no-repeat">
+        </div>
+        <div class="course-body">
+          <div class="course-category">Velas Artesanais</div>
+          <h3>Velaroma Artesanal</h3>
+          <p>15+ vídeos ensinando técnicas de velas aromáticas do zero ao acabamento profissional — inclui 28 receitas bônus.</p>
+          <div class="course-footer">
+            <span class="course-meta">⏱ 15+ vídeos · Prof. Ivaneide Amarante</span>
+            <div class="course-price">R$47 <span>/ acesso vitalício</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="how-inner">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Como funciona</div>
+        <h2 class="section-title">Da inscrição ao produto vendido.</h2>
+        <p class="section-sub" style="color:var(--gray-mid)">Um caminho simples e estruturado para quem está começando do zero.</p>
+      </div>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <h3>Escolha seu curso</h3>
+        <p>Selecione o produto que você quer aprender a fazer — velas, sabonetes, buquês ou kits.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <h3>Assista no seu ritmo</h3>
+        <p>Aulas em vídeo com acesso vitalício. Pause, reveja e pratique quando quiser.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <h3>Faça e mostre</h3>
+        <p>Poste na comunidade Handify. Receba feedback de instrutoras e de outras alunas.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">4</div>
+        <h3>Venda com confiança</h3>
+        <p>Aplique as estratégias de precificação e venda que estão dentro de cada curso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Depoimentos</div>
+        <h2 class="section-title">Quem aprendeu, está vendendo.</h2>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"Fiz o workshop de buquê de velas em uma tarde e na semana seguinte já tinha fechado 3 pedidos pelo WhatsApp. A instrutora explica tudo com uma clareza que eu nunca tinha encontrado."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">A</div>
+          <div>
+            <strong>Amanda R.</strong>
+            <span>São Paulo · Aluna há 6 meses</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"O módulo de precificação valeu o curso inteiro. Eu estava cobrando muito abaixo do que meus produtos valiam. Depois de aplicar o que aprendi, dobrei meu faturamento no mês seguinte."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">C</div>
+          <div>
+            <strong>Carla M.</strong>
+            <span>Belo Horizonte · Aluna há 1 ano</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"Os sabonetes florais que aprendi aqui literalmente param conversas. Postei uma foto no story e em 20 minutos tinha 14 perguntas de onde comprar. A técnica é completamente diferente do que eu via no YouTube."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">F</div>
+          <div>
+            <strong>Fernanda L.</strong>
+            <span>Curitiba · Aluna há 4 meses</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG PREVIEW -->
+<section class="blog-section">
+  <div class="blog-inner">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Do blog</div>
+        <h2 class="section-title">Conteúdo grátis para começar agora.</h2>
+        <p class="section-sub">Artigos práticos sobre técnica, embalagem e estratégia de vendas.</p>
+      </div>
+      <a href="blog.html" class="see-all">Ver todos os artigos →</a>
+    </div>
+    <div class="blog-grid">
+      <a href="buque-de-velas.html" class="blog-card-link">
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:#0F0F0F">🕯️</div>
+          <div class="blog-card-body">
+            <span class="blog-tag">Velas Artesanais</span>
+            <h3>Flores duram 15 dias. Esse buquê dura o ano inteiro.</h3>
+            <p>Comparativo direto entre buquê de flores naturais e buquê de velas — durabilidade, aroma e memória afetiva.</p>
+            <span class="blog-read-time">6 min de leitura</span>
+          </div>
+        </div>
+      </a>
+      <a href="sabonetes-arte-floral.html" class="blog-card-link">
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:#EEF3FD">🌸</div>
+          <div class="blog-card-body">
+            <span class="blog-tag">Saboaria</span>
+            <h3>Arte floral em sabonetes: o produto que para tudo</h3>
+            <p>Como criar sabonetes com flores que parecem de floricultural — técnica embed passo a passo.</p>
+            <span class="blog-read-time">7 min de leitura</span>
+          </div>
+        </div>
+      </a>
+      <a href="primeira-venda-7-dias.html" class="blog-card-link">
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:#F5F5F0">🛍️</div>
+          <div class="blog-card-body">
+            <span class="blog-tag">Vendas</span>
+            <h3>Sua primeira venda em 7 dias: o guia direto ao ponto</h3>
+            <p>Com R$100 de material e esse plano, você já pode fechar sua primeira venda artesanal.</p>
+            <span class="blog-read-time">8 min de leitura</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <h2>Pronta para transformar habilidade em renda?</h2>
+  <p>Mais de 12 mil artesãs já começaram aqui. Seu produto favorito pode ser o próximo.</p>
+  <a href="cursos.html" class="btn-white">Escolher meu primeiro curso</a>
+</section>
+
+<div class="brand-stripe"></div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <a href="index.html" class="footer-brand">HANDIFY<span>.</span></a>
+      <p>Plataforma brasileira de cursos de artesanato. Aprenda com quem faz de verdade e transforme sua habilidade em negócio.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/handify.br/" target="_blank" rel="noopener" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @handify.br
+        </a>
+        <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <span class="footer-email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          contato@handify.com.br
+        </span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#">Comunidade</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Sobre a Handify</a></li>
+        <li><a href="seja-instrutora.html">Seja instrutora</a></li>
+        <li><a href="termos-de-uso.html">Termos de uso</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Handify™ · Todos os direitos reservados</p>
+    <p>Feito com cuidado no Brasil 🇧🇷</p>
+  </div>
+</footer>
+
+<!-- COOKIE CONSENT -->
+<div class="cookie-bar" id="cookieBar">
+  <p>🍪 Este site usa cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="termos-de-uso.html">Política de Privacidade</a>.</p>
+  <button class="cookie-btn" onclick="document.getElementById('cookieBar').style.display='none';localStorage.setItem('hf_cookies','1')">Aceitar</button>
+</div>
+<style>
+.cookie-bar{position:fixed;bottom:0;left:0;right:0;background:var(--black);color:rgba(255,255,255,.85);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;z-index:9999;flex-wrap:wrap;box-shadow:0 -4px 24px rgba(0,0,0,.18)}
+.cookie-bar p{font-size:13px;line-height:1.5;font-family:'Montserrat',sans-serif}
+.cookie-bar p a{color:var(--blue);text-decoration:underline}
+.cookie-btn{background:var(--blue);color:#fff;border:none;padding:10px 24px;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;transition:opacity .15s;flex-shrink:0}
+.cookie-btn:hover{opacity:.85}
+</style>
+<script>if(localStorage.getItem('hf_cookies'))document.getElementById('cookieBar').style.display='none'</script>
+
+<script>
+fetch('cursos.html')
+  .then(function(r){ return r.text(); })
+  .then(function(html){
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var count = doc.querySelectorAll('.course-card').length;
+    if(count > 0) document.getElementById('cursos-count').textContent = count;
+  })
+  .catch(function(){});
+</script>
+
+</body>
+</html>
