@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pack Completo Handify — Acesso a tudo por 12x de R$29,70</title>
+<meta name="description" content="Acesse todos os cursos, e-books e materiais da Handify por 12x de R$29,70 por mês. Comunidade exclusiva, novos lançamentos incluídos e garantia de 7 dias.">
+<meta property="og:title" content="Pack Completo Handify — Acesso a tudo por 12x de R$29,70">
+<meta property="og:description" content="9 cursos completos + 12 e-books + comunidade exclusiva. Tudo por menos do que um almoço por semana.">
+<meta property="og:url" content="https://site.handify.com.br/pack-completo.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://site.handify.com.br/pack-completo.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#5288EF;--green:#A8E8A9;--black:#0F0F0F;--gray-dark:#2D2D2D;--gray-mid:#6B7280;--off-white:#F5F5F0;--yellow:#F5CE3E;--white:#FFFFFF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',Arial,sans-serif;background:var(--white);color:var(--gray-dark);font-size:16px;line-height:1.7}
+.brand-stripe{height:6px;background:linear-gradient(90deg,var(--blue) 33.3%,var(--green) 33.3% 66.6%,var(--yellow) 66.6%)}
+
+/* NAV */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid rgba(0,0,0,0.08);position:sticky;top:0;background:var(--white);z-index:100;box-shadow:0 1px 12px rgba(0,0,0,0.05)}
+.nav-brand{font-size:22px;font-weight:900;letter-spacing:-0.5px;color:var(--black);text-decoration:none}
+.nav-brand span{color:var(--blue)}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{font-size:13px;font-weight:600;text-decoration:none;color:var(--gray-mid);text-transform:uppercase;letter-spacing:.06em;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+.nav-cta{background:var(--blue);color:var(--white)!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* HERO */
+.hero{background:var(--black);padding:80px 60px 72px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(82,136,239,0.15) 0%,transparent 70%);pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--yellow);background:rgba(245,206,62,0.1);border:1px solid rgba(245,206,62,0.25);padding:6px 16px;border-radius:20px;margin-bottom:28px}
+.hero h1{font-size:clamp(36px,5.5vw,68px);font-weight:900;color:var(--white);letter-spacing:-2px;line-height:1.05;margin-bottom:24px;max-width:900px;margin-left:auto;margin-right:auto}
+.hero h1 .accent-blue{color:var(--blue)}
+.hero h1 .accent-yellow{color:var(--yellow)}
+.hero h1 .accent-green{color:var(--green)}
+.hero-sub{font-size:18px;color:rgba(255,255,255,0.6);max-width:580px;margin:0 auto 44px;line-height:1.7}
+.hero-price-display{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px 40px;display:inline-block;margin-bottom:36px}
+.hero-price-from{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:line-through;margin-bottom:4px}
+.hero-price-main{font-size:48px;font-weight:900;color:var(--yellow);letter-spacing:-2px;line-height:1}
+.hero-price-label{font-size:14px;color:rgba(255,255,255,0.5);margin-top:4px}
+.hero-price-or{font-size:13px;color:rgba(255,255,255,0.35);margin-top:8px}
+.btn-hero{display:inline-block;background:var(--yellow);color:var(--black);font-weight:900;font-size:17px;padding:18px 48px;border-radius:10px;text-decoration:none;letter-spacing:-0.3px;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 24px rgba(245,206,62,0.35)}
+.btn-hero:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(245,206,62,0.45)}
+.hero-guarantee{font-size:12px;color:rgba(255,255,255,0.35);margin-top:16px}
+.hero-stats{display:flex;justify-content:center;gap:48px;margin-top:56px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.08);flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat strong{display:block;font-size:28px;font-weight:900;color:var(--white);letter-spacing:-1px}
+.hero-stat span{font-size:12px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.08em}
+
+/* PAIN SECTION */
+.pain-section{background:var(--off-white);padding:80px 60px}
+.pain-inner{max-width:860px;margin:0 auto}
+.section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin-bottom:12px}
+.section-title{font-size:clamp(26px,3.5vw,40px);font-weight:900;color:var(--black);letter-spacing:-1px;margin-bottom:16px;line-height:1.15}
+.section-sub{font-size:16px;color:var(--gray-mid);margin-bottom:48px;max-width:600px}
+.pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pain-item{background:var(--white);border-radius:12px;padding:20px 24px;display:flex;align-items:flex-start;gap:14px;border:1px solid rgba(0,0,0,0.06)}
+.pain-item .pain-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.pain-item p{font-size:14px;color:var(--gray-dark);line-height:1.6}
+.pain-item p strong{color:var(--black)}
+
+/* VALUE SECTION */
+.value-section{padding:80px 60px;background:var(--white)}
+.value-inner{max-width:1000px;margin:0 auto}
+.value-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px}
+.value-col h3{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-mid);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--off-white)}
+.value-item{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--off-white);gap:12px}
+.value-item-name{font-size:14px;color:var(--gray-dark);font-weight:500}
+.value-item-price{font-size:13px;font-weight:700;color:var(--gray-mid);text-decoration:line-through;flex-shrink:0}
+.value-total{background:var(--black);border-radius:16px;padding:32px 40px;margin-top:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.value-total-left p{font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:4px}
+.value-total-left strong{font-size:22px;font-weight:900;color:rgba(255,255,255,0.35);text-decoration:line-through;letter-spacing:-0.5px}
+.value-total-right{text-align:right}
+.value-total-right p{font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:4px}
+.value-total-right strong{font-size:36px;font-weight:900;color:var(--yellow);letter-spacing:-1.5px;display:block;line-height:1}
+.value-total-right small{font-size:13px;color:rgba(255,255,255,0.35)}
+
+/* INCLUDES SECTION */
+.includes-section{background:var(--black);padding:80px 60px}
+.includes-inner{max-width:900px;margin:0 auto;text-align:center}
+.includes-inner .section-label{color:var(--green)}
+.includes-inner .section-title{color:var(--white);margin-bottom:12px}
+.includes-inner .section-sub{color:rgba(255,255,255,0.5);margin-bottom:48px}
+.includes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left}
+.include-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px}
+.include-card .ic-icon{font-size:28px;margin-bottom:12px}
+.include-card h4{font-size:15px;font-weight:800;color:var(--white);margin-bottom:6px;letter-spacing:-0.3px}
+.include-card p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6}
+
+/* TESTIMONIALS */
+.testimonials-section{padding:80px 60px;background:var(--off-white)}
+.testimonials-inner{max-width:1000px;margin:0 auto}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.testimonial-card{background:var(--white);border-radius:16px;padding:28px;border:1px solid rgba(0,0,0,0.06)}
+.stars{color:var(--yellow);font-size:14px;margin-bottom:12px;letter-spacing:2px}
+.testimonial-card blockquote{font-size:14px;color:var(--gray-dark);line-height:1.7;margin-bottom:20px;font-style:italic}
+.testimonial-author{display:flex;align-items:center;gap:10px}
+.author-avatar{width:36px;height:36px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:var(--white);flex-shrink:0}
+.author-name{font-size:13px;font-weight:700;color:var(--black)}
+.author-city{font-size:11px;color:var(--gray-mid)}
+
+/* GUARANTEE */
+.guarantee-section{padding:64px 60px;background:var(--white)}
+.guarantee-inner{max-width:700px;margin:0 auto;display:flex;align-items:flex-start;gap:32px;background:var(--off-white);border-radius:20px;padding:40px}
+.guarantee-icon{font-size:56px;flex-shrink:0}
+.guarantee-text h3{font-size:22px;font-weight:900;color:var(--black);margin-bottom:10px;letter-spacing:-0.5px}
+.guarantee-text p{font-size:15px;color:var(--gray-mid);line-height:1.7}
+
+/* PRICING / OFFER */
+.offer-section{background:var(--black);padding:96px 60px;text-align:center}
+.offer-inner{max-width:700px;margin:0 auto}
+.offer-badge{display:inline-block;background:var(--yellow);color:var(--black);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;padding:6px 16px;border-radius:20px;margin-bottom:32px}
+.offer-title{font-size:clamp(28px,4vw,44px);font-weight:900;color:var(--white);letter-spacing:-1px;line-height:1.1;margin-bottom:16px}
+.offer-sub{font-size:16px;color:rgba(255,255,255,0.5);margin-bottom:48px}
+.offer-box{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:48px;margin-bottom:32px}
+.offer-from{font-size:14px;color:rgba(255,255,255,0.3);text-decoration:line-through;margin-bottom:8px}
+.offer-price{font-size:64px;font-weight:900;color:var(--yellow);letter-spacing:-3px;line-height:1}
+.offer-price-month{font-size:18px;font-weight:600;color:rgba(255,255,255,0.5);margin-top:4px;margin-bottom:4px}
+.offer-price-or{font-size:14px;color:rgba(255,255,255,0.3);margin-bottom:32px}
+.offer-checklist{list-style:none;text-align:left;margin-bottom:36px;display:inline-block}
+.offer-checklist li{font-size:14px;color:rgba(255,255,255,0.75);padding:6px 0;display:flex;align-items:center;gap:10px}
+.offer-checklist li::before{content:'✓';color:var(--green);font-weight:900;font-size:15px;flex-shrink:0}
+.btn-offer{display:block;background:var(--yellow);color:var(--black);font-weight:900;font-size:18px;padding:20px 48px;border-radius:12px;text-decoration:none;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 24px rgba(245,206,62,0.4);letter-spacing:-0.3px}
+.btn-offer:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(245,206,62,0.5)}
+.offer-guarantee-note{font-size:12px;color:rgba(255,255,255,0.3);margin-top:16px}
+
+/* SUMMARY STRIP */
+.summary-strip{background:rgba(255,255,255,0.03);border-top:1px solid rgba(255,255,255,0.08);padding:32px 60px;max-width:700px;margin:0 auto;border-radius:0 0 20px 20px}
+.summary-strip h4{font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px}
+.summary-items{display:flex;flex-direction:column;gap:10px}
+.summary-item{display:flex;align-items:center;justify-content:space-between;font-size:14px}
+.summary-item span:first-child{color:rgba(255,255,255,0.6)}
+.summary-item span:last-child{color:var(--green);font-weight:700}
+.summary-total{display:flex;align-items:center;justify-content:space-between;font-size:16px;font-weight:800;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1);margin-top:8px}
+.summary-total span:first-child{color:var(--white)}
+.summary-total span:last-child{color:var(--yellow)}
+
+/* FAQ */
+.faq-section{padding:80px 60px;background:var(--off-white)}
+.faq-inner{max-width:720px;margin:0 auto}
+.faq-list{margin-top:48px;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--white);border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,0.06)}
+.faq-q{width:100%;background:none;border:none;padding:20px 24px;text-align:left;font-family:inherit;font-size:15px;font-weight:700;color:var(--black);cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.faq-q::after{content:'+';font-size:20px;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 24px 20px;font-size:14px;color:var(--gray-mid);line-height:1.7}
+.faq-item.open .faq-a{display:block}
+
+/* AVULSO SECTION */
+.avulso-section{padding:80px 60px;background:var(--white)}
+.avulso-inner{max-width:800px;margin:0 auto;text-align:center}
+.divider-label{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gray-mid);margin-bottom:48px}
+.divider-label::before,.divider-label::after{content:'';flex:1;height:1px;background:rgba(0,0,0,0.1);width:60px}
+.avulso-title{font-size:clamp(24px,3vw,36px);font-weight:900;color:var(--black);letter-spacing:-1px;margin-bottom:14px}
+.avulso-sub{font-size:15px;color:var(--gray-mid);margin-bottom:40px;line-height:1.7}
+.avulso-features{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-bottom:40px}
+.avulso-feat{font-size:13px;color:var(--gray-mid);display:flex;align-items:center;gap:6px}
+.avulso-feat::before{content:'•';color:var(--blue);font-size:18px}
+.btn-avulso{display:inline-block;background:var(--off-white);color:var(--black);font-weight:700;font-size:15px;padding:16px 40px;border-radius:10px;text-decoration:none;border:2px solid rgba(0,0,0,0.08);transition:border-color .15s}
+.btn-avulso:hover{border-color:var(--blue);color:var(--blue)}
+
+/* FOOTER */
+footer{background:var(--black);padding:64px 60px 36px}
+.footer-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-brand-col .footer-brand{font-size:22px;font-weight:900;color:var(--white);letter-spacing:-.5px;margin-bottom:12px;display:block;text-decoration:none}
+.footer-brand-col .footer-brand span{color:var(--blue)}
+.footer-brand-col p{font-size:13px;color:var(--gray-mid);line-height:1.7;max-width:260px}
+.footer-col h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-mid);margin-bottom:16px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .15s}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-bottom{max-width:1140px;margin:32px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:var(--gray-mid)}
+.footer-social{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.footer-social-link{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);text-decoration:none;font-size:13px;transition:color .15s}
+.footer-social-link:hover{color:var(--white)}
+.footer-email{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-mid)}
+
+/* COOKIE */
+.cookie-bar{position:fixed;bottom:0;left:0;right:0;background:var(--black);color:rgba(255,255,255,0.85);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;z-index:999;font-size:13px;box-shadow:0 -4px 24px rgba(0,0,0,.18)}
+.cookie-bar a{color:var(--blue)}
+.cookie-btn{background:var(--blue);color:var(--white);border:none;border-radius:6px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap}
+
+@media(max-width:768px){
+  .nav{padding:16px 24px;position:relative}
+  .nav-toggle{display:flex}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;gap:0;padding:8px 0 16px;border-bottom:1px solid rgba(0,0,0,0.1);box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:99}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:12px 24px;font-size:14px}
+  .nav-links .nav-cta{margin:8px 16px 0;text-align:center;display:block;border-radius:6px}
+  .hero{padding:56px 24px 48px}
+  .hero-price-display{padding:20px 24px}
+  .hero-price-main{font-size:36px}
+  .hero-stats{gap:24px}
+  .pain-section,.value-section,.includes-section,.testimonials-section,.guarantee-section,.offer-section,.faq-section,.avulso-section{padding:56px 24px}
+  .pain-grid{grid-template-columns:1fr}
+  .value-grid{grid-template-columns:1fr}
+  .value-total{flex-direction:column;text-align:center}
+  .value-total-right{text-align:center}
+  .includes-grid{grid-template-columns:1fr}
+  .testimonials-grid{grid-template-columns:1fr}
+  .guarantee-inner{flex-direction:column;gap:20px;padding:28px 24px}
+  .offer-box{padding:32px 24px}
+  .offer-price{font-size:48px}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .cookie-bar{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="brand-stripe"></div>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">HANDIFY<span>.</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cursos.html">Cursos</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
+    <li><a href="pack-completo.html" class="nav-cta active">Começar agora</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">✦ Acesso anual · renovação automática</div>
+  <h1>Tudo que você precisa para <span class="accent-green">criar</span>, <span class="accent-blue">vender</span> e <span class="accent-yellow">crescer</span> no artesanato.</h1>
+  <p class="hero-sub">9 cursos completos + 12 materiais digitais + comunidade exclusiva + novos lançamentos — tudo em um único plano acessível.</p>
+  <div class="hero-price-display">
+    <p class="hero-price-from">de R$897/ano</p>
+    <p class="hero-price-main">12x de R$29,70</p>
+    <p class="hero-price-label">por mês · acesso anual</p>
+    <p class="hero-price-or">ou R$297 à vista</p>
+  </div>
+  <br>
+  <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" class="btn-hero">Quero o Pack Completo →</a>
+  <p class="hero-guarantee">🔒 Garantia de 7 dias · sem burocracia · cancele quando quiser</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>9</strong><span>cursos completos</span></div>
+    <div class="hero-stat"><strong>12</strong><span>materiais digitais</span></div>
+    <div class="hero-stat"><strong>+100</strong><span>receitas e fórmulas</span></div>
+    <div class="hero-stat"><strong>7 dias</strong><span>garantia total</span></div>
+  </div>
+</section>
+
+<!-- DOR -->
+<section class="pain-section">
+  <div class="pain-inner">
+    <div class="section-label">Você se identifica?</div>
+    <h2 class="section-title">Sabe fazer, mas ainda não sabe como transformar isso em renda.</h2>
+    <p class="section-sub">Essas situações são mais comuns do que parecem — e têm solução:</p>
+    <div class="pain-grid">
+      <div class="pain-item">
+        <span class="pain-icon">😔</span>
+        <p>Você faz produtos lindos, mas na hora de precificar <strong>cobra menos do que deveria</strong> com medo de afastar clientes.</p>
+      </div>
+      <div class="pain-item">
+        <span class="pain-icon">📱</span>
+        <p>Posta no Instagram, mas <strong>ninguém compra</strong> — e você não sabe o que está errado.</p>
+      </div>
+      <div class="pain-item">
+        <span class="pain-icon">🔍</span>
+        <p>Assiste vídeos no YouTube, mas o conteúdo é <strong>raso, genérico</strong> e você sai sem saber o que fazer.</p>
+      </div>
+      <div class="pain-item">
+        <span class="pain-icon">💸</span>
+        <p>Já gastou com cursos que prometiam muito, mas <strong>não entregaram resultados práticos</strong>.</p>
+      </div>
+      <div class="pain-item">
+        <span class="pain-icon">⏰</span>
+        <p>Quer aprender no seu tempo, sem depender de <strong>horário fixo</strong> ou turma fechada.</p>
+      </div>
+      <div class="pain-item">
+        <span class="pain-icon">🧭</span>
+        <p>Não sabe por onde começar — velas, sabonetes, flores? Falta <strong>um caminho claro</strong> para seguir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE STACK -->
+<section class="value-section">
+  <div class="value-inner">
+    <div class="section-label">O que está incluído</div>
+    <h2 class="section-title">Mais de R$800 em conteúdo.<br>Por menos de R$30 por mês.</h2>
+    <p class="section-sub">Cada item abaixo pode ser comprado separadamente. No Pack, você leva tudo junto.</p>
+    <div class="value-grid">
+      <div>
+        <h3>🎬 9 Cursos em Vídeo</h3>
+        <div class="value-item"><span class="value-item-name">Velaroma Artesanal (15+ aulas)</span><span class="value-item-price">R$47</span></div>
+        <div class="value-item"><span class="value-item-name">Workshop Buquê de Velas</span><span class="value-item-price">R$47</span></div>
+        <div class="value-item"><span class="value-item-name">Saponaria Brasil (13 aulas)</span><span class="value-item-price">R$67</span></div>
+        <div class="value-item"><span class="value-item-name">Flores de Alto Padrão</span><span class="value-item-price">R$57</span></div>
+        <div class="value-item"><span class="value-item-name">Ateliê Caixas Florais</span><span class="value-item-price">R$57</span></div>
+        <div class="value-item"><span class="value-item-name">Embalagens Premium na Prática</span><span class="value-item-price">R$47</span></div>
+        <div class="value-item"><span class="value-item-name">Vendas no Artesanato</span><span class="value-item-price">R$67</span></div>
+        <div class="value-item"><span class="value-item-name">Sistema de Decoração de Balões</span><span class="value-item-price">R$57</span></div>
+        <div class="value-item"><span class="value-item-name">Primeira Venda em 7 Dias</span><span class="value-item-price">R$47</span></div>
+      </div>
+      <div>
+        <h3>📚 12 Materiais Digitais (E-books)</h3>
+        <div class="value-item"><span class="value-item-name">100 Assinaturas Aromáticas</span><span class="value-item-price">R$27</span></div>
+        <div class="value-item"><span class="value-item-name">Loja de Velas Online</span><span class="value-item-price">R$27</span></div>
+        <div class="value-item"><span class="value-item-name">Difusores e Aromas para Casa</span><span class="value-item-price">R$27</span></div>
+        <div class="value-item"><span class="value-item-name">Lista de Fornecedores Premium</span><span class="value-item-price">R$27</span></div>
+        <div class="value-item"><span class="value-item-name">Pomadas Medicinais</span><span class="value-item-price">R$27</span></div>
+        <div class="value-item"><span class="value-item-name">Aromaterapia com Plantas</span><span class="value-item-price">R$27</span></div>
+        <div class="value-item"><span class="value-item-name">Arte Floral em Sabonetes</span><span class="value-item-price">R$27</span></div>
+        <div class="value-item"><span class="value-item-name">Saboaria Energética</span><span class="value-item-price">R$27</span></div>
+        <div class="value-item"><span class="value-item-name">Beleza Natural com Plantas</span><span class="value-item-price">R$27</span></div>
+        <div class="value-item"><span class="value-item-name">Embalagens que Encantam</span><span class="value-item-price">R$27</span></div>
+        <div class="value-item"><span class="value-item-name">Kit Natal Artesanal</span><span class="value-item-price">R$27</span></div>
+        <div class="value-item"><span class="value-item-name">Natural Dermatológica</span><span class="value-item-price">R$27</span></div>
+      </div>
+    </div>
+    <div class="value-total">
+      <div class="value-total-left">
+        <p>Se comprado separadamente</p>
+        <strong>R$817</strong>
+      </div>
+      <div class="value-total-right">
+        <p>No Pack Completo</p>
+        <strong>12x de R$29,70</strong>
+        <small>por mês · ou R$297 à vista</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE MAIS ESTÁ INCLUÍDO -->
+<section class="includes-section">
+  <div class="includes-inner">
+    <div class="section-label">Além dos cursos e e-books</div>
+    <h2 class="section-title" style="color:var(--white)">O Pack vai além do conteúdo.</h2>
+    <p class="section-sub">Você não compra apenas aulas. Você entra para uma estrutura completa de evolução.</p>
+    <div class="includes-grid">
+      <div class="include-card">
+        <div class="ic-icon">💬</div>
+        <h4>Comunidade Exclusiva</h4>
+        <p>Grupo de alunas ativas para tirar dúvidas, compartilhar resultados e se motivar junto com quem está na mesma jornada.</p>
+      </div>
+      <div class="include-card">
+        <div class="ic-icon">🚀</div>
+        <h4>Novos Lançamentos Incluídos</h4>
+        <p>Todos os cursos e materiais lançados durante o seu período de acesso entram automaticamente no seu Pack — sem pagar a mais.</p>
+      </div>
+      <div class="include-card">
+        <div class="ic-icon">📲</div>
+        <h4>Acesso em Qualquer Dispositivo</h4>
+        <p>Assista pelo celular, tablet ou computador. No seu ritmo, no seu horário — sem aula ao vivo, sem prazo para assistir.</p>
+      </div>
+      <div class="include-card">
+        <div class="ic-icon">🎓</div>
+        <h4>Instrutoras que Vivem do Artesanato</h4>
+        <p>Não é professora teórica. São artesãs que construíram negócio real e ensinam o que realmente funciona na prática.</p>
+      </div>
+      <div class="include-card">
+        <div class="ic-icon">🔓</div>
+        <h4>Cancele Quando Quiser</h4>
+        <p>Sem fidelidade, sem multa. Avise com 48h de antecedência antes da renovação e o acesso segue ativo até o fim do período.</p>
+      </div>
+      <div class="include-card">
+        <div class="ic-icon">🛡️</div>
+        <h4>Garantia de 7 Dias</h4>
+        <p>Entrou e não gostou? Devolução integral em até 7 dias. Sem perguntas, sem burocracia. Palavra da Handify.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="section-label">Resultados reais</div>
+    <h2 class="section-title">Quem entrou, saiu fazendo.</h2>
+    <p class="section-sub">Alunas que aplicaram o que aprenderam e transformaram habilidade em renda.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Entrei sem saber nada de velas. Em dois meses já tinha fechado 14 pedidos pelo Instagram. O curso de ancoragem de preço mudou completamente como eu me vejo como vendedora."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">C</div>
+          <div><div class="author-name">Carla Mendonça</div><div class="author-city">Curitiba, PR</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Já tinha feito outros cursos online, mas nenhum tão direto ao ponto. Aqui aprendi fórmulas que realmente funcionam e ainda descobri como embalar e fotografar os produtos."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:var(--green);color:var(--black)">R</div>
+          <div><div class="author-name">Renata Figueroa</div><div class="author-city">São Paulo, SP</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Fiz o Pack porque queria aprender sabonetes. Acabei me apaixonando pelo módulo de vendas e hoje tenho uma lojinha online com 40 produtos. Não esperava tanta coisa por esse preço."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:var(--yellow);color:var(--black)">A</div>
+          <div><div class="author-name">Amanda Teixeira</div><div class="author-city">Belo Horizonte, MG</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="guarantee-section">
+  <div class="guarantee-inner">
+    <div class="guarantee-icon">🛡️</div>
+    <div class="guarantee-text">
+      <h3>Garantia incondicional de 7 dias</h3>
+      <p>Assine o Pack, acesse todo o conteúdo, explore os cursos e materiais. Se em até 7 dias você não estiver satisfeita por qualquer motivo — devolvemos 100% do valor. Sem formulário, sem espera, sem questionamento. Basta mandar uma mensagem.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA PRINCIPAL -->
+<section class="offer-section" id="oferta">
+  <div class="offer-inner">
+    <div class="offer-badge">✦ Oferta especial de lançamento</div>
+    <h2 class="offer-title">Uma decisão simples que pode mudar o seu negócio.</h2>
+    <p class="offer-sub">Acesso completo a tudo que a Handify tem a oferecer. Por menos do que um café por dia.</p>
+
+    <div class="offer-box">
+      <p class="offer-from">de R$897/ano</p>
+      <p class="offer-price">12x de R$29,70</p>
+      <p class="offer-price-month">por mês · cobrado anualmente</p>
+      <p class="offer-price-or">ou R$297 à vista — economia de R$600</p>
+      <ul class="offer-checklist">
+        <li>9 cursos completos em vídeo</li>
+        <li>12 e-books e materiais digitais</li>
+        <li>Comunidade exclusiva de alunas</li>
+        <li>Novos lançamentos incluídos automaticamente</li>
+        <li>Acesso em qualquer dispositivo, no seu ritmo</li>
+        <li>Cancele quando quiser, sem multa</li>
+        <li>Garantia de 7 dias sem perguntas</li>
+      </ul>
+      <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" class="btn-offer">Quero o Pack Completo agora →</a>
+      <p class="offer-guarantee-note">🔒 Pagamento seguro · Garantia de 7 dias · Cancele a qualquer momento</p>
+    </div>
+
+    <!-- RESUMO DA OFERTA -->
+    <div class="summary-strip">
+      <h4>Resumo do que você leva</h4>
+      <div class="summary-items">
+        <div class="summary-item"><span>9 cursos completos em vídeo</span><span>incluso</span></div>
+        <div class="summary-item"><span>12 materiais digitais e e-books</span><span>incluso</span></div>
+        <div class="summary-item"><span>Comunidade exclusiva</span><span>incluso</span></div>
+        <div class="summary-item"><span>Novos lançamentos do ano</span><span>incluso</span></div>
+        <div class="summary-item"><span>Garantia incondicional</span><span>7 dias</span></div>
+      </div>
+      <div class="summary-total">
+        <span>Valor total</span>
+        <span>12x R$29,70 / mês</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="section-label">Dúvidas frequentes</div>
+    <h2 class="section-title">Antes de decidir, leia isso.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Como funciona o acesso anual?</button>
+        <div class="faq-a">Ao assinar o Pack, você tem acesso a todo o conteúdo por 12 meses. Próximo ao vencimento, o plano renova automaticamente. Você pode cancelar a qualquer momento antes da data de cobrança — o acesso segue ativo até o fim do período já pago.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Posso acessar pelo celular?</button>
+        <div class="faq-a">Sim. O conteúdo é acessível em qualquer dispositivo — celular, tablet ou computador — sem necessidade de aplicativo específico.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Preciso ter experiência com artesanato?</button>
+        <div class="faq-a">Não. Os cursos foram desenvolvidos para funcionar do zero ao avançado. Se você já tem experiência, os módulos de vendas e embalagens vão acelerar seu negócio de qualquer forma.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">E se eu não gostar?</button>
+        <div class="faq-a">Você tem 7 dias de garantia incondicional. Basta entrar em contato por WhatsApp ou e-mail e devolvemos 100% do valor, sem questionamentos.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quantos cursos novos são lançados por ano?</button>
+        <div class="faq-a">A Handify lança novos cursos e materiais ao longo do ano — todos incluídos no Pack sem custo adicional. Você acompanha os lançamentos pela comunidade.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">O Pack inclui certificado?</button>
+        <div class="faq-a">Sim, cada curso concluído gera um certificado de participação com o nome da aluna e da instrutora, válido como comprovante de qualificação profissional.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURSOS AVULSOS -->
+<section class="avulso-section">
+  <div class="avulso-inner">
+    <div class="divider-label">outra opção</div>
+    <h2 class="avulso-title">Prefere começar com um curso específico?</h2>
+    <p class="avulso-sub">Se você já sabe exatamente o que quer aprender, pode adquirir qualquer curso de forma avulsa — com acesso vitalício e sem mensalidade. Cada curso tem seu próprio preço e pode ser comprado individualmente.</p>
+    <div class="avulso-features">
+      <span class="avulso-feat">Acesso vitalício</span>
+      <span class="avulso-feat">Sem assinatura</span>
+      <span class="avulso-feat">A partir de R$47</span>
+      <span class="avulso-feat">Garantia de 7 dias</span>
+    </div>
+    <a href="cursos.html" class="btn-avulso">Ver todos os cursos avulsos →</a>
+  </div>
+</section>
+
+<div class="brand-stripe"></div>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <a href="index.html" class="footer-brand">HANDIFY<span>.</span></a>
+      <p>Plataforma brasileira de cursos de artesanato. Aprenda com quem faz de verdade e transforme sua habilidade em negócio.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/handify.br/" target="_blank" rel="noopener" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @handify.br
+        </a>
+        <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <span class="footer-email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          contato@handify.com.br
+        </span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="seja-instrutora.html">Seja instrutora</a></li>
+        <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
+        <li><a href="termos-de-uso.html">Termos de uso</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Handify™ · Todos os direitos reservados</p>
+    <p>Feito com cuidado no Brasil 🇧🇷</p>
+  </div>
+</footer>
+
+<div class="cookie-bar" id="cookieBar">
+  <p>🍪 Este site usa cookies para melhorar sua experiência. <a href="termos-de-uso.html">Política de Privacidade</a>.</p>
+  <button class="cookie-btn" onclick="document.getElementById('cookieBar').style.display='none';localStorage.setItem('hf_cookies','1')">Aceitar</button>
+</div>
+<script>if(localStorage.getItem('hf_cookies')){document.getElementById('cookieBar').style.display='none';}</script>
+<script>
+// Hamburger
+document.getElementById('navToggle').addEventListener('click',function(){
+  this.classList.toggle('open');
+  document.getElementById('navLinks').classList.toggle('open');
+});
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item = this.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+    if(!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
