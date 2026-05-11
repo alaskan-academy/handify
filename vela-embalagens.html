@@ -623,6 +623,7 @@ footer p {
   footer { padding: 36px 24px; }
   .experiment { grid-template-columns: 1fr; }
 }
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}.nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav-toggle.open span:nth-child(2){opacity:0}.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 </style>
 </head>
 <body>
@@ -631,11 +632,13 @@ footer p {
 
 <nav class="nav">
   <a href="index.html" class="nav-brand">HANDIFY<span>.</span></a>
-  <ul class="nav-links">
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="cursos.html">Cursos</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contato.html">Contato</a></li>
+    <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
     <li><a href="cursos.html" class="nav-cta">Começar agora</a></li>
   </ul>
 </nav>
@@ -982,8 +985,10 @@ footer p {
 .cookie-bar p a{color:var(--blue);text-decoration:underline}
 .cookie-btn{background:var(--blue);color:#fff;border:none;padding:10px 24px;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;transition:opacity .15s;flex-shrink:0}
 .cookie-btn:hover{opacity:.85}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}.nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav-toggle.open span:nth-child(2){opacity:0}.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 </style>
 <script>if(localStorage.getItem('hf_cookies'))document.getElementById('cookieBar').style.display='none'</script>
 
+<script>document.getElementById('navToggle').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');});</script>
 </body>
 </html>

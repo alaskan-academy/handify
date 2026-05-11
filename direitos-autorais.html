@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direitos Autorais e Marca Registrada — Handify</title>
+<meta name="description" content="A Handify é uma marca registrada. Saiba como protegemos nossos cursos, materiais digitais e propriedade intelectual.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#5288EF;--green:#A8E8A9;--black:#0F0F0F;--gray-dark:#2D2D2D;--gray-mid:#6B7280;--off-white:#F5F5F0;--yellow:#F5CE3E;--white:#FFFFFF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',Arial,sans-serif;background:var(--white);color:var(--gray-dark);font-size:16px;line-height:1.8}
+.brand-stripe{height:6px;background:linear-gradient(90deg,var(--blue) 33.3%,var(--green) 33.3% 66.6%,var(--yellow) 66.6%)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid rgba(0,0,0,0.08);position:sticky;top:0;background:var(--white);z-index:100;box-shadow:0 1px 12px rgba(0,0,0,0.05)}
+.nav-brand{font-size:22px;font-weight:900;letter-spacing:-0.5px;color:var(--black);text-decoration:none}
+.nav-brand span{color:var(--blue)}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{font-size:13px;font-weight:600;text-decoration:none;color:var(--gray-mid);text-transform:uppercase;letter-spacing:.06em;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+.nav-cta{background:var(--blue);color:var(--white)!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* PAGE HEADER */
+.page-header{background:var(--black);padding:72px 60px 56px;position:relative;overflow:hidden}
+.page-header::before{content:'®';position:absolute;right:60px;top:50%;transform:translateY(-50%);font-size:220px;font-weight:900;color:rgba(255,255,255,0.03);line-height:1;pointer-events:none}
+.page-header-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin-bottom:16px}
+.page-header h1{font-size:clamp(28px,4vw,48px);font-weight:900;color:var(--white);letter-spacing:-0.5px;line-height:1.1;margin-bottom:20px}
+.page-header p{font-size:16px;color:rgba(255,255,255,0.55);max-width:560px}
+
+/* BADGE STRIP */
+.badge-strip{background:var(--off-white);border-bottom:1px solid rgba(0,0,0,0.06);padding:20px 60px;display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-dark);background:var(--white);border:1px solid rgba(0,0,0,0.08);padding:7px 14px;border-radius:20px}
+.badge span{font-size:15px}
+
+/* CONTENT */
+.content{max-width:780px;margin:0 auto;padding:64px 60px 96px}
+.content h2{font-size:21px;font-weight:800;color:var(--black);margin:52px 0 18px;letter-spacing:-0.3px;display:flex;align-items:center;gap:10px}
+.content h2:first-child{margin-top:0}
+.content h2 .icon{font-size:20px}
+.content p{font-size:15px;color:var(--gray-dark);margin-bottom:16px;line-height:1.8}
+.content ul{margin:0 0 16px 20px}
+.content ul li{font-size:15px;color:var(--gray-dark);margin-bottom:10px}
+.content a{color:var(--blue);text-decoration:none}
+.content a:hover{text-decoration:underline}
+
+/* HIGHLIGHT BOX */
+.highlight-box{background:var(--off-white);border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:20px 24px;margin:24px 0}
+.highlight-box p{margin-bottom:0;font-weight:500}
+
+/* WARNING BOX */
+.warning-box{background:#fff8ed;border-left:4px solid var(--yellow);border-radius:0 8px 8px 0;padding:20px 24px;margin:24px 0}
+.warning-box p{margin-bottom:0;font-weight:500;color:#7a5c00}
+
+/* PROHIBITED LIST */
+.prohibited-list{list-style:none!important;margin-left:0!important}
+.prohibited-list li{padding:12px 16px;background:var(--off-white);border-radius:6px;margin-bottom:8px!important;display:flex;align-items:flex-start;gap:12px;font-size:14px}
+.prohibited-list li::before{content:'✗';color:#e53e3e;font-weight:900;font-size:15px;flex-shrink:0;margin-top:1px}
+
+/* ALLOWED LIST */
+.allowed-list{list-style:none!important;margin-left:0!important}
+.allowed-list li{padding:12px 16px;background:#f0faf0;border-radius:6px;margin-bottom:8px!important;display:flex;align-items:flex-start;gap:12px;font-size:14px}
+.allowed-list li::before{content:'✓';color:#2f855a;font-weight:900;font-size:15px;flex-shrink:0;margin-top:1px}
+
+footer{background:var(--black);color:var(--white);padding:32px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+footer p{font-size:12px;color:rgba(255,255,255,0.35)}
+
+.cookie-bar{position:fixed;bottom:0;left:0;right:0;background:var(--black);color:rgba(255,255,255,0.85);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;z-index:999;font-size:13px}
+.cookie-bar a{color:var(--blue)}
+.cookie-btn{background:var(--blue);color:var(--white);border:none;border-radius:6px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap}
+
+@media(max-width:768px){
+  .nav{padding:16px 24px;position:relative}
+  .nav-toggle{display:flex}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;gap:0;padding:8px 0 16px;border-bottom:1px solid rgba(0,0,0,0.1);box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:99}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:12px 24px;font-size:14px}
+  .nav-links .nav-cta{margin:8px 16px 0;text-align:center;border-radius:6px}
+  .page-header{padding:48px 24px 40px}
+  .page-header::before{display:none}
+  .badge-strip{padding:16px 24px}
+  .content{padding:40px 24px 64px}
+  footer{padding:24px}
+  .cookie-bar{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="brand-stripe"></div>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">HANDIFY<span>.</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cursos.html">Cursos</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="direitos-autorais.html" class="active">Direitos Autorais</a></li>
+    <li><a href="cursos.html" class="nav-cta">Começar agora</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-label">Propriedade Intelectual</div>
+  <h1>Direitos Autorais<br>&amp; Marca Registrada</h1>
+  <p>A Handify é uma marca registrada. Todo o conteúdo da plataforma é protegido por lei. Conheça seus direitos e os nossos.</p>
+</div>
+
+<div class="badge-strip">
+  <div class="badge"><span>™</span> Marca Registrada</div>
+  <div class="badge"><span>©</span> Conteúdo Protegido</div>
+  <div class="badge"><span>🔒</span> LGPD Compliant</div>
+  <div class="badge"><span>🇧🇷</span> Lei 9.610/98</div>
+</div>
+
+<div class="content">
+
+  <h2><span class="icon">™</span> A Marca Handify</h2>
+  <p>A <strong>Handify</strong> é uma marca registrada, pertencente à <strong>Alaskan Academy LTDA</strong>. O nome, logotipo, slogan, identidade visual, paleta de cores e todos os elementos gráficos associados à marca são propriedade exclusiva da empresa e estão protegidos nos termos da legislação brasileira de propriedade intelectual.</p>
+  <div class="highlight-box">
+    <p>O uso do nome "Handify", do logotipo ou de qualquer elemento da identidade visual da marca sem autorização prévia e por escrito é expressamente proibido e sujeito a medidas legais.</p>
+  </div>
+
+  <h2><span class="icon">©</span> Direitos Autorais sobre o Conteúdo</h2>
+  <p>Todo o conteúdo disponível na plataforma Handify — incluindo, mas não se limitando a:</p>
+  <ul>
+    <li>Vídeoaulas e gravações</li>
+    <li>E-books, apostilas e materiais em PDF</li>
+    <li>Fórmulas, receitas e fichas técnicas</li>
+    <li>Textos, roteiros e transcrições</li>
+    <li>Artes, ilustrações e fotografias originais</li>
+    <li>Trilhas sonoras e narrações</li>
+  </ul>
+  <p>— é protegido pela <strong>Lei de Direitos Autorais nº 9.610/98</strong> e pela legislação de propriedade intelectual vigente no Brasil. A Handify é a titular exclusiva de todos esses direitos, salvo onde indicado de outra forma.</p>
+
+  <h2><span class="icon">✗</span> O que é proibido</h2>
+  <p>Ao adquirir qualquer produto da Handify, você recebe uma <strong>licença pessoal e intransferível</strong> de uso. É expressamente vedado:</p>
+  <ul class="prohibited-list">
+    <li>Reproduzir, copiar ou transcrever o conteúdo — total ou parcialmente</li>
+    <li>Compartilhar acesso, login ou arquivos com terceiros</li>
+    <li>Gravar, fazer download ou captura de tela das aulas em vídeo</li>
+    <li>Revender, sublicenciar ou distribuir qualquer material adquirido</li>
+    <li>Usar o conteúdo para criar cursos, produtos ou materiais derivados sem autorização</li>
+    <li>Publicar ou republicar fórmulas e receitas da Handify em redes sociais, blogs ou canais próprios</li>
+    <li>Usar o nome ou a marca Handify para promover produtos, serviços ou cursos de terceiros</li>
+  </ul>
+
+  <h2><span class="icon">✓</span> O que você pode fazer</h2>
+  <ul class="allowed-list">
+    <li>Assistir às aulas quantas vezes quiser, no período de acesso contratado</li>
+    <li>Usar as técnicas aprendidas para criar e vender seus próprios produtos artesanais</li>
+    <li>Aplicar os conhecimentos em seu negócio pessoal</li>
+    <li>Mencionar que se formou ou estudou pela Handify (ex: "aprendi na Handify") em contextos pessoais e profissionais</li>
+    <li>Recomendar a Handify para amigas e familiares</li>
+  </ul>
+
+  <h2><span class="icon">⚠️</span> Consequências do uso indevido</h2>
+  <div class="warning-box">
+    <p>O descumprimento das condições de uso resultará no <strong>cancelamento imediato do acesso</strong>, sem direito a reembolso, além das medidas legais cabíveis — incluindo notificação extrajudicial e ação judicial por danos materiais e morais, nos termos da Lei 9.610/98 e do Código Civil Brasileiro.</p>
+  </div>
+  <p>A Handify monitora ativamente o compartilhamento não autorizado de conteúdo e toma medidas contra infrações identificadas.</p>
+
+  <h2><span class="icon">📢</span> Reporte uma violação</h2>
+  <p>Se você identificou uso indevido da marca Handify ou de nosso conteúdo por terceiros, entre em contato:</p>
+  <ul>
+    <li>E-mail: <a href="mailto:alaskan.tools@gmail.com">alaskan.tools@gmail.com</a></li>
+    <li>WhatsApp: <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener">WhatsApp</a></li>
+  </ul>
+  <p>Tratamos todas as denúncias com sigilo e respondemos em até 2 dias úteis.</p>
+
+  <h2><span class="icon">🤝</span> Parcerias e licenciamento</h2>
+  <p>Se você tem interesse em usar o nome, conteúdo ou metodologia da Handify de forma institucional — como escola, ateliê, curso parceiro ou programa de afiliados — entre em contato pelo e-mail <a href="mailto:alaskan.tools@gmail.com">alaskan.tools@gmail.com</a> para conversarmos sobre as condições de licenciamento.</p>
+
+</div>
+
+<div class="brand-stripe"></div>
+<footer>
+  <p>© 2026 Handify™ · Todos os direitos reservados · Alaskan Academy LTDA</p>
+  <p>Feito com cuidado no Brasil 🇧🇷</p>
+</footer>
+
+<div class="cookie-bar" id="cookieBar">
+  <p>🍪 Este site usa cookies para melhorar sua experiência. <a href="termos-de-uso.html">Política de Privacidade</a>.</p>
+  <button class="cookie-btn" onclick="document.getElementById('cookieBar').style.display='none';localStorage.setItem('hf_cookies','1')">Aceitar</button>
+</div>
+<script>if(localStorage.getItem('hf_cookies')){document.getElementById('cookieBar').style.display='none';}</script>
+<script>
+document.getElementById('navToggle').addEventListener('click', function(){
+  this.classList.toggle('open');
+  document.getElementById('navLinks').classList.toggle('open');
+});
+</script>
+</body>
+</html>

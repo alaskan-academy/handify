@@ -93,6 +93,29 @@ body {
 }
 .nav-cta:hover { background: #3A72D4 !important; }
 
+/* ── HAMBURGER ── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 101;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--black);
+  border-radius: 2px;
+  transition: transform .2s, opacity .2s;
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ── HERO ── */
 .hero {
   background: var(--black);
@@ -633,11 +656,27 @@ footer {
 
 @media (max-width: 768px) {
   section { padding: 56px 24px; }
-  .nav { padding: 16px 24px; }
-  .nav-links { display: none; }
+  .nav { padding: 16px 24px; position: relative; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: var(--white);
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    z-index: 99;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: block; padding: 12px 24px; font-size: 14px; border-radius: 0; }
+  .nav-links .nav-cta { margin: 8px 16px 0; text-align: center; display: block; border-radius: 6px; }
   .hero { padding: 72px 24px 64px; min-height: auto; }
   .hero-stats { gap: 28px; flex-wrap: wrap; }
-
   .courses-grid, .blog-grid, .testimonials-grid { grid-template-columns: 1fr; }
   .how-steps { grid-template-columns: 1fr; }
   .cta-section { padding: 60px 24px; }
@@ -653,11 +692,15 @@ footer {
 
 <nav class="nav">
   <a href="index.html" class="nav-brand">HANDIFY<span>.</span></a>
-  <ul class="nav-links">
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="cursos.html">Cursos</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contato.html">Contato</a></li>
+    <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
     <li><a href="cursos.html" class="nav-cta">Começar agora</a></li>
   </ul>
 </nav>
@@ -996,6 +1039,31 @@ footer {
 .cookie-btn:hover{opacity:.85}
 </style>
 <script>if(localStorage.getItem('hf_cookies'))document.getElementById('cookieBar').style.display='none'</script>
+
+<script>
+// Hamburger menu
+document.getElementById('navToggle').addEventListener('click', function(){
+  this.classList.toggle('open');
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// Course cards → páginas de curso
+var homeCards = {
+  'Saponaria Brasil': 'curso-saponaria-brasil.html',
+  'Workshop Buquê de Velas': 'curso-workshop-buque-velas.html',
+  'Velaroma Artesanal': 'curso-velaroma-artesanal.html'
+};
+document.querySelectorAll('.course-card').forEach(function(card){
+  var h3 = card.querySelector('h3');
+  if(!h3) return;
+  var url = homeCards[h3.textContent.trim()];
+  if(!url) return;
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', function(e){
+    if(!e.target.closest('a')) window.location.href = url;
+  });
+});
+</script>
 
 <script>
 fetch('cursos.html')
