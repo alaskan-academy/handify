@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central de Ajuda — Handify</title>
+<meta name="description" content="Encontre respostas rápidas sobre cursos, pagamentos, acesso, materiais e técnicas. Central de ajuda da Handify.">
+<meta property="og:title" content="Central de Ajuda — Handify">
+<meta property="og:description" content="Pesquise qualquer dúvida sobre a plataforma Handify — cursos, pagamentos, acesso e muito mais.">
+<meta property="og:image" content="https://www.handify.com.br/og-image.jpg">
+<meta property="og:url" content="https://site.handify.com.br/ajuda">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://site.handify.com.br/ajuda">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue: #5288EF;
+  --green: #A8E8A9;
+  --black: #0F0F0F;
+  --gray-dark: #2D2D2D;
+  --gray-mid: #6B7280;
+  --off-white: #F5F5F0;
+  --blue-light: #EEF3FD;
+  --yellow: #F5CE3E;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--gray-dark);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.brand-stripe {
+  height: 6px;
+  background: linear-gradient(90deg, var(--blue) 33.3%, var(--green) 33.3% 66.6%, var(--yellow) 66.6%);
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  z-index: 100;
+  box-shadow: 0 1px 12px rgba(0,0,0,0.05);
+}
+.nav-brand { font-size: 22px; font-weight: 900; letter-spacing: -0.5px; color: var(--black); text-decoration: none; }
+.nav-brand span { color: var(--blue); }
+.nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+.nav-links a { font-size: 13px; font-weight: 600; text-decoration: none; color: var(--gray-mid); text-transform: uppercase; letter-spacing: .06em; transition: color .15s; }
+.nav-links a:hover, .nav-links a.active { color: var(--blue); }
+.nav-cta { background: var(--blue); color: var(--white) !important; padding: 9px 22px; border-radius: 6px; font-weight: 700 !important; }
+.nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; z-index:101; }
+.nav-toggle span { display:block; width:22px; height:2px; background:var(--black); border-radius:2px; transition:transform .2s,opacity .2s; }
+.nav-toggle.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity:0; }
+.nav-toggle.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+/* HERO */
+.hero {
+  background: var(--black);
+  padding: 72px 60px 80px;
+  text-align: center;
+}
+.hero-eyebrow {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .14em; color: var(--blue); margin-bottom: 16px;
+}
+.hero h1 {
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 900; line-height: 1.1;
+  color: var(--off-white); letter-spacing: -1px;
+  margin-bottom: 16px; max-width: 680px; margin-left: auto; margin-right: auto;
+}
+.hero h1 .accent { color: var(--green); }
+.hero-sub {
+  font-size: 17px; color: var(--gray-mid);
+  max-width: 500px; margin: 0 auto 40px; line-height: 1.6;
+}
+
+/* SEARCH BAR */
+.search-wrap {
+  max-width: 620px;
+  margin: 0 auto;
+  position: relative;
+}
+.search-input {
+  width: 100%;
+  padding: 18px 56px 18px 22px;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.07);
+  color: var(--white);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+  transition: border-color .2s, background .2s;
+  backdrop-filter: blur(8px);
+}
+.search-input::placeholder { color: rgba(255,255,255,0.35); }
+.search-input:focus { border-color: var(--blue); background: rgba(255,255,255,0.1); }
+.search-icon {
+  position: absolute; right: 20px; top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.4);
+  pointer-events: none;
+}
+.search-clear {
+  position: absolute; right: 20px; top: 50%;
+  transform: translateY(-50%);
+  background: none; border: none;
+  color: rgba(255,255,255,0.5); cursor: pointer;
+  font-size: 18px; display: none; line-height: 1;
+  padding: 4px;
+}
+.search-clear:hover { color: var(--white); }
+
+/* RESULTS COUNT */
+.search-count {
+  font-size: 12px; color: var(--gray-mid); font-weight: 500;
+  text-align: center; margin-top: 12px; min-height: 18px;
+}
+
+/* MAIN WRAP */
+.main-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 40px 80px;
+}
+
+/* CATEGORY CHIPS */
+.cats {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.cat-btn {
+  font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em;
+  padding: 7px 18px; border-radius: 20px;
+  background: var(--off-white); color: var(--gray-mid);
+  border: 1.5px solid rgba(0,0,0,0.08);
+  cursor: pointer; transition: all .15s;
+}
+.cat-btn:hover, .cat-btn.active {
+  background: var(--blue); color: var(--white); border-color: var(--blue);
+}
+
+/* SECTION LABEL */
+.section-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .14em; color: var(--gray-mid);
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  margin-bottom: 12px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.result-count-badge {
+  font-size: 11px; font-weight: 600;
+  background: var(--blue-light); color: var(--blue);
+  padding: 2px 10px; border-radius: 10px;
+}
+
+/* FAQ CATEGORY GROUPS */
+.faq-group { margin-bottom: 48px; }
+.faq-group-title {
+  font-size: 13px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .1em; color: var(--blue);
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.faq-group-title::before {
+  content: '';
+  width: 3px; height: 16px;
+  background: var(--blue); border-radius: 2px;
+  display: inline-block;
+}
+
+/* FAQ ACCORDION */
+.faq-item {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.faq-item:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+.faq-item.hidden { display: none; }
+
+.faq-q {
+  width: 100%; text-align: left;
+  padding: 18px 22px;
+  background: var(--white);
+  border: none; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 15px; font-weight: 600;
+  color: var(--black); line-height: 1.4;
+  transition: background .15s;
+}
+.faq-q:hover { background: var(--off-white); }
+.faq-item.open .faq-q { background: var(--off-white); color: var(--blue); }
+
+.faq-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--off-white); border: 1.5px solid rgba(0,0,0,0.1);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 16px; font-weight: 700;
+  color: var(--gray-mid); transition: all .2s;
+}
+.faq-item.open .faq-icon { background: var(--blue); color: var(--white); border-color: var(--blue); }
+
+.faq-a {
+  display: none;
+  padding: 0 22px 20px;
+  background: var(--off-white);
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.faq-item.open .faq-a { display: block; }
+.faq-a p {
+  font-size: 14px; color: var(--gray-dark);
+  line-height: 1.8; margin-top: 14px; margin-bottom: 0;
+}
+.faq-a p + p { margin-top: 10px; }
+.faq-a strong { color: var(--black); font-weight: 700; }
+.faq-a ul { margin: 10px 0 0 20px; }
+.faq-a ul li { font-size: 14px; color: var(--gray-dark); line-height: 1.7; margin-bottom: 6px; }
+.faq-a ol { margin: 10px 0 0 20px; }
+.faq-a ol li { font-size: 14px; color: var(--gray-dark); line-height: 1.7; margin-bottom: 6px; }
+.faq-a .guide-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 14px;
+  font-size: 13px; font-weight: 700; color: var(--blue);
+  text-decoration: none; padding: 8px 16px;
+  background: var(--blue-light); border-radius: 6px;
+  transition: background .15s;
+}
+.faq-a .guide-link:hover { background: #d8e7fd; }
+
+/* HIGHLIGHT SEARCH TERM */
+mark {
+  background: #fff3b0;
+  color: var(--black);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+/* EMPTY STATE */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  display: none;
+}
+.empty-state .emoji { font-size: 48px; margin-bottom: 16px; }
+.empty-state h3 { font-size: 20px; font-weight: 700; color: var(--black); margin-bottom: 8px; }
+.empty-state p { font-size: 14px; color: var(--gray-mid); max-width: 360px; margin: 0 auto 24px; line-height: 1.6; }
+.empty-state a {
+  display: inline-block;
+  background: var(--blue); color: var(--white);
+  padding: 12px 28px; border-radius: 8px;
+  font-weight: 700; font-size: 14px; text-decoration: none;
+  transition: opacity .15s;
+}
+.empty-state a:hover { opacity: .88; }
+
+/* CONTACT BAND */
+.contact-band {
+  background: var(--off-white);
+  border-radius: 16px;
+  padding: 44px 48px;
+  text-align: center;
+  margin-top: 24px;
+  border: 1px solid rgba(0,0,0,0.07);
+}
+.contact-band h2 { font-size: 22px; font-weight: 900; color: var(--black); margin-bottom: 10px; }
+.contact-band p { font-size: 15px; color: var(--gray-mid); max-width: 400px; margin: 0 auto 28px; line-height: 1.6; }
+.contact-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--blue); color: var(--white);
+  padding: 12px 28px; border-radius: 8px;
+  font-weight: 700; font-size: 14px; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: opacity .15s;
+}
+.btn-primary:hover { opacity: .88; }
+.btn-outline {
+  background: var(--white); color: var(--blue);
+  padding: 12px 28px; border-radius: 8px;
+  border: 2px solid var(--blue);
+  font-weight: 700; font-size: 14px; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: all .15s;
+}
+.btn-outline:hover { background: var(--blue); color: var(--white); }
+
+/* FOOTER */
+footer { background: var(--black); padding: 64px 60px 32px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.footer-brand-col a.footer-brand { font-size: 22px; font-weight: 900; color: var(--white); text-decoration: none; letter-spacing: -.5px; display: block; margin-bottom: 14px; }
+.footer-brand-col a.footer-brand span { color: var(--blue); }
+.footer-brand-col p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 280px; margin-bottom: 20px; }
+.footer-social { display: flex; flex-direction: column; gap: 10px; }
+.footer-social-link { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color .15s; }
+.footer-social-link:hover { color: var(--white); }
+.footer-email { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.5); }
+.footer-col h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,0.35); margin-bottom: 18px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; transition: color .15s; }
+.footer-col ul li a:hover { color: var(--white); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; }
+.footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+/* COOKIE BAR */
+.cookie-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--black); border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 16px 32px; display: flex; align-items: center;
+  justify-content: space-between; gap: 20px; z-index: 9999;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.2);
+}
+.cookie-bar p { font-size: 12px; color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.5; }
+.cookie-bar p a { color: var(--blue); text-decoration: none; }
+.cookie-bar p a:hover { text-decoration: underline; }
+.cookie-btn {
+  background: var(--blue); color: var(--white); border: none;
+  padding: 10px 24px; border-radius: 6px; font-weight: 700;
+  font-size: 13px; cursor: pointer; white-space: nowrap;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav{padding:16px 24px;position:relative}
+  .nav-toggle{display:flex}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;gap:0;padding:8px 0 16px;border-bottom:1px solid rgba(0,0,0,0.1);box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:99}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:12px 24px;font-size:14px}
+  .nav-links .nav-cta{margin:8px 16px 0;text-align:center;display:block;border-radius:6px}
+
+  .hero{padding:52px 24px 60px}
+  .search-input{font-size:14px;padding:15px 50px 15px 18px}
+
+  .main-wrap{padding:40px 20px 60px}
+  .cats{gap:6px}
+  .cat-btn{font-size:11px;padding:6px 14px}
+
+  .faq-q{font-size:14px;padding:16px 18px}
+
+  .contact-band{padding:32px 24px}
+  .contact-btns{flex-direction:column;align-items:center}
+  .btn-primary,.btn-outline{width:100%;max-width:320px;justify-content:center}
+
+  footer{padding:48px 24px 28px}
+  .footer-grid{grid-template-columns:1fr;gap:32px;padding:0 0 32px}
+  .footer-bottom{flex-direction:column;text-align:center;gap:8px}
+
+  .cookie-bar{flex-direction:column;text-align:center;padding:16px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- COOKIE BAR -->
+<div class="cookie-bar" id="cookieBar">
+  <p>Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa <a href="termos-de-uso.html">Política de Privacidade</a>.</p>
+  <button class="cookie-btn" onclick="document.getElementById('cookieBar').style.display='none';localStorage.setItem('cookie','1')">Entendi</button>
+</div>
+
+<div class="brand-stripe"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-brand">HANDIFY<span>.</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cursos.html">Cursos</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="ajuda.html" class="active">Ajuda</a></li>
+    <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
+    <li><a href="pack-completo.html" class="nav-cta">Começar agora</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SEARCH -->
+<section class="hero">
+  <div class="hero-eyebrow">Central de Ajuda</div>
+  <h1>Como podemos te <span class="accent">ajudar?</span></h1>
+  <p class="hero-sub">Pesquise sua dúvida abaixo ou navegue pelas categorias.</p>
+
+  <div class="search-wrap">
+    <input
+      class="search-input"
+      id="searchInput"
+      type="text"
+      placeholder="Ex: como pagar, pavio, acesso ao curso…"
+      autocomplete="off"
+      spellcheck="false"
+    >
+    <svg class="search-icon" id="searchIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <button class="search-clear" id="searchClear" aria-label="Limpar busca">×</button>
+  </div>
+  <div class="search-count" id="searchCount"></div>
+</section>
+
+<!-- MAIN -->
+<main class="main-wrap">
+
+  <!-- CATEGORY CHIPS -->
+  <div class="cats" id="catBar">
+    <button class="cat-btn active" data-cat="todos">Todas as categorias</button>
+    <button class="cat-btn" data-cat="cursos">📚 Cursos</button>
+    <button class="cat-btn" data-cat="pagamentos">💳 Pagamentos</button>
+    <button class="cat-btn" data-cat="acesso">🔑 Acesso & Conta</button>
+    <button class="cat-btn" data-cat="materiais">🧴 Materiais</button>
+    <button class="cat-btn" data-cat="tecnicas">🕯️ Técnicas</button>
+    <button class="cat-btn" data-cat="vendas">💰 Vendas</button>
+  </div>
+
+  <!-- RESULT LABEL -->
+  <div class="section-label">
+    <span id="sectionLabel">Perguntas frequentes</span>
+    <span class="result-count-badge" id="resultBadge"></span>
+  </div>
+
+  <!-- FAQ ITEMS -->
+  <div id="faqList">
+
+    <!-- ── CURSOS ── -->
+    <div class="faq-group" data-group="cursos">
+      <div class="faq-group-title">📚 Cursos</div>
+
+      <div class="faq-item" data-cat="cursos" data-tags="curso comprar acesso vídeo aula plataforma">
+        <button class="faq-q">
+          <span class="faq-text">Como acesso o curso depois de comprar?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Após a confirmação do pagamento, você recebe um e-mail com o link de acesso. Clique no link, crie sua senha e já estará dentro da plataforma.</p>
+          <p>Se não receber o e-mail em até 15 minutos, confira a caixa de spam. Caso não encontre, entre em contato pelo WhatsApp.</p>
+          <a href="ajuda-como-acessar-curso.html" class="guide-link">📖 Ver guia passo a passo →</a>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="cursos" data-tags="curso quantos módulos conteúdo aulas horas">
+        <button class="faq-q">
+          <span class="faq-text">Quantas aulas têm cada curso?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Cada curso tem entre 8 e 20 aulas em vídeo, organizadas em módulos práticos. Você pode assistir no seu ritmo, pausar e retomar quando quiser — o progresso fica salvo.</p>
+          <p>Acesse a página de cada curso para ver o índice completo de conteúdo.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="cursos" data-tags="certificado certificação conclusão diploma">
+        <button class="faq-q">
+          <span class="faq-text">Recebo certificado ao concluir?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sim! Ao completar 100% das aulas, o certificado digital fica disponível para download diretamente na plataforma. Ele tem validade nacional e pode ser usado no currículo.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="cursos" data-tags="tempo prazo acesso expirar vitalício">
+        <button class="faq-q">
+          <span class="faq-text">Por quanto tempo tenho acesso ao curso?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>O acesso é <strong>vitalício</strong> — você assiste quantas vezes quiser, pelo tempo que precisar, sem data de expiração.</p>
+          <p>Atualizações de conteúdo que a instrutora fizer também ficam disponíveis automaticamente para quem já comprou.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="cursos" data-tags="mobile celular tablet assistir offline app">
+        <button class="faq-q">
+          <span class="faq-text">Posso assistir pelo celular?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sim! A plataforma é totalmente responsiva — funciona bem em celular, tablet e computador. Basta acessar pelo navegador do seu dispositivo.</p>
+          <p>Para assistir offline, recomendamos baixar os vídeos enquanto conectado ao Wi-Fi (disponível em cursos selecionados).</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="cursos" data-tags="diferença pack completo avulso individual">
+        <button class="faq-q">
+          <span class="faq-text">Qual a diferença entre um curso avulso e o Pack Completo?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Os <strong>cursos avulsos</strong> dão acesso a um curso específico — ideal se você quer aprender uma técnica determinada.</p>
+          <p>O <strong>Pack Completo</strong> dá acesso a todos os 9 cursos + 12 e-books da Handify por um único valor, com economia de mais de 60% comparado a comprar tudo separado.</p>
+          <a href="pack-completo.html" class="guide-link">🎁 Ver o Pack Completo →</a>
+        </div>
+      </div>
+
+    </div><!-- /cursos -->
+
+    <!-- ── PAGAMENTOS ── -->
+    <div class="faq-group" data-group="pagamentos">
+      <div class="faq-group-title">💳 Pagamentos</div>
+
+      <div class="faq-item" data-cat="pagamentos" data-tags="pagar pagamento pix cartão boleto forma">
+        <button class="faq-q">
+          <span class="faq-text">Quais formas de pagamento são aceitas?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Aceitamos:</p>
+          <ul>
+            <li><strong>PIX</strong> — aprovação imediata</li>
+            <li><strong>Cartão de crédito</strong> — em até 12x</li>
+            <li><strong>Boleto bancário</strong> — aprovação em até 3 dias úteis</li>
+          </ul>
+          <p>Todas as transações são processadas com segurança pela Hotmart.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="pagamentos" data-tags="parcelamento parcelas vezes crédito">
+        <button class="faq-q">
+          <span class="faq-text">Posso parcelar a compra?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sim! No cartão de crédito, você pode parcelar em até <strong>12x</strong>. O Pack Completo, por exemplo, fica a partir de <strong>12x de R$29,70</strong>.</p>
+          <p>As parcelas são sem juros da Handify — os juros de parcelamento dependem da operadora do seu cartão.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="pagamentos" data-tags="reembolso devolução garantia cancelar desistir">
+        <button class="faq-q">
+          <span class="faq-text">Tem garantia? Posso pedir reembolso?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sim! Todos os produtos têm <strong>garantia de 7 dias</strong> após a compra. Se por qualquer motivo você não ficar satisfeita, basta solicitar o estorno e devolvemos 100% do valor pago — sem perguntas.</p>
+          <p>Para solicitar, envie um e-mail para <strong>contato@handify.com.br</strong> com o número do seu pedido.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="pagamentos" data-tags="nota fiscal recibo comprovante cupom">
+        <button class="faq-q">
+          <span class="faq-text">Recebo nota fiscal ou comprovante?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Você recebe um comprovante de compra por e-mail logo após a confirmação do pagamento. Para nota fiscal, entre em contato com nossa equipe em <strong>contato@handify.com.br</strong>.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="pagamentos" data-tags="pix aprovação acesso liberado demora">
+        <button class="faq-q">
+          <span class="faq-text">Fiz o PIX — quando o acesso é liberado?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>O acesso é liberado <strong>automaticamente em poucos minutos</strong> após a confirmação do PIX. Você receberá um e-mail com as instruções de acesso.</p>
+          <p>Se passar de 30 minutos sem receber, entre em contato via WhatsApp que resolvemos na hora.</p>
+        </div>
+      </div>
+
+    </div><!-- /pagamentos -->
+
+    <!-- ── ACESSO & CONTA ── -->
+    <div class="faq-group" data-group="acesso">
+      <div class="faq-group-title">🔑 Acesso & Conta</div>
+
+      <div class="faq-item" data-cat="acesso" data-tags="senha esqueci redefinir recuperar login entrar">
+        <button class="faq-q">
+          <span class="faq-text">Esqueci minha senha. Como recuperar?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Na tela de login da plataforma, clique em <strong>"Esqueci minha senha"</strong>. Você receberá um e-mail com um link para criar uma nova senha em poucos minutos.</p>
+          <p>Se não receber o e-mail, cheque a caixa de spam ou entre em contato pelo WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="acesso" data-tags="e-mail email mudar alterar conta cadastro">
+        <button class="faq-q">
+          <span class="faq-text">Posso mudar o e-mail da minha conta?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sim. Acesse as configurações da sua conta na plataforma e atualize o e-mail. Caso tenha dificuldade, entre em contato com nosso suporte pelo WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="acesso" data-tags="dispositivos aparelhos simultâneo compartilhar acesso">
+        <button class="faq-q">
+          <span class="faq-text">Posso acessar em mais de um dispositivo?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sim! Você pode acessar pelo celular, tablet e computador com o mesmo login. O acesso é pessoal e intransferível — não é permitido compartilhar a conta com outras pessoas.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="acesso" data-tags="não consigo entrar erro login problema técnico">
+        <button class="faq-q">
+          <span class="faq-text">Não consigo entrar na plataforma. O que fazer?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Siga estes passos:</p>
+          <ol>
+            <li>Limpe o cache do navegador e tente novamente</li>
+            <li>Tente em outro navegador (Chrome ou Firefox)</li>
+            <li>Verifique se o e-mail e senha estão corretos</li>
+            <li>Tente redefinir a senha pelo link "Esqueci minha senha"</li>
+          </ol>
+          <p>Se ainda assim não funcionar, fale com a gente pelo WhatsApp que resolvemos rapidinho.</p>
+        </div>
+      </div>
+
+    </div><!-- /acesso -->
+
+    <!-- ── MATERIAIS ── -->
+    <div class="faq-group" data-group="materiais">
+      <div class="faq-group-title">🧴 Materiais</div>
+
+      <div class="faq-item" data-cat="materiais" data-tags="cera vela vegetal soja parafina qual melhor usar">
+        <button class="faq-q">
+          <span class="faq-text">Qual cera é melhor para velas: soja ou parafina?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Depende do seu objetivo:</p>
+          <ul>
+            <li><strong>Cera de soja</strong> — queima mais limpa, é de origem vegetal e tem excelente fixação de aroma. Ideal para velas premium e mercado natural.</li>
+            <li><strong>Parafina</strong> — mais barata e com acabamento branco mais nítido. Boa para velas decorativas.</li>
+          </ul>
+          <p>Para velas que perfumam de verdade, recomendamos a <strong>cera vegetal (soja ou coco)</strong> com essência de qualidade.</p>
+          <a href="vela-aroma-explosao.html" class="guide-link">📖 Ler: Por que sua vela não perfuma →</a>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="materiais" data-tags="essência fragrância quantidade porcentagem perfume aroma">
+        <button class="faq-q">
+          <span class="faq-text">Quanta essência devo usar na vela?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>A proporção ideal é de <strong>8% a 12%</strong> de essência em relação ao peso da cera. Comece com 10% e ajuste conforme os testes.</p>
+          <ul>
+            <li>Menos de 8%: aroma fraco</li>
+            <li>Entre 8% e 12%: zona ideal</li>
+            <li>Acima de 12%: risco de "suamento" e pavio entupido</li>
+          </ul>
+          <a href="vela-aroma-explosao.html" class="guide-link">📖 Guia completo de aroma em velas →</a>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="materiais" data-tags="pavio tamanho escolher qual usar diâmetro">
+        <button class="faq-q">
+          <span class="faq-text">Como escolho o pavio certo para minha vela?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>O pavio é escolhido pelo <strong>diâmetro do recipiente</strong>:</p>
+          <ul>
+            <li>Até 7 cm → 1 pavio</li>
+            <li>7,5 a 10 cm → 2 pavios</li>
+            <li>Acima de 10 cm → 3 ou mais pavios</li>
+          </ul>
+          <p>Sempre faça um teste de queima antes de finalizar o lote. Mantenha o pavio aparado em <strong>0,5 cm</strong> antes de acender.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="materiais" data-tags="sabonete glicerina base ingredientes matéria prima comprar">
+        <button class="faq-q">
+          <span class="faq-text">Onde compro a base de glicerina para sabonetes?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>A base de glicerina transparente ou branca é encontrada em lojas de insumos para cosméticos e artesanato. Algumas opções:</p>
+          <ul>
+            <li>Lojas físicas de produtos para artesanato (pesquise na sua cidade)</li>
+            <li>Mercado Livre e Amazon — busque por "base glicerina melt and pour"</li>
+            <li>Fornecedores especializados como Drogalmaster e Petinatti</li>
+          </ul>
+          <p>Prefira sempre bases certificadas e com laudo de qualidade.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="materiais" data-tags="temperatura derretimento cera essência quando adicionar">
+        <button class="faq-q">
+          <span class="faq-text">Em qual temperatura adiciono a essência na cera?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Adicione a essência quando a cera estiver entre <strong>60°C e 70°C</strong> — nunca acima disso.</p>
+          <p>Acima de 70°C os compostos aromáticos se evaporam e o aroma fica muito mais fraco. Use um termômetro culinário para garantir a temperatura correta.</p>
+          <p>Após adicionar, misture por no mínimo 2 minutos para incorporar bem.</p>
+        </div>
+      </div>
+
+    </div><!-- /materiais -->
+
+    <!-- ── TÉCNICAS ── -->
+    <div class="faq-group" data-group="tecnicas">
+      <div class="faq-group-title">🕯️ Técnicas</div>
+
+      <div class="faq-item" data-cat="tecnicas" data-tags="cura tempo esperar vela secar pronto usar">
+        <button class="faq-q">
+          <span class="faq-text">Por quanto tempo a vela precisa curar antes de usar?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>O tempo de cura ideal é de <strong>48 a 72 horas</strong> em temperatura ambiente, longe de correntes de ar.</p>
+          <p>Durante a cura, as moléculas de essência se ligam completamente à cera — quem testa antes desse prazo geralmente acha o aroma mais fraco do que ele realmente é.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="tecnicas" data-tags="vela afundar buraco cratera centro problema defeito">
+        <button class="faq-q">
+          <span class="faq-text">Minha vela afundou no centro. O que aconteceu?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Esse afundamento (chamado "sinhole") acontece porque a cera contrai ao esfriar. É normal e tem solução fácil:</p>
+          <ul>
+            <li>Faça um furo no centro com um palito antes de solidificar completamente</li>
+            <li>Complete com uma segunda camada de cera a 70°C</li>
+            <li>A cera de soja tem menor contração que a parafina</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="tecnicas" data-tags="sabonete bolhas ar como evitar problema produção">
+        <button class="faq-q">
+          <span class="faq-text">Meu sabonete ficou cheio de bolhas. Como evitar?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>As bolhas surgem quando a base é despejada quente demais ou com agitação excessiva. Para evitar:</p>
+          <ul>
+            <li>Derreta a base no micro-ondas em intervalos de 30 segundos</li>
+            <li>Despeje suavemente, inclinando o molde</li>
+            <li>Borrife álcool 70% na superfície logo após despejar — isso estoura as bolhas</li>
+            <li>Deixe esfriar em local sem corrente de ar</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="tecnicas" data-tags="aroma fraco vela não cheira não perfuma problema">
+        <button class="faq-q">
+          <span class="faq-text">Por que minha vela não perfuma bem quando queima?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Os principais motivos são:</p>
+          <ul>
+            <li><strong>Essência de baixa qualidade</strong> — invista em essências com mínimo 8% de concentração aromática</li>
+            <li><strong>Temperatura incorreta</strong> — adicionou a essência acima de 70°C</li>
+            <li><strong>Pouca essência</strong> — use entre 8% e 12% do peso da cera</li>
+            <li><strong>Pavio errado</strong> — pavio fino não derrete o "pool de cera" suficiente</li>
+            <li><strong>Vela não curou</strong> — aguarde 48h antes de testar</li>
+          </ul>
+          <a href="vela-aroma-explosao.html" class="guide-link">📖 Guia completo sobre aroma em velas →</a>
+        </div>
+      </div>
+
+    </div><!-- /tecnicas -->
+
+    <!-- ── VENDAS ── -->
+    <div class="faq-group" data-group="vendas">
+      <div class="faq-group-title">💰 Vendas</div>
+
+      <div class="faq-item" data-cat="vendas" data-tags="preço precificar quanto cobrar margem lucro vender">
+        <button class="faq-q">
+          <span class="faq-text">Como precificar meu artesanato?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>A fórmula básica é: <strong>Custo total × 3</strong> (markup mínimo para cobrir materiais, tempo e lucro).</p>
+          <p>Inclua no custo total:</p>
+          <ul>
+            <li>Materiais e embalagem</li>
+            <li>Sua hora de trabalho (defina um valor por hora)</li>
+            <li>Taxas de plataforma ou marketplace</li>
+            <li>Frete (se for pagar)</li>
+          </ul>
+          <p>Depois, pesquise concorrentes e ajuste conforme o posicionamento desejado.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="vendas" data-tags="onde vender instagram WhatsApp etsy marketplace loja">
+        <button class="faq-q">
+          <span class="faq-text">Onde devo começar a vender meu artesanato?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Para quem está começando, recomendamos:</p>
+          <ul>
+            <li><strong>Instagram + WhatsApp</strong> — custo zero, alcance local, ideal para as primeiras vendas</li>
+            <li><strong>Elo7</strong> — marketplace brasileiro especializado em artesanato</li>
+            <li><strong>Feiras locais</strong> — contato direto com o cliente, ótimo para validar produtos</li>
+          </ul>
+          <p>Comece por 1 ou 2 canais, domine, depois expanda.</p>
+          <a href="primeira-venda-7-dias.html" class="guide-link">📖 Sua primeira venda em 7 dias →</a>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="vendas" data-tags="embalagem apresentação produto diferencial vender mais">
+        <button class="faq-q">
+          <span class="faq-text">A embalagem realmente faz diferença nas vendas?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Faz toda a diferença. Estudos mostram que até 70% da decisão de compra é influenciada pela apresentação visual do produto.</p>
+          <p>Uma embalagem bem feita:</p>
+          <ul>
+            <li>Justifica um preço mais alto</li>
+            <li>Gera mais fotos e compartilhamentos nas redes sociais</li>
+            <li>Fideliza clientes (experiência de unboxing)</li>
+          </ul>
+          <a href="vela-embalagens.html" class="guide-link">📖 Como a embalagem muda o preço →</a>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="vendas" data-tags="fotos produto fotografia celular instagram qualidade">
+        <button class="faq-q">
+          <span class="faq-text">Como tirar boas fotos dos meus produtos só com o celular?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Dicas básicas que fazem grande diferença:</p>
+          <ul>
+            <li><strong>Luz natural</strong> — fotografe perto de uma janela durante o dia, evite flash</li>
+            <li><strong>Fundo limpo</strong> — use papel cartão branco ou textura neutra</li>
+            <li><strong>Vários ângulos</strong> — frente, cima, detalhe e "em uso"</li>
+            <li><strong>Lente limpa</strong> — parece óbvio, mas muda muito</li>
+            <li><strong>Edição básica</strong> — Lightroom Mobile (gratuito) para ajustar brilho e contraste</li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /vendas -->
+
+  </div><!-- #faqList -->
+
+  <!-- EMPTY STATE -->
+  <div class="empty-state" id="emptyState">
+    <div class="emoji">🔍</div>
+    <h3>Nenhum resultado encontrado</h3>
+    <p>Não encontramos nada para essa busca. Tente outras palavras-chave ou fale diretamente com a gente.</p>
+    <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener">Falar com o suporte →</a>
+  </div>
+
+  <!-- CONTACT BAND -->
+  <div class="contact-band">
+    <h2>Não encontrou o que procurava?</h2>
+    <p>Nossa equipe responde pelo WhatsApp em menos de 24h nos dias úteis.</p>
+    <div class="contact-btns">
+      <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Chamar no WhatsApp
+      </a>
+      <a href="contato.html" class="btn-outline">
+        Enviar mensagem →
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<div class="brand-stripe"></div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <a href="index.html" class="footer-brand">HANDIFY<span>.</span></a>
+      <p>Plataforma brasileira de cursos de artesanato. Aprenda com quem faz de verdade e transforme sua habilidade em negócio.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/handify.br/" target="_blank" rel="noopener" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @handify.br
+        </a>
+        <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <span class="footer-email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          contato@handify.com.br
+        </span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="ajuda.html">Central de Ajuda</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="seja-instrutora.html">Seja instrutora</a></li>
+        <li><a href="pack-completo.html">Pack Completo</a></li>
+        <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
+        <li><a href="termos-de-uso.html">Termos de uso</a></li>
+        <li><a href="contato.html">Fale conosco</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Handify™ · Todos os direitos reservados</p>
+    <p>Feito com cuidado no Brasil 🇧🇷</p>
+  </div>
+</footer>
+
+<script>
+// Cookie bar
+if(localStorage.getItem('cookie')) document.getElementById('cookieBar').style.display='none';
+
+// Nav hamburger
+document.getElementById('navToggle').addEventListener('click', function(){
+  this.classList.toggle('open');
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// ── FAQ DATA ──
+// Each item is identified by its DOM element; search reads text from DOM.
+
+// ── ACCORDION ──
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = this.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    // close all
+    document.querySelectorAll('.faq-item.open').forEach(function(el){ el.classList.remove('open'); });
+    if(!isOpen) item.classList.add('open');
+  });
+});
+
+// ── CATEGORY FILTER ──
+var activeCat = 'todos';
+document.querySelectorAll('.cat-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.cat-btn').forEach(function(b){ b.classList.remove('active'); });
+    this.classList.add('active');
+    activeCat = this.dataset.cat;
+    applyFilter();
+  });
+});
+
+// ── SEARCH ──
+var searchInput = document.getElementById('searchInput');
+var searchClear = document.getElementById('searchClear');
+var searchIcon  = document.getElementById('searchIcon');
+
+searchInput.addEventListener('input', function(){
+  var hasVal = this.value.trim().length > 0;
+  searchClear.style.display = hasVal ? 'block' : 'none';
+  searchIcon.style.display  = hasVal ? 'none'  : 'block';
+  applyFilter();
+});
+
+searchClear.addEventListener('click', function(){
+  searchInput.value = '';
+  searchClear.style.display = 'none';
+  searchIcon.style.display  = 'block';
+  searchInput.focus();
+  applyFilter();
+});
+
+// ── APPLY FILTER ──
+function applyFilter(){
+  var query = searchInput.value.trim().toLowerCase();
+  var items = document.querySelectorAll('.faq-item');
+  var groups = document.querySelectorAll('.faq-group');
+  var visible = 0;
+
+  items.forEach(function(item){
+    var cat     = item.dataset.cat;
+    var tags    = (item.dataset.tags || '').toLowerCase();
+    var qText   = item.querySelector('.faq-text').textContent.toLowerCase();
+    var aText   = item.querySelector('.faq-a').textContent.toLowerCase();
+
+    var catOk  = (activeCat === 'todos' || cat === activeCat);
+    var srchOk = !query || qText.includes(query) || aText.includes(query) || tags.includes(query);
+
+    if(catOk && srchOk){
+      item.classList.remove('hidden');
+      visible++;
+      // Highlight
+      if(query) highlight(item, query);
+      else clearHighlight(item);
+    } else {
+      item.classList.add('hidden');
+      clearHighlight(item);
+    }
+  });
+
+  // Hide empty groups
+  groups.forEach(function(g){
+    var anyVisible = Array.from(g.querySelectorAll('.faq-item')).some(function(i){ return !i.classList.contains('hidden'); });
+    g.style.display = anyVisible ? '' : 'none';
+  });
+
+  // Empty state
+  document.getElementById('emptyState').style.display = visible === 0 ? 'block' : 'none';
+
+  // Count badge
+  var badge = document.getElementById('resultBadge');
+  var label = document.getElementById('sectionLabel');
+  if(query || activeCat !== 'todos'){
+    badge.textContent = visible + (visible === 1 ? ' resultado' : ' resultados');
+    label.textContent = query ? 'Resultados para "' + searchInput.value.trim() + '"' : 'Filtrando por categoria';
+  } else {
+    badge.textContent = '';
+    label.textContent = 'Perguntas frequentes';
+  }
+}
+
+// ── HIGHLIGHT ──
+function highlight(item, query){
+  var spans = item.querySelectorAll('.faq-text');
+  spans.forEach(function(span){
+    var orig = span.dataset.orig || span.textContent;
+    span.dataset.orig = orig;
+    var re = new RegExp('(' + escapeRe(query) + ')', 'gi');
+    span.innerHTML = orig.replace(re, '<mark>$1</mark>');
+  });
+}
+
+function clearHighlight(item){
+  item.querySelectorAll('.faq-text').forEach(function(span){
+    if(span.dataset.orig) span.textContent = span.dataset.orig;
+  });
+}
+
+function escapeRe(s){
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+</script>
+</body>
+</html>
