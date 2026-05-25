@@ -84,10 +84,18 @@ body { font-family:'Montserrat',Arial,Helvetica,sans-serif; background:var(--whi
 .step-right p strong { color:var(--black); font-weight:700; }
 .step-right p:last-child { margin-bottom:0; }
 
-/* SCREENSHOT */
-.screenshot-wrap { margin:14px 0 0; }
-.screenshot-wrap img { width:100%; max-width:340px; border-radius:20px; border:1px solid rgba(0,0,0,0.1); box-shadow:0 8px 28px rgba(0,0,0,0.12); display:block; }
-.img-caption { font-size:11px; color:var(--gray-mid); margin-top:8px; font-style:italic; max-width:340px; }
+/* SCREENSHOT — padrão portrait mobile */
+.screenshot-wrap { margin:18px 0 0; text-align:center; }
+.screenshot-wrap img {
+  display:block;
+  margin:0 auto;
+  width:100%;
+  max-width:420px;
+  border-radius:20px;
+  border:1px solid rgba(0,0,0,0.1);
+  box-shadow:0 8px 28px rgba(0,0,0,0.12);
+}
+.img-caption { font-size:11px; color:var(--gray-mid); margin-top:10px; font-style:italic; text-align:center; }
 
 /* SUCCESS BLOCK */
 .success-block { background:linear-gradient(135deg,#f0fdf4,#dcfce7); border:1.5px solid #86efac; border-radius:16px; padding:28px 32px; text-align:center; margin-top:8px; }
