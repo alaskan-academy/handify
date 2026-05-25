@@ -56,7 +56,28 @@ body { font-family:'Montserrat',Arial,Helvetica,sans-serif; background:var(--whi
 .hero-meta span { font-size:12px; color:rgba(255,255,255,0.35); }
 
 /* LAYOUT */
-.page-wrap { max-width:960px; margin:0 auto; padding:56px 60px 80px; }
+.page-wrap { max-width:1100px; margin:0 auto; padding:56px 60px 80px; display:grid; grid-template-columns:1fr 260px; gap:60px; align-items:start; }
+
+/* SIDEBAR */
+.guide-sidebar { position:sticky; top:88px; display:flex; flex-direction:column; gap:20px; }
+.sidebar-card { background:var(--off-white); border:1px solid rgba(0,0,0,0.08); border-radius:14px; padding:22px 24px; }
+.sidebar-card h4 { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--gray-mid); margin-bottom:16px; }
+.toc-list { list-style:none; display:flex; flex-direction:column; gap:4px; }
+.toc-list a { display:flex; align-items:center; gap:10px; font-size:13px; color:var(--gray-dark); text-decoration:none; padding:6px 8px; border-radius:8px; transition:background .15s,color .15s; }
+.toc-list a:hover { background:rgba(82,136,239,0.08); color:var(--blue); }
+.toc-num { width:22px; height:22px; border-radius:50%; background:var(--blue); color:#fff; font-size:11px; font-weight:700; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; }
+.related-list { list-style:none; display:flex; flex-direction:column; gap:12px; }
+.related-list li { display:flex; flex-direction:column; gap:2px; }
+.related-list a { font-size:13px; font-weight:600; color:var(--blue); text-decoration:none; }
+.related-list a:hover { text-decoration:underline; }
+.related-list span { font-size:11px; color:var(--gray-mid); }
+.sidebar-cta { background:var(--blue); border-radius:14px; padding:22px 24px; }
+.sidebar-cta p { font-size:13px; color:rgba(255,255,255,0.8); line-height:1.6; margin-bottom:14px; }
+.sidebar-cta a { display:block; background:#fff; color:var(--blue); text-align:center; padding:10px 14px; border-radius:8px; font-weight:700; font-size:13px; text-decoration:none; transition:opacity .15s; }
+.sidebar-cta a:hover { opacity:.9; }
+
+/* MAIN CONTENT column */
+.guide-main { min-width:0; }
 
 /* OS TABS */
 .os-tabs { display:flex; gap:0; margin-bottom:48px; border:1.5px solid rgba(0,0,0,0.1); border-radius:10px; overflow:hidden; }
@@ -157,6 +178,10 @@ footer{background:var(--black);padding:64px 60px 32px}
 .cookie-btn{background:var(--blue);color:var(--white);border:none;padding:10px 24px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap;font-family:'Montserrat',Arial,sans-serif}
 
 /* MOBILE */
+@media(max-width:900px){
+  .page-wrap{grid-template-columns:1fr;gap:0;padding:36px 24px 60px}
+  .guide-sidebar{position:static;margin-top:48px}
+}
 @media(max-width:768px){
   .nav{padding:16px 24px;position:relative}
   .nav-toggle{display:flex}
@@ -167,7 +192,6 @@ footer{background:var(--black);padding:64px 60px 32px}
   .nav-links .nav-cta{margin:8px 16px 0;text-align:center;display:block;border-radius:6px}
   .breadcrumb{padding:12px 20px}
   .page-hero{padding:40px 24px 44px}
-  .page-wrap{padding:36px 20px 60px}
   .step-block{flex-direction:column;gap:12px}
   .step-left{flex-direction:row;align-items:center}
   .step-line{display:none}
@@ -222,6 +246,7 @@ footer{background:var(--black);padding:64px 60px 32px}
 </section>
 
 <div class="page-wrap">
+<div class="guide-main">
 
   <a href="ajuda-como-acessar-plataforma.html" class="back-link">← Voltar: Como acessar a plataforma</a>
 
@@ -406,6 +431,46 @@ footer{background:var(--black);padding:64px 60px 32px}
       <button class="helpful-btn" onclick="vote(this,'nao')">👎 Ainda preciso de ajuda</button>
     </div>
   </div>
+
+</div><!-- /guide-main -->
+
+<!-- SIDEBAR -->
+<aside class="guide-sidebar">
+  <div class="sidebar-card">
+    <h4>Neste guia</h4>
+    <ul class="toc-list">
+      <li><a href="#section-android" onclick="switchOS('android',document.querySelectorAll('.os-tab')[0])"><span class="toc-num" style="background:var(--android-green);font-size:13px;width:24px;height:24px">🤖</span> Android (Chrome)</a></li>
+      <li><a href="#section-ios" onclick="switchOS('ios',document.querySelectorAll('.os-tab')[1])"><span class="toc-num" style="background:#555;font-size:13px;width:24px;height:24px">🍎</span> iPhone (Safari)</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-cta">
+    <p>Quer ter todos os cursos e e-books da Handify de uma vez só?</p>
+    <a href="pack-completo.html">Ver Pack Completo →</a>
+  </div>
+
+  <div class="sidebar-card">
+    <h4>Guias relacionados</h4>
+    <ul class="related-list">
+      <li>
+        <a href="ajuda-como-acessar-plataforma.html">Como acessar a plataforma</a>
+        <span>Login & Conta</span>
+      </li>
+      <li>
+        <a href="ajuda.html">Ver toda a Central de Ajuda →</a>
+        <span>Central de Ajuda</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sidebar-card" style="background:#fff8ed;border-color:#f97316;">
+    <h4 style="color:#c2410c">Precisa de suporte?</h4>
+    <p style="font-size:13px;color:#7c2d12;margin-bottom:14px;line-height:1.6">Nossa equipe responde em menos de 24h nos dias úteis.</p>
+    <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;background:#22c55e;color:#fff;padding:10px 14px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;justify-content:center">
+      💬 WhatsApp
+    </a>
+  </div>
+</aside>
 
 </div><!-- /page-wrap -->
 
