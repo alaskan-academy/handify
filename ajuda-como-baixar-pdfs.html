@@ -83,8 +83,23 @@ body { font-family:'Montserrat',Arial,Helvetica,sans-serif; background:var(--whi
 .sidebar-cta a { display:block; background:#fff; color:var(--blue); text-align:center; padding:10px 14px; border-radius:8px; font-weight:700; font-size:13px; text-decoration:none; transition:opacity .15s; }
 .sidebar-cta a:hover { opacity:.9; }
 
+/* TOC groups — only active shows */
+.toc-group { display:none; }
+.toc-group.active { display:block; }
+
 /* MAIN CONTENT */
 .guide-main { min-width:0; }
+
+/* PLATFORM TABS */
+.platform-tabs { display:flex; margin-bottom:44px; border-radius:12px; overflow:hidden; border:2px solid rgba(0,0,0,0.1); }
+.platform-tab { flex:1; padding:16px 20px; background:var(--off-white); border:none; font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:700; color:var(--gray-mid); cursor:pointer; transition:background .2s,color .2s; text-align:center; line-height:1.4; }
+.platform-tab:first-child { border-right:2px solid rgba(0,0,0,0.1); }
+.platform-tab.active { background:var(--blue); color:var(--white); }
+.platform-tab .tab-sub { display:block; font-size:10px; font-weight:500; opacity:.75; margin-top:2px; }
+
+/* TAB CONTENT */
+.tab-content { display:none; }
+.tab-content.active { display:block; }
 
 /* STEPS */
 .step-block { margin-bottom:48px; }
@@ -165,6 +180,7 @@ footer{background:var(--black);padding:64px 60px 32px}
   .nav-links .nav-cta{margin:8px 16px 0;text-align:center;display:block;border-radius:6px}
   .breadcrumb{padding:12px 20px}
   .page-hero{padding:40px 24px 44px}
+  .platform-tab { padding:14px 12px; font-size:13px; }
   .screenshot-wrap.landscape img{width:100%}
   footer{padding:48px 24px 28px}
   .footer-grid{grid-template-columns:1fr;gap:32px;padding:0 0 32px}
@@ -205,11 +221,11 @@ footer{background:var(--black);padding:64px 60px 32px}
 <section class="page-hero">
   <div class="hero-eyebrow">Materiais de Apoio</div>
   <h1>Como baixar os PDFs e materiais das suas aulas</h1>
-  <p>Dentro de cada aula pode haver receitas, listas de materiais e outros arquivos para download — veja como acessá-los.</p>
+  <p>Dentro de cada aula pode haver receitas, listas de materiais e outros arquivos para download — veja como acessá-los na sua plataforma.</p>
   <div class="hero-meta">
-    <span>⏱ 1 min</span>
+    <span>⏱ 2 min</span>
     <span>📅 Atualizado em maio de 2026</span>
-    <span>📄 3 passos</span>
+    <span>✨ Nova plataforma & Anterior</span>
   </div>
 </section>
 
@@ -218,52 +234,136 @@ footer{background:var(--black);padding:64px 60px 32px}
 
   <a href="ajuda.html" class="back-link">← Voltar para a Central de Ajuda</a>
 
-  <!-- PASSO 1 -->
-  <div class="step-block" id="passo1">
-    <div class="step-header">
-      <div class="step-num">1</div>
-      <div class="step-title">Abra a aula</div>
-    </div>
-    <p class="step-desc">Acesse o curso e clique na aula que contém o material que você quer baixar. A aula será aberta com o vídeo no centro da tela.</p>
-    <div class="screenshot-wrap landscape">
-      <img src="/prints/pdf-01-aula.png" alt="Aula aberta na plataforma Handify com vídeo no centro e lista de aulas na barra lateral">
-      <p class="img-caption">Aula aberta — o vídeo aparece no centro da tela</p>
-    </div>
+  <!-- TABS -->
+  <div class="platform-tabs" id="platformTabs">
+    <button class="platform-tab active" id="tab-nova" onclick="switchPlataforma('nova', this)">
+      ✨ Nova Plataforma
+      <span class="tab-sub">portal.handify.com.br</span>
+    </button>
+    <button class="platform-tab" id="tab-anterior" onclick="switchPlataforma('anterior', this)">
+      Plataforma Anterior
+      <span class="tab-sub">ATÉ JUL/2026</span>
+    </button>
   </div>
 
-  <hr class="step-divider">
+  <!-- ===== ABA: NOVA PLATAFORMA ===== -->
+  <div class="tab-content active" id="content-nova">
 
-  <!-- PASSO 2 -->
-  <div class="step-block" id="passo2">
-    <div class="step-header">
-      <div class="step-num">2</div>
-      <div class="step-title">Role a página para baixo</div>
+    <!-- PASSO 1 -->
+    <div class="step-block" id="nova-passo1">
+      <div class="step-header">
+        <div class="step-num">1</div>
+        <div class="step-title">Abra o curso</div>
+      </div>
+      <p class="step-desc">Na página inicial da plataforma, role para baixo e encontre o curso que você comprou. Clique na capa do curso para abri-lo.</p>
+      <div class="screenshot-wrap landscape">
+        <img src="/prints/nova-pdf-01-curso.png" alt="Página inicial da nova plataforma com capas dos cursos, um deles circulado em vermelho">
+        <p class="img-caption">Clique na capa do seu curso para acessá-lo</p>
+      </div>
     </div>
-    <p class="step-desc">Com a aula aberta, role a página para baixo. Abaixo do vídeo você encontrará as informações da aula e, mais abaixo, a seção <strong>Material de Apoio</strong>.</p>
-    <div class="screenshot-wrap landscape">
-      <img src="/prints/pdf-02-baixar-material.png" alt="Página da aula com a seção Material de Apoio visível e o botão Baixar Material circulado em vermelho">
-      <p class="img-caption">Role até encontrar a seção "Material de Apoio"</p>
-    </div>
-  </div>
 
-  <hr class="step-divider">
+    <hr class="step-divider">
 
-  <!-- PASSO 3 -->
-  <div class="step-block" id="passo3">
-    <div class="step-header">
-      <div class="step-num ok">3</div>
-      <div class="step-title">Clique em "Baixar Material"</div>
+    <!-- PASSO 2 -->
+    <div class="step-block" id="nova-passo2">
+      <div class="step-header">
+        <div class="step-num">2</div>
+        <div class="step-title">Abra a aula</div>
+      </div>
+      <p class="step-desc">Dentro do curso, clique na aula que contém os materiais que você precisa. A aula será aberta com o vídeo no centro da tela e a lista de aulas no lado direito.</p>
+      <div class="screenshot-wrap landscape">
+        <img src="/prints/nova-pdf-02-aula.png" alt="Curso aberto com vídeo em exibição e lista de aulas na lateral direita">
+        <p class="img-caption">Clique na aula para abri-la</p>
+      </div>
     </div>
-    <p class="step-desc">Na seção Material de Apoio, clique no botão <strong>Baixar Material</strong>. O arquivo será baixado automaticamente para o seu dispositivo.</p>
-    <div class="alert blue">
-      <span class="alert-icon">💡</span>
-      <div class="alert-body"><p>Nem todas as aulas possuem material de apoio. Se a seção não aparecer após rolar a página, significa que aquela aula não tem arquivo disponível para download.</p></div>
+
+    <hr class="step-divider">
+
+    <!-- PASSO 3 -->
+    <div class="step-block" id="nova-passo3">
+      <div class="step-header">
+        <div class="step-num">3</div>
+        <div class="step-title">Role a página para baixo</div>
+      </div>
+      <p class="step-desc">Com a aula aberta, role a página para baixo. Abaixo do vídeo você verá as informações da aula.</p>
     </div>
-    <div class="alert green">
-      <span class="alert-icon">✅</span>
-      <div class="alert-body"><p>O arquivo ficará salvo na pasta de <strong>Downloads</strong> do seu dispositivo e poderá ser acessado a qualquer momento, mesmo sem internet.</p></div>
+
+    <hr class="step-divider">
+
+    <!-- PASSO 4 -->
+    <div class="step-block" id="nova-passo4">
+      <div class="step-header">
+        <div class="step-num ok">4</div>
+        <div class="step-title">Em "Informações", clique no arquivo para baixar</div>
+      </div>
+      <p class="step-desc">Na seção <strong>Informações</strong>, você verá todos os arquivos disponíveis para aquela aula. <strong>Clique no nome do arquivo</strong> para fazer o download direto para o seu dispositivo.</p>
+      <div class="screenshot-wrap landscape">
+        <img src="/prints/nova-pdf-03-informacoes.png" alt="Seção Informações da aula com arquivo PDF circulado em vermelho e botão Avaliar ao lado">
+        <p class="img-caption">Clique no arquivo em "Informações" para baixá-lo</p>
+      </div>
+      <div class="alert blue">
+        <span class="alert-icon">💡</span>
+        <div class="alert-body"><p>Nem todas as aulas possuem materiais de apoio. Se a seção <strong>Informações</strong> não exibir nenhum arquivo, significa que aquela aula não tem material disponível para download.</p></div>
+      </div>
+      <div class="alert green">
+        <span class="alert-icon">✅</span>
+        <div class="alert-body"><p>O arquivo ficará salvo na pasta de <strong>Downloads</strong> do seu dispositivo e poderá ser acessado a qualquer momento, mesmo sem internet.</p></div>
+      </div>
     </div>
-  </div>
+
+  </div><!-- /tab-content nova -->
+
+  <!-- ===== ABA: PLATAFORMA ANTERIOR ===== -->
+  <div class="tab-content" id="content-anterior">
+
+    <!-- PASSO 1 -->
+    <div class="step-block" id="ant-passo1">
+      <div class="step-header">
+        <div class="step-num">1</div>
+        <div class="step-title">Abra a aula</div>
+      </div>
+      <p class="step-desc">Acesse o curso e clique na aula que contém o material que você quer baixar. A aula será aberta com o vídeo no centro da tela.</p>
+      <div class="screenshot-wrap landscape">
+        <img src="/prints/pdf-01-aula.png" alt="Aula aberta na plataforma Handify com vídeo no centro e lista de aulas na barra lateral">
+        <p class="img-caption">Aula aberta — o vídeo aparece no centro da tela</p>
+      </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <!-- PASSO 2 -->
+    <div class="step-block" id="ant-passo2">
+      <div class="step-header">
+        <div class="step-num">2</div>
+        <div class="step-title">Role a página para baixo</div>
+      </div>
+      <p class="step-desc">Com a aula aberta, role a página para baixo. Abaixo do vídeo você encontrará as informações da aula e, mais abaixo, a seção <strong>Material de Apoio</strong>.</p>
+      <div class="screenshot-wrap landscape">
+        <img src="/prints/pdf-02-baixar-material.png" alt="Página da aula com a seção Material de Apoio visível e o botão Baixar Material circulado em vermelho">
+        <p class="img-caption">Role até encontrar a seção "Material de Apoio"</p>
+      </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <!-- PASSO 3 -->
+    <div class="step-block" id="ant-passo3">
+      <div class="step-header">
+        <div class="step-num ok">3</div>
+        <div class="step-title">Clique em "Baixar Material"</div>
+      </div>
+      <p class="step-desc">Na seção Material de Apoio, clique no botão <strong>Baixar Material</strong>. O arquivo será baixado automaticamente para o seu dispositivo.</p>
+      <div class="alert blue">
+        <span class="alert-icon">💡</span>
+        <div class="alert-body"><p>Nem todas as aulas possuem material de apoio. Se a seção não aparecer após rolar a página, significa que aquela aula não tem arquivo disponível para download.</p></div>
+      </div>
+      <div class="alert green">
+        <span class="alert-icon">✅</span>
+        <div class="alert-body"><p>O arquivo ficará salvo na pasta de <strong>Downloads</strong> do seu dispositivo e poderá ser acessado a qualquer momento, mesmo sem internet.</p></div>
+      </div>
+    </div>
+
+  </div><!-- /tab-content anterior -->
 
   <!-- HELPFUL -->
   <div class="helpful-bar">
@@ -280,11 +380,25 @@ footer{background:var(--black);padding:64px 60px 32px}
 <aside class="guide-sidebar">
   <div class="sidebar-card">
     <h4>Neste guia</h4>
-    <ul class="toc-list">
-      <li><a href="#passo1"><span class="toc-num">1</span> Abrir a aula</a></li>
-      <li><a href="#passo2"><span class="toc-num">2</span> Rolar para baixo</a></li>
-      <li><a href="#passo3"><span class="toc-num">3</span> Baixar o material</a></li>
-    </ul>
+
+    <!-- TOC: Nova Plataforma -->
+    <div class="toc-group active" id="toc-nova">
+      <ul class="toc-list">
+        <li><a href="#nova-passo1"><span class="toc-num">1</span> Abrir o curso</a></li>
+        <li><a href="#nova-passo2"><span class="toc-num">2</span> Abrir a aula</a></li>
+        <li><a href="#nova-passo3"><span class="toc-num">3</span> Rolar para baixo</a></li>
+        <li><a href="#nova-passo4"><span class="toc-num">4</span> Baixar em Informações</a></li>
+      </ul>
+    </div>
+
+    <!-- TOC: Plataforma Anterior -->
+    <div class="toc-group" id="toc-anterior">
+      <ul class="toc-list">
+        <li><a href="#ant-passo1"><span class="toc-num">1</span> Abrir a aula</a></li>
+        <li><a href="#ant-passo2"><span class="toc-num">2</span> Rolar para baixo</a></li>
+        <li><a href="#ant-passo3"><span class="toc-num">3</span> Baixar o material</a></li>
+      </ul>
+    </div>
   </div>
 
   <div class="sidebar-cta">
@@ -373,6 +487,20 @@ footer{background:var(--black);padding:64px 60px 32px}
 <script>
 if(localStorage.getItem('cookie')) document.getElementById('cookieBar').style.display='none';
 document.getElementById('navToggle').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');});
+
+function switchPlataforma(plat, btn) {
+  document.querySelectorAll('.platform-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.tab-content').forEach(function(c){ c.classList.remove('active'); });
+  document.querySelectorAll('.toc-group').forEach(function(g){ g.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('content-' + plat).classList.add('active');
+  document.getElementById('toc-' + plat).classList.add('active');
+  window.scrollTo({ top: document.getElementById('platformTabs').offsetTop - 100, behavior: 'smooth' });
+}
+
+if(window.location.hash === '#anterior') {
+  switchPlataforma('anterior', document.getElementById('tab-anterior'));
+}
 
 function vote(btn, val) {
   document.querySelectorAll('.helpful-btn').forEach(function(b){ b.classList.remove('voted'); });
