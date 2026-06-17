@@ -225,7 +225,7 @@ footer{background:var(--black);padding:64px 60px 32px}
   <div class="hero-meta">
     <span>⏱ 2 min</span>
     <span>📅 Atualizado em maio de 2026</span>
-    <span>✨ Nova plataforma & Anterior</span>
+    <span>🖥 Plataforma Handify</span>
   </div>
 </section>
 
@@ -235,86 +235,10 @@ footer{background:var(--black);padding:64px 60px 32px}
   <a href="ajuda.html" class="back-link">← Voltar para a Central de Ajuda</a>
 
   <!-- TABS -->
-  <div class="platform-tabs" id="platformTabs">
-    <button class="platform-tab active" id="tab-nova" onclick="switchPlataforma('nova', this)">
-      ✨ Nova Plataforma
-      <span class="tab-sub">portal.handify.com.br</span>
-    </button>
-    <button class="platform-tab" id="tab-anterior" onclick="switchPlataforma('anterior', this)">
-      Plataforma Anterior
-      <span class="tab-sub">ATÉ JUL/2026</span>
-    </button>
-  </div>
-
   <!-- ===== ABA: NOVA PLATAFORMA ===== -->
-  <div class="tab-content active" id="content-nova">
-
-    <!-- PASSO 1 -->
-    <div class="step-block" id="nova-passo1">
-      <div class="step-header">
-        <div class="step-num">1</div>
-        <div class="step-title">Abra o curso</div>
-      </div>
-      <p class="step-desc">Na página inicial da plataforma, role para baixo e encontre o curso que você comprou. Clique na capa do curso para abri-lo.</p>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-pdf-01-curso.png" alt="Página inicial da nova plataforma com capas dos cursos, um deles circulado em vermelho">
-        <p class="img-caption">Clique na capa do seu curso para acessá-lo</p>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <!-- PASSO 2 -->
-    <div class="step-block" id="nova-passo2">
-      <div class="step-header">
-        <div class="step-num">2</div>
-        <div class="step-title">Abra a aula</div>
-      </div>
-      <p class="step-desc">Dentro do curso, clique na aula que contém os materiais que você precisa. A aula será aberta com o vídeo no centro da tela e a lista de aulas no lado direito.</p>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-pdf-02-aula.png" alt="Curso aberto com vídeo em exibição e lista de aulas na lateral direita">
-        <p class="img-caption">Clique na aula para abri-la</p>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <!-- PASSO 3 -->
-    <div class="step-block" id="nova-passo3">
-      <div class="step-header">
-        <div class="step-num">3</div>
-        <div class="step-title">Role a página para baixo</div>
-      </div>
-      <p class="step-desc">Com a aula aberta, role a página para baixo. Abaixo do vídeo você verá as informações da aula.</p>
-    </div>
-
-    <hr class="step-divider">
-
-    <!-- PASSO 4 -->
-    <div class="step-block" id="nova-passo4">
-      <div class="step-header">
-        <div class="step-num ok">4</div>
-        <div class="step-title">Em "Informações", clique no arquivo para baixar</div>
-      </div>
-      <p class="step-desc">Na seção <strong>Informações</strong>, você verá todos os arquivos disponíveis para aquela aula. <strong>Clique no nome do arquivo</strong> para fazer o download direto para o seu dispositivo.</p>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-pdf-03-informacoes.png" alt="Seção Informações da aula com arquivo PDF circulado em vermelho e botão Avaliar ao lado">
-        <p class="img-caption">Clique no arquivo em "Informações" para baixá-lo</p>
-      </div>
-      <div class="alert blue">
-        <span class="alert-icon">💡</span>
-        <div class="alert-body"><p>Nem todas as aulas possuem materiais de apoio. Se a seção <strong>Informações</strong> não exibir nenhum arquivo, significa que aquela aula não tem material disponível para download.</p></div>
-      </div>
-      <div class="alert green">
-        <span class="alert-icon">✅</span>
-        <div class="alert-body"><p>O arquivo ficará salvo na pasta de <strong>Downloads</strong> do seu dispositivo e poderá ser acessado a qualquer momento, mesmo sem internet.</p></div>
-      </div>
-    </div>
-
-  </div><!-- /tab-content nova -->
 
   <!-- ===== ABA: PLATAFORMA ANTERIOR ===== -->
-  <div class="tab-content" id="content-anterior">
+  <div id="content-anterior">
 
     <!-- PASSO 1 -->
     <div class="step-block" id="ant-passo1">
@@ -382,17 +306,8 @@ footer{background:var(--black);padding:64px 60px 32px}
     <h4>Neste guia</h4>
 
     <!-- TOC: Nova Plataforma -->
-    <div class="toc-group active" id="toc-nova">
-      <ul class="toc-list">
-        <li><a href="#nova-passo1"><span class="toc-num">1</span> Abrir o curso</a></li>
-        <li><a href="#nova-passo2"><span class="toc-num">2</span> Abrir a aula</a></li>
-        <li><a href="#nova-passo3"><span class="toc-num">3</span> Rolar para baixo</a></li>
-        <li><a href="#nova-passo4"><span class="toc-num">4</span> Baixar em Informações</a></li>
-      </ul>
-    </div>
-
     <!-- TOC: Plataforma Anterior -->
-    <div class="toc-group" id="toc-anterior">
+    <div id="toc-anterior">
       <ul class="toc-list">
         <li><a href="#ant-passo1"><span class="toc-num">1</span> Abrir a aula</a></li>
         <li><a href="#ant-passo2"><span class="toc-num">2</span> Rolar para baixo</a></li>
@@ -498,21 +413,6 @@ footer{background:var(--black);padding:64px 60px 32px}
 <script>
 if(localStorage.getItem('cookie')) document.getElementById('cookieBar').style.display='none';
 document.getElementById('navToggle').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');});
-
-function switchPlataforma(plat, btn) {
-  document.querySelectorAll('.platform-tab').forEach(function(t){ t.classList.remove('active'); });
-  document.querySelectorAll('.tab-content').forEach(function(c){ c.classList.remove('active'); });
-  document.querySelectorAll('.toc-group').forEach(function(g){ g.classList.remove('active'); });
-  btn.classList.add('active');
-  document.getElementById('content-' + plat).classList.add('active');
-  document.getElementById('toc-' + plat).classList.add('active');
-  window.scrollTo({ top: document.getElementById('platformTabs').offsetTop - 100, behavior: 'smooth' });
-}
-
-if(window.location.hash === '#anterior') {
-  switchPlataforma('anterior', document.getElementById('tab-anterior'));
-}
-
 function vote(btn, val) {
   document.querySelectorAll('.helpful-btn').forEach(function(b){ b.classList.remove('voted'); });
   btn.classList.add('voted');

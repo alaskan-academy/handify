@@ -132,21 +132,21 @@ body { font-family:'Montserrat',Arial,Helvetica,sans-serif; background:var(--whi
 
 /* FOOTER */
 footer{background:var(--black);padding:64px 60px 32px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
-.footer-brand-col a.footer-brand{font-size:22px;font-weight:900;color:var(--white);text-decoration:none;letter-spacing:-.5px;display:block;margin-bottom:14px}
-.footer-brand-col a.footer-brand span{color:var(--blue)}
-.footer-brand-col p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;max-width:280px;margin-bottom:20px}
-.footer-social{display:flex;flex-direction:column;gap:10px}
-.footer-social-link{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .15s}
+.footer-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-brand-col .footer-brand{font-size:22px;font-weight:900;color:var(--white);text-decoration:none;letter-spacing:-.5px;display:block;margin-bottom:12px}
+.footer-brand-col .footer-brand span{color:var(--blue)}
+.footer-brand-col p{font-size:13px;color:var(--gray-mid);line-height:1.7;max-width:260px}
+.footer-social{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.footer-social-link{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .15s}
 .footer-social-link:hover{color:var(--white)}
-.footer-email{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5)}
-.footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.35);margin-bottom:18px}
+.footer-email{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-mid)}
+.footer-col h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-mid);margin-bottom:16px}
 .footer-col ul{list-style:none}
 .footer-col ul li{margin-bottom:10px}
 .footer-col ul li a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .15s}
 .footer-col ul li a:hover{color:var(--white)}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px}
-.footer-bottom p{font-size:12px;color:rgba(255,255,255,0.25)}
+.footer-bottom{max-width:1140px;margin:32px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:var(--gray-mid)}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -207,32 +207,13 @@ footer{background:var(--black);padding:64px 60px 32px}
 <!-- MAIN -->
 <main class="main">
 
-  <div class="section-label" id="sectionLabel">Guias disponíveis · 5 artigos</div>
+  <div class="section-label" id="sectionLabel">Guias disponíveis · 4 artigos</div>
 
   <div class="articles-grid" id="articlesGrid">
 
-    <!-- CARD: NOVA PLATAFORMA — SENHA -->
-    <a href="ajuda-nova-plataforma-senha.html" class="article-card"
-       data-search="nova plataforma senha recuperar alterar esqueci perfil dados acesso">
-      <div class="article-thumb" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">
-        <div class="thumb-solid">🔑</div>
-        <div class="article-thumb-overlay">
-          <span class="article-tag" style="background:#7c3aed">Nova plataforma</span>
-        </div>
-      </div>
-      <div class="article-body">
-        <h3>Como recuperar ou alterar a senha</h3>
-        <p>Esqueceu a senha ou quer trocar pela senha padrão? Veja como recuperar o acesso por e-mail ou alterar a senha dentro do seu perfil.</p>
-        <div class="article-meta">
-          <span>⏱ 2 min · Recuperar & Alterar</span>
-          <span class="article-read">Ler guia →</span>
-        </div>
-      </div>
-    </a>
-
     <!-- CARD 1: ACESSAR PLATAFORMA -->
     <a href="ajuda-como-acessar-plataforma.html" class="article-card"
-       data-search="acesso login entrar plataforma email senha erro cadeado curso notificação nova plataforma portal whatsapp termos">
+       data-search="acesso login entrar plataforma email senha erro cadeado curso notificação whatsapp termos">
       <div class="article-thumb thumb-blue">
         <div class="thumb-solid">🔑</div>
         <div class="article-thumb-overlay">
@@ -241,9 +222,9 @@ footer{background:var(--black);padding:64px 60px 32px}
       </div>
       <div class="article-body">
         <h3>Como acessar a plataforma</h3>
-        <p>Guia completo para entrar na área de membros — nova plataforma (portal.handify.com.br) ou plataforma anterior. Inclui login, primeiro acesso e navegação pelos cursos.</p>
+        <p>Passo a passo para entrar na área de membros, fazer login e navegar pelos seus cursos.</p>
         <div class="article-meta">
-          <span>⏱ 3 min · Nova & Anterior</span>
+          <span>⏱ 3 min · Login & Acesso</span>
           <span class="article-read">Ler guia →</span>
         </div>
       </div>
@@ -407,7 +388,7 @@ document.getElementById('searchInput').addEventListener('input', function(){
   document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
   document.getElementById('sectionLabel').textContent = q
     ? visible + (visible === 1 ? ' resultado' : ' resultados') + ' para "' + this.value.trim() + '"'
-    : 'Guias disponíveis · 5 artigos';
+    : 'Guias disponíveis · 4 artigos';
 });
 </script>
 <style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style></body>

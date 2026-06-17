@@ -240,7 +240,7 @@ footer{background:var(--black);padding:64px 60px 32px}
   <div class="hero-meta">
     <span>⏱ 2 min</span>
     <span>📅 Atualizado em maio de 2026</span>
-    <span>✨ Nova plataforma & Anterior</span>
+    <span>🖥 Plataforma Handify</span>
   </div>
 </section>
 
@@ -250,94 +250,10 @@ footer{background:var(--black);padding:64px 60px 32px}
   <a href="ajuda.html" class="back-link">← Voltar para a Central de Ajuda</a>
 
   <!-- TABS -->
-  <div class="platform-tabs" id="platformTabs">
-    <button class="platform-tab active" id="tab-nova" onclick="switchPlataforma('nova', this)">
-      ✨ Nova Plataforma
-      <span class="tab-sub">portal.handify.com.br</span>
-    </button>
-    <button class="platform-tab" id="tab-anterior" onclick="switchPlataforma('anterior', this)">
-      Plataforma Anterior
-      <span class="tab-sub">ATÉ JUL/2026</span>
-    </button>
-  </div>
-
   <!-- ===== ABA: NOVA PLATAFORMA ===== -->
-  <div class="tab-content active" id="content-nova">
-
-    <div class="alert blue">
-      <span class="alert-icon">🎓</span>
-      <div class="alert-body"><p>Ao concluir todas as aulas, a plataforma exibirá automaticamente a tela de emissão — não é necessário solicitá-lo ao suporte.</p></div>
-    </div>
-    <div class="alert orange">
-      <span class="alert-icon">⚠️</span>
-      <div class="alert-body"><p><strong>Atenção:</strong> os <strong>cursos complementares</strong> não emitem certificado. Esse benefício é exclusivo dos cursos principais da plataforma.</p></div>
-    </div>
-
-    <!-- NOVA PASSO 1 -->
-    <div class="step-block" id="nova-passo1">
-      <div class="step-header">
-        <div class="step-num">1</div>
-        <div class="step-title">Conclua o curso — clique em "Emitir certificado"</div>
-      </div>
-      <p class="step-desc">Ao assistir a última aula, a plataforma exibirá automaticamente um modal com a mensagem <strong>"Você concluiu o conteúdo!"</strong>. Clique no botão <strong>Emitir certificado</strong> para avançar.</p>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-cert-01-modal.png" alt="Modal de conclusão do curso com o botão Emitir certificado circulado em vermelho">
-        <p class="img-caption">Modal de conclusão — clique em "Emitir certificado"</p>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <!-- NOVA PASSO 2 -->
-    <div class="step-block" id="nova-passo2">
-      <div class="step-header">
-        <div class="step-num">2</div>
-        <div class="step-title">Confirme ou altere o nome no certificado</div>
-      </div>
-      <p class="step-desc">A plataforma perguntará se deseja emitir o certificado com o nome cadastrado. Você terá duas opções:</p>
-      <div class="conditional-grid">
-        <div class="cond-block not-done">
-          <div class="cond-label">✏️ Alterar o nome</div>
-          <p>Clique em <strong>"Não, desejo alterar meu nome"</strong> para corrigir o nome antes da emissão.</p>
-        </div>
-        <div class="cond-block done">
-          <div class="cond-label">✅ Manter o nome</div>
-          <p>Clique em <strong>"Sim, desejo manter meu nome"</strong> para emitir o certificado com o nome cadastrado.</p>
-        </div>
-      </div>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-cert-02-alterar-nome.png" alt="Tela de emissão do certificado com os botões Não, desejo alterar meu nome e Sim, desejo manter meu nome">
-        <p class="img-caption">Escolha se deseja alterar ou manter o nome antes de emitir</p>
-      </div>
-      <div class="alert orange">
-        <span class="alert-icon">⚠️</span>
-        <div class="alert-body"><p><strong>Atenção:</strong> após emitido, o nome não poderá mais ser alterado. Verifique se está correto <em>antes</em> de confirmar.</p></div>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <!-- NOVA PASSO 3 -->
-    <div class="step-block" id="nova-passo3">
-      <div class="step-header">
-        <div class="step-num ok">3</div>
-        <div class="step-title">Certificado pronto — faça o download</div>
-      </div>
-      <p class="step-desc">Após confirmar, o certificado será gerado com o seu nome e ficará disponível para download. Clique em <strong>"Sim, desejo manter meu nome"</strong> para emiti-lo e baixá-lo.</p>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-cert-03-manter-nome.png" alt="Tela de emissão com o botão Sim, desejo manter meu nome circulado em vermelho">
-        <p class="img-caption">Confirme e o certificado será gerado para download</p>
-      </div>
-      <div class="alert green">
-        <span class="alert-icon">🎉</span>
-        <div class="alert-body"><p><strong>Parabéns pela conclusão!</strong> O certificado ficará salvo em Downloads e poderá ser compartilhado ou impresso quando quiser.</p></div>
-      </div>
-    </div>
-
-  </div><!-- /tab-content nova -->
 
   <!-- ===== ABA: PLATAFORMA ANTERIOR ===== -->
-  <div class="tab-content" id="content-anterior">
+  <div id="content-anterior">
 
     <div class="alert blue">
       <span class="alert-icon">🎓</span>
@@ -452,16 +368,8 @@ footer{background:var(--black);padding:64px 60px 32px}
     <h4>Neste guia</h4>
 
     <!-- TOC: Nova Plataforma -->
-    <div class="toc-group active" id="toc-nova">
-      <ul class="toc-list">
-        <li><a href="#nova-passo1"><span class="toc-num">1</span> Concluir e emitir</a></li>
-        <li><a href="#nova-passo2"><span class="toc-num">2</span> Confirmar o nome</a></li>
-        <li><a href="#nova-passo3"><span class="toc-num">3</span> Baixar certificado</a></li>
-      </ul>
-    </div>
-
     <!-- TOC: Plataforma Anterior -->
-    <div class="toc-group" id="toc-anterior">
+    <div id="toc-anterior">
       <ul class="toc-list">
         <li><a href="#passo1"><span class="toc-num">1</span> Acessar o curso</a></li>
         <li><a href="#passo2"><span class="toc-num">2</span> Botão Certificado</a></li>
@@ -569,21 +477,6 @@ footer{background:var(--black);padding:64px 60px 32px}
 <script>
 if(localStorage.getItem('cookie')) document.getElementById('cookieBar').style.display='none';
 document.getElementById('navToggle').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');});
-
-function switchPlataforma(plat, btn) {
-  document.querySelectorAll('.platform-tab').forEach(function(t){ t.classList.remove('active'); });
-  document.querySelectorAll('.tab-content').forEach(function(c){ c.classList.remove('active'); });
-  document.querySelectorAll('.toc-group').forEach(function(g){ g.classList.remove('active'); });
-  btn.classList.add('active');
-  document.getElementById('content-' + plat).classList.add('active');
-  document.getElementById('toc-' + plat).classList.add('active');
-  window.scrollTo({ top: document.getElementById('platformTabs').offsetTop - 100, behavior: 'smooth' });
-}
-
-if(window.location.hash === '#anterior') {
-  switchPlataforma('anterior', document.getElementById('tab-anterior'));
-}
-
 function vote(btn, val) {
   document.querySelectorAll('.helpful-btn').forEach(function(b){ b.classList.remove('voted'); });
   btn.classList.add('voted');
