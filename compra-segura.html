@@ -111,6 +111,19 @@ body{font-family:'Montserrat',Arial,Helvetica,sans-serif;background:var(--white)
 .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,0.2)}
 .cta-trust{font-size:12px;color:rgba(255,255,255,0.5);margin-top:16px}
 
+/* PARTNER LOGOS */
+.partner-logos{display:flex;align-items:center;justify-content:center;gap:32px;margin-top:40px;flex-wrap:wrap}
+.partner-logo-item{text-align:center;flex:1;min-width:180px;max-width:240px}
+.partner-img{display:block;margin:0 auto 14px;width:auto}
+.partner-img-ak{height:68px;border-radius:16px}
+.partner-img-h{height:84px}
+.partner-label{display:block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gray-mid);margin-bottom:6px}
+.partner-logo-item strong{display:block;font-size:14px;font-weight:800;color:var(--black);margin-bottom:3px}
+.partner-meta{font-size:12px;color:var(--gray-mid);line-height:1.6}
+.partner-connector{text-align:center;flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 8px}
+.partner-connector::before,.partner-connector::after{content:'';display:block;width:1px;height:28px;background:rgba(0,0,0,0.15)}
+.partner-connector span{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-mid);white-space:nowrap}
+
 /* COOKIE */
 .cookie-bar{position:fixed;bottom:0;left:0;right:0;background:var(--black);border-top:1px solid rgba(255,255,255,0.1);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;z-index:9999;box-shadow:0 -4px 24px rgba(0,0,0,0.2)}
 .cookie-bar p{font-size:12px;color:rgba(255,255,255,0.6);max-width:560px;line-height:1.5}
@@ -332,6 +345,41 @@ footer{background:var(--black);padding:64px 60px 32px}
       <span class="g-badge">Codigo de Defesa do Consumidor &middot; Art. 49</span>
     </div>
     <p style="color:rgba(255,255,255,0.45);font-size:13px;margin-top:24px">Para solicitar reembolso, entre em contato pelo WhatsApp ou pelo e-mail <span style="color:rgba(255,255,255,0.7)">contato@handify.com.br</span></p>
+  </div>
+</section>
+
+<!-- SOBRE A EMPRESA -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-eyebrow">Quem esta por tras da Handify</div>
+    <h2>A Handify pertence a Alaskan Academy</h2>
+    <p class="lead">A plataforma Handify e uma marca da <strong>ALASKAN ACADEMY LTDA</strong>, empresa brasileira fundada em 2024, com foco no ramo educacional. Registrada no CNPJ <strong>59.081.684/0001-46</strong>, desenvolvemos plataformas digitais de ensino para capacitar pessoas com habilidades praticas e criativas.</p>
+
+    <div class="partner-logos">
+      <div class="partner-logo-item">
+        <img src="logo-alaskan.png" alt="Alaskan Academy" class="partner-img partner-img-ak">
+        <span class="partner-label">Empresa proprietaria</span>
+        <strong>ALASKAN ACADEMY LTDA</strong>
+        <span class="partner-meta">CNPJ 59.081.684/0001-46<br>Fundada em 2024 &middot; Educacao digital</span>
+      </div>
+      <div class="partner-connector">
+        <span>possui a marca</span>
+      </div>
+      <div class="partner-logo-item">
+        <img src="logo-handify.png" alt="Handify" class="partner-img partner-img-h">
+        <span class="partner-label">Plataforma de cursos</span>
+        <strong>HANDIFY&trade;</strong>
+        <span class="partner-meta">Plataforma brasileira de<br>cursos de artesanato</span>
+      </div>
+    </div>
+
+    <div class="alert-box blue" style="margin-top:40px">
+      <span class="alert-icon">&#x1F3DB;&#xFE0F;</span>
+      <div>
+        <h4>Empresa 100% brasileira, regularizada</h4>
+        <p>A Alaskan Academy e uma empresa de educacao digital registrada na Receita Federal, com CNPJ ativo desde 2024. Desenvolvemos a Handify como nossa plataforma principal para democratizar o acesso ao aprendizado criativo e artesanal no Brasil.</p>
+      </div>
+    </div>
   </div>
 </section>
 
