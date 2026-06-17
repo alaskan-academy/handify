@@ -893,7 +893,17 @@ footer {
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </div>
-  </div>
+    <div class="footer-col">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="cursos.html?cat=velas">Cursos de Velas</a></li>
+        <li><a href="cursos.html?cat=saboaria">Cursos de Saboaria</a></li>
+        <li><a href="cursos.html?cat=flores">Cursos de Flores</a></li>
+        <li><a href="cursos.html?cat=vendas">Cursos de Vendas</a></li>
+        <li><a href="cursos.html?cat=materiais">Materiais Digitais</a></li>
+        <li><a href="cursos.html">Todos os cursos</a></li>
+      </ul>
+    </div>  </div>
   <div class="footer-bottom">
     <p>© 2026 Handify™ · Todos os direitos reservados</p>
     <p>Feito com cuidado no Brasil 🇧🇷</p>
@@ -999,21 +1009,28 @@ footer {
   const btns = document.querySelectorAll('.filter-btn');
   const groups = document.querySelectorAll('.course-group');
 
+  function applyFilter(cat) {
+    btns.forEach(function(b){ b.classList.remove('active'); });
+    var matchBtn = document.querySelector('.filter-btn[data-cat="' + cat + '"]');
+    if (matchBtn) matchBtn.classList.add('active');
+    groups.forEach(function(g){
+      g.style.display = (cat === 'todos' || g.getAttribute('data-cat') === cat) ? '' : 'none';
+    });
+    if (cat !== 'todos') {
+      setTimeout(function(){
+        var bar = document.querySelector('.filters-bar');
+        if (bar) bar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }
+
+  var urlParam = new URLSearchParams(window.location.search).get('cat');
+  if (urlParam) applyFilter(urlParam);
+
   btns.forEach(function(btn){
     btn.addEventListener('click', function(){
-      // update active button
-      btns.forEach(function(b){ b.classList.remove('active'); });
-      btn.classList.add('active');
-
       const cat = btn.getAttribute('data-cat');
-
-      groups.forEach(function(g){
-        if(cat === 'todos' || g.getAttribute('data-cat') === cat){
-          g.style.display = '';
-        } else {
-          g.style.display = 'none';
-        }
-      });
+      applyFilter(cat);
     });
   });
 })();
