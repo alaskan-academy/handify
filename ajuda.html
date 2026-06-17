@@ -207,7 +207,7 @@ footer{background:var(--black);padding:64px 60px 32px}
 <!-- MAIN -->
 <main class="main">
 
-  <div class="section-label" id="sectionLabel">Guias disponíveis · 4 artigos</div>
+  <div class="section-label" id="sectionLabel">Guias disponíveis · 5 artigos</div>
 
   <div class="articles-grid" id="articlesGrid">
 
@@ -283,6 +283,25 @@ footer{background:var(--black);padding:64px 60px 32px}
         <div class="article-meta">
           <span>⏱ 2 min · 5 passos</span>
           <span class="article-read">Ler guia →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- CARD 5: COMPRA SEGURA -->
+    <a href="compra-segura.html" class="article-card"
+       data-search="compra segura pix golpe aviso banco cnpj empresa real curso existe garantia reembolso 7 dias confiança alaskan">
+      <div class="article-thumb" style="background:linear-gradient(135deg,#1e3a5f,#2d5f8a)">
+        <div class="thumb-solid" style="font-size:52px">🛡️</div>
+        <div class="article-thumb-overlay">
+          <span class="article-tag" style="background:var(--green);color:var(--black)">Segurança</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <h3>Sua compra é 100% segura — tire todas as dúvidas</h3>
+        <p>Por que o banco manda aviso de "possível golpe" no Pix? A Handify é real? Entenda tudo, veja o CNPJ e a garantia de 7 dias.</p>
+        <div class="article-meta">
+          <span>⏱ 3 min · CNPJ & Garantia</span>
+          <span class="article-read">Ver →</span>
         </div>
       </div>
     </a>
@@ -388,7 +407,7 @@ document.getElementById('searchInput').addEventListener('input', function(){
   document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
   document.getElementById('sectionLabel').textContent = q
     ? visible + (visible === 1 ? ' resultado' : ' resultados') + ' para "' + this.value.trim() + '"'
-    : 'Guias disponíveis · 4 artigos';
+    : 'Guias disponíveis · 5 artigos';
 });
 </script>
 <style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style></body>
