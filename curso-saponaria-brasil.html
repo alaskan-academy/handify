@@ -15,20 +15,6 @@
 body{font-family:'Montserrat',Arial,sans-serif;background:var(--white);color:var(--gray-dark);font-size:16px;line-height:1.7}
 .brand-stripe{height:6px;background:linear-gradient(90deg,var(--blue) 33.3%,var(--green) 33.3% 66.6%,var(--yellow) 66.6%)}
 
-/* NAV */
-.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid rgba(0,0,0,.08);position:sticky;top:0;background:var(--white);z-index:100;box-shadow:0 1px 12px rgba(0,0,0,.05)}
-.nav-brand{font-size:22px;font-weight:900;letter-spacing:-.5px;color:var(--black);text-decoration:none}
-.nav-brand span{color:var(--blue)}
-.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
-.nav-links a{font-size:13px;font-weight:600;text-decoration:none;color:var(--gray-mid);text-transform:uppercase;letter-spacing:.06em;transition:color .15s}
-.nav-links a:hover{color:var(--blue)}
-.nav-cta{background:var(--blue);color:var(--white)!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
-.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}
-.nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}
-.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.nav-toggle.open span:nth-child(2){opacity:0}
-.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
 /* URGENCY BAR */
 .urgency-bar{background:var(--black);color:var(--white);text-align:center;padding:12px 24px;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
 .urg-cta{background:var(--yellow);color:var(--black);padding:6px 16px;border-radius:4px;font-size:12px;font-weight:800;text-decoration:none;white-space:nowrap;transition:opacity .15s}
