@@ -843,7 +843,6 @@ body{font-family:'Montserrat',Arial,sans-serif;background:var(--white);color:var
 <script>
 (function(){
   var d=new Date();
-  d.setDate(d.getDate()+7);
   var dd=String(d.getDate()).padStart(2,'0');
   var mm=String(d.getMonth()+1).padStart(2,'0');
   var label=dd+'/'+mm;
@@ -851,7 +850,7 @@ body{font-family:'Montserrat',Arial,sans-serif;background:var(--white);color:var
   var el2=document.getElementById('urg-date-sec');if(el2)el2.textContent=label;
   document.querySelectorAll('.urg-date-inline').forEach(function(e){e.textContent=label;});
 })();
-var urgTarget=(function(){var d=new Date();d.setDate(d.getDate()+7);d.setHours(23,59,59,0);return d;})();
+var urgTarget=(function(){var d=new Date();d.setHours(23,59,59,0);return d;})();
 function updateCountdown(){
   var diff=urgTarget-new Date();
   if(diff<=0){var b=document.querySelector('.countdown-box');if(b)b.innerHTML='<p style="color:rgba(255,255,255,.6);font-size:14px">O período de revisão foi encerrado.</p>';return;}
