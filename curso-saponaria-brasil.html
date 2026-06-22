@@ -846,8 +846,6 @@ body{font-family:'Montserrat',Arial,sans-serif;background:var(--white);color:var
 
 
 <script>
-document.getElementById('navToggle').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');});
-if(localStorage.getItem('hf_cookies'))document.getElementById('cookieBar').style.display='none';
 function updateCountdown(){
   var target=new Date('2026-06-30T02:59:59Z');
   var diff=target-new Date();
