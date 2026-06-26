@@ -28,6 +28,8 @@ body{font-family:'Montserrat',Arial,sans-serif;background:var(--white);color:var
 .nav-links a{font-size:13px;font-weight:600;text-decoration:none;color:var(--gray-mid);text-transform:uppercase;letter-spacing:.06em;transition:color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--blue)}
 .nav-cta{background:var(--blue);color:var(--white)!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
+.nav-login { border:2px solid var(--blue); color:var(--blue)!important; padding:7px 20px; border-radius:6px; font-weight:700!important; transition:all .15s!important; }
+.nav-login:hover { background:var(--blue); color:var(--white)!important; }
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}
 .nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}
 .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -224,7 +226,7 @@ footer{background:var(--black);padding:64px 60px 36px}
 @media(max-width:768px){
   /* NAV */
   .nav{padding:16px 24px !important;position:relative !important}
-  .nav-links .nav-login{margin:8px 16px 0 !important;text-align:center !important;display:block !important;border-radius:6px !important;padding:9px 20px !important}
+  .nav-links .nav-login{margin:8px 16px 0 !important;text-align:center !important;display:block !important;border-radius:6px !important;border:2px solid var(--blue)!important;padding:9px 20px !important}
 
   /* FOOTER GRID */
   footer{padding:48px 24px 28px !important}
