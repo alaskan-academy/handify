@@ -179,15 +179,16 @@ body{font-family:'Montserrat',Arial,sans-serif;background:var(--white);color:var
 .recap-courses-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:64px}
 .recap-course{background:var(--off-white);border-radius:14px;padding:24px 28px;border:1px solid rgba(0,0,0,0.06)}
 .recap-course.featured{background:var(--white);border-color:var(--blue);box-shadow:0 2px 16px rgba(82,136,239,0.1)}
-.rc-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.rc-icon{font-size:26px;flex-shrink:0}
-.rc-name{font-size:15px;font-weight:900;color:var(--black);letter-spacing:-.2px}
+.rc-img{width:100%;border-radius:10px;margin-bottom:16px;display:block;object-fit:cover}
+.rc-img-sm{width:100%;border-radius:8px;margin-bottom:12px;display:block;object-fit:cover;max-height:160px}
+.rc-name{font-size:15px;font-weight:900;color:var(--black);letter-spacing:-.2px;margin-bottom:6px}
 .rc-meta{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin-bottom:8px}
 .recap-course p{font-size:13px;color:var(--gray-mid);line-height:1.65}
 .recap-ebooks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.recap-ebook{background:var(--off-white);border-radius:12px;padding:20px 22px;border:1px solid rgba(0,0,0,0.06)}
-.re-icon{font-size:22px;margin-bottom:10px}
-.recap-ebook h4{font-size:14px;font-weight:800;color:var(--black);margin-bottom:6px}
+.recap-ebook{background:var(--off-white);border-radius:12px;padding:0;border:1px solid rgba(0,0,0,0.06);overflow:hidden}
+.re-img{width:100%;display:block;object-fit:cover;max-height:130px}
+.recap-ebook-body{padding:16px 18px}
+.recap-ebook h4{font-size:13px;font-weight:800;color:var(--black);margin-bottom:5px}
 .recap-ebook p{font-size:12px;color:var(--gray-mid);line-height:1.6}
 @media(max-width:768px){
   .recap-section{padding:56px 24px !important}
