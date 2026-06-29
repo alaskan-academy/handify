@@ -30,6 +30,9 @@ body{font-family:'Montserrat',Arial,Helvetica,sans-serif;background:var(--white)
 .nav-links a{font-size:13px;font-weight:600;text-decoration:none;color:var(--gray-mid);text-transform:uppercase;letter-spacing:.06em;transition:color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--blue)}
 .nav-cta{background:var(--blue);color:var(--white)!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
+.nav-cta:hover { background:#3A72D4!important; }
+.nav-login { border:2px solid var(--blue); color:var(--blue)!important; padding:7px 20px; border-radius:6px; font-weight:700!important; transition:all .15s!important; }
+.nav-login:hover { background:var(--blue); color:var(--white)!important; }
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}
 .nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}
 .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -53,16 +56,16 @@ body{font-family:'Montserrat',Arial,Helvetica,sans-serif;background:var(--white)
 .page-wrap{max-width:1060px;margin:0 auto;padding:56px 60px 80px;display:grid;grid-template-columns:1fr 260px;gap:60px;align-items:start}
 
 /* PLATFORM TABS */
-.platform-tabs{display:flex;margin-bottom:44px;border-radius:12px;overflow:hidden;border:2px solid rgba(0,0,0,0.1)}
-.platform-tab{flex:1;padding:16px 20px;text-align:center;font-size:14px;font-weight:700;cursor:pointer;border:none;background:var(--off-white);color:var(--gray-mid);font-family:'Montserrat',Arial,sans-serif;transition:all .2s;line-height:1.3;display:flex;align-items:center;justify-content:center;gap:8px}
-.platform-tab:first-child{border-right:2px solid rgba(0,0,0,0.1)}
-.platform-tab.active{background:var(--blue);color:var(--white)}
-.platform-tab .tab-badge{background:rgba(255,255,255,0.25);font-size:10px;padding:2px 7px;border-radius:10px;font-weight:700;letter-spacing:.04em}
-.platform-tab:not(.active) .tab-badge{background:rgba(82,136,239,0.15);color:var(--blue)}
+
+
+
+
+
+
 
 /* TAB CONTENT */
-.tab-content{display:none}
-.tab-content.active{display:block}
+
+
 
 /* STEP */
 .step-block{margin-bottom:48px}
@@ -139,8 +142,8 @@ body{font-family:'Montserrat',Arial,Helvetica,sans-serif;background:var(--white)
 .toc-list a{font-size:13px;color:var(--gray-dark);text-decoration:none;font-weight:500;display:flex;gap:8px;align-items:flex-start;transition:color .15s;line-height:1.4}
 .toc-list a:hover{color:var(--blue)}
 .toc-num{color:var(--blue);font-weight:700;flex-shrink:0;font-size:12px;margin-top:1px}
-.toc-group{display:none}
-.toc-group.active{display:block}
+
+
 .related-list{list-style:none}
 .related-list li{margin-bottom:10px;border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:10px}
 .related-list li:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
@@ -154,7 +157,7 @@ body{font-family:'Montserrat',Arial,Helvetica,sans-serif;background:var(--white)
 
 /* FOOTER */
 footer{background:var(--black);padding:64px 60px 32px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
 .footer-brand-col a.footer-brand{font-size:22px;font-weight:900;color:var(--white);text-decoration:none;letter-spacing:-.5px;display:block;margin-bottom:14px}
 .footer-brand-col a.footer-brand span{color:var(--blue)}
 .footer-brand-col p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;max-width:280px;margin-bottom:20px}
@@ -184,16 +187,17 @@ footer{background:var(--black);padding:64px 60px 32px}
 }
 @media(max-width:768px){
   .nav{padding:16px 24px;position:relative}
-  .nav-toggle{display:flex}
+  .nav-toggle{display:flex !important}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;gap:0;padding:8px 0 16px;border-bottom:1px solid rgba(0,0,0,0.1);box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:99}
-  .nav-links.open{display:flex}
+  .nav-links.open{display:flex !important}
   .nav-links li{width:100%}
   .nav-links a{display:block;padding:12px 24px;font-size:14px}
   .nav-links .nav-cta{margin:8px 16px 0;text-align:center;display:block;border-radius:6px}
+  .nav-links .nav-login{margin:4px 16px!important;text-align:center!important;display:block!important;border-radius:6px!important;border:2px solid var(--blue)!important;padding:8px 22px!important}
   .breadcrumb{padding:12px 20px}
   .page-hero{padding:40px 24px 44px}
-  .platform-tabs{flex-direction:column}
-  .platform-tab:first-child{border-right:none;border-bottom:2px solid rgba(0,0,0,0.1)}
+  
+  
   .screenshot-wrap img{max-width:100%}
   footer{padding:48px 24px 28px}
   .footer-grid{grid-template-columns:1fr;gap:32px;padding:0 0 32px}
@@ -221,6 +225,7 @@ footer{background:var(--black);padding:64px 60px 32px}
     <li><a href="contato.html">Contato</a></li>
     <li><a href="ajuda.html" class="active">Ajuda</a></li>
     <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
+    <li><a href="https://membros.handify.com.br/login" target="_blank" rel="noopener" class="nav-login">Acessar</a></li>
     <li><a href="pack-completo.html" class="nav-cta">Começar agora</a></li>
   </ul>
 </nav>
@@ -244,177 +249,11 @@ footer{background:var(--black);padding:64px 60px 32px}
 <div class="page-wrap">
 <article class="guide-content">
 
-  <!-- TAB SWITCHER -->
-  <div class="platform-tabs">
-    <button class="platform-tab active" id="tab-nova" onclick="switchPlataforma('nova',this)">
-      ✨ Nova Plataforma <span class="tab-badge">NOVO</span>
-    </button>
-    <button class="platform-tab" id="tab-anterior" onclick="switchPlataforma('anterior',this)">
-      Plataforma Anterior <span class="tab-badge">ATÉ JUL/2026</span>
-    </button>
-  </div>
-
-  <!-- ══════════════ NOVA PLATAFORMA ══════════════ -->
-  <div class="tab-content active" id="content-nova">
-
-    <div class="step-block" id="nova-passo1">
-      <div class="step-header">
-        <div class="step-num">1</div>
-        <div class="step-title">Verifique seu e-mail e WhatsApp</div>
-      </div>
-      <p class="step-desc">Após a compra, o acesso é enviado automaticamente para dois canais. Verifique os dois antes de continuar:</p>
-      <div class="channel-pills">
-        <span class="pill email">📧 E-mail</span>
-        <span class="pill whatsapp">💬 WhatsApp</span>
-      </div>
-      <div class="alert blue">
-        <span class="alert-icon">🔗</span>
-        <div class="alert-body">
-          <p>A mensagem conterá o link de acesso e a sua <strong>senha padrão</strong>. Guarde essa senha — você vai precisar dela no próximo passo.</p>
-          <p>Link da plataforma: <a href="https://portal.handify.com.br/login" target="_blank" rel="noopener"><strong>portal.handify.com.br/login</strong></a></p>
-        </div>
-      </div>
-      <div class="alert orange">
-        <span class="alert-icon">⚠️</span>
-        <div class="alert-body"><p>Não recebeu? Verifique a caixa de <strong>spam</strong>. Se ainda não encontrar, <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener">chame nossa equipe no WhatsApp</a> com o e-mail e o comprovante de compra.</p></div>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <div class="step-block" id="nova-passo2">
-      <div class="step-header">
-        <div class="step-num">2</div>
-        <div class="step-title">Acesse o portal e digite seu e-mail</div>
-      </div>
-      <p class="step-desc">Entre em <a href="https://portal.handify.com.br/login" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700;text-decoration:underline;text-underline-offset:3px">portal.handify.com.br/login</a> e preencha o campo com o <strong>e-mail usado na compra</strong>.</p>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-acesso-01-email.png" alt="Tela de login da nova plataforma com o campo de e-mail circulado em vermelho">
-        <p class="img-caption">Digite o e-mail exatamente como usado na compra</p>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <div class="step-block" id="nova-passo3">
-      <div class="step-header">
-        <div class="step-num">3</div>
-        <div class="step-title">Digite a senha padrão</div>
-      </div>
-      <p class="step-desc">No campo de senha, use a <strong>senha padrão</strong> enviada no e-mail e no WhatsApp. Depois clique em <strong>Entrar</strong>.</p>
-      <div class="alert blue">
-        <span class="alert-icon">💡</span>
-        <div class="alert-body"><p>Prefere criar uma senha própria? Clique em <strong>"Esqueci minha senha"</strong> para definir uma nova. Você também pode alterar a senha depois dentro do seu perfil. <a href="ajuda-nova-plataforma-senha.html">Ver como alterar a senha →</a></p></div>
-      </div>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-acesso-02-senha.png" alt="Tela de login com o campo de senha circulado em vermelho">
-        <p class="img-caption">Use a senha padrão recebida no e-mail ou WhatsApp</p>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <div class="step-block" id="nova-passo4">
-      <div class="step-header">
-        <div class="step-num">4</div>
-        <div class="step-title">Aceite os Termos de Uso</div>
-      </div>
-      <p class="step-desc">No primeiro acesso, a plataforma exibirá os Termos de Uso. Leia, marque <strong>"Li e concordo com os Termos de Uso"</strong> e clique em <strong>Confirmar</strong>.</p>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-acesso-03-termos.png" alt="Tela de Termos de Uso com checkbox circulado em vermelho">
-        <p class="img-caption">Marque a caixa e clique em Confirmar para prosseguir</p>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <div class="step-block" id="nova-passo5">
-      <div class="step-header">
-        <div class="step-num ok">5</div>
-        <div class="step-title">Você está dentro! Encontre seus cursos</div>
-      </div>
-      <p class="step-desc">Bem-vinda à nova plataforma! Na tela inicial há um banner de destaque e, logo abaixo, a primeira seção de cursos.</p>
-      <div class="alert blue">
-        <span class="alert-icon">👇</span>
-        <div class="alert-body"><p><strong>Os cursos que você comprou aparecem nessa primeira seção com as capas coloridas.</strong> Role a página para baixo e clique no seu curso para começar.</p></div>
-      </div>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-acesso-04-home.png" alt="Tela inicial da nova plataforma com os cursos adquiridos em capas coloridas">
-        <p class="img-caption">Seus cursos ficam na primeira seção com capas coloridas</p>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <div class="step-block" id="nova-passo6">
-      <div class="step-header">
-        <div class="step-num">6</div>
-        <div class="step-title">Entenda as seções da plataforma</div>
-      </div>
-      <p class="step-desc">A plataforma tem dois tipos de conteúdo — role para explorar:</p>
-      <div class="course-types">
-        <div class="course-type video">
-          <div class="course-type-label">🎬 Cursos em Vídeo</div>
-          <h5>Cursos completos em aulas</h5>
-          <p>Conteúdo aprofundado em vídeo, organizado em módulos. Acompanham <strong>certificado de conclusão</strong>.</p>
-        </div>
-        <div class="course-type complementar">
-          <div class="course-type-label">📄 Materiais Complementares</div>
-          <h5>Recursos e PDFs de apoio</h5>
-          <p>Guias e receitas extras para aprofundar o aprendizado. <strong>Não emitem certificado.</strong></p>
-        </div>
-      </div>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-acesso-05-secoes.png" alt="Tela da plataforma mostrando as seções Cursos em Vídeo e Materiais Complementares">
-        <p class="img-caption">Role para ver as duas seções disponíveis</p>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <div class="step-block" id="nova-passo7">
-      <div class="step-header">
-        <div class="step-num warn">7</div>
-        <div class="step-title">Capa colorida × capa em preto e branco 🔒</div>
-      </div>
-      <div class="course-types">
-        <div class="course-type video">
-          <div class="course-type-label">✅ Colorida</div>
-          <h5>Curso liberado para você</h5>
-          <p>Você já adquiriu este curso. Clique para começar.</p>
-        </div>
-        <div class="course-type complementar">
-          <div class="course-type-label">🔒 P&B + cadeado</div>
-          <h5>Ainda não adquirido</h5>
-          <p>Se comprou e ainda aparece bloqueado, fale com o suporte.</p>
-        </div>
-      </div>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-acesso-06-cadeado.png" alt="Cursos com capas coloridas (liberados) e em preto e branco com cadeado (bloqueados)">
-        <p class="img-caption">Colorido = seu curso · Preto e branco + 🔒 = não adquirido</p>
-      </div>
-      <div class="alert orange" style="margin-top:20px">
-        <span class="alert-icon">⚠️</span>
-        <div class="alert-body"><p>Comprou mas o cadeado ainda aparece? <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener">Chame no WhatsApp</a> com o comprovante de pagamento, e-mail de compra e nome completo.</p></div>
-      </div>
-    </div>
-
-    <div class="helpful-bar">
-      <p>Este guia foi útil?</p>
-      <div class="helpful-btns">
-        <button class="helpful-btn" onclick="vote(this,'sim')">👍 Sim, consegui acessar!</button>
-        <button class="helpful-btn" onclick="vote(this,'nao')">👎 Ainda preciso de ajuda</button>
-      </div>
-    </div>
-
-  </div><!-- /nova -->
-
-  <!-- ══════════════ PLATAFORMA ANTERIOR ══════════════ -->
-  <div class="tab-content" id="content-anterior">
+  <div id="content-anterior">
 
     <div class="alert blue" style="margin-bottom:36px">
       <span class="alert-icon">ℹ️</span>
-      <div class="alert-body"><p>Este guia é para alunas que ainda utilizam a <strong>plataforma anterior</strong> (acesso.handify.com.br). Se você comprou recentemente, use a aba <strong>Nova Plataforma ✨</strong> acima.</p></div>
+      <div class="alert-body"><p>Acesse a plataforma em <strong>acesso.handify.com.br</strong> com o e-mail e senha utilizados na compra.</p></div>
     </div>
 
     <div class="step-block" id="ant-passo1">
@@ -558,18 +397,7 @@ footer{background:var(--black);padding:64px 60px 32px}
 <aside class="guide-sidebar">
   <div class="sidebar-card">
     <h4>Neste guia</h4>
-    <div class="toc-group active" id="toc-nova">
-      <ul class="toc-list">
-        <li><a href="#nova-passo1"><span class="toc-num">1</span> Verificar e-mail e WhatsApp</a></li>
-        <li><a href="#nova-passo2"><span class="toc-num">2</span> Digitar o e-mail</a></li>
-        <li><a href="#nova-passo3"><span class="toc-num">3</span> Digitar a senha</a></li>
-        <li><a href="#nova-passo4"><span class="toc-num">4</span> Aceitar os termos</a></li>
-        <li><a href="#nova-passo5"><span class="toc-num">5</span> Encontrar seus cursos</a></li>
-        <li><a href="#nova-passo6"><span class="toc-num">6</span> Seções da plataforma</a></li>
-        <li><a href="#nova-passo7"><span class="toc-num">7</span> Colorido × cadeado</a></li>
-      </ul>
-    </div>
-    <div class="toc-group" id="toc-anterior">
+    <div id="toc-anterior">
       <ul class="toc-list">
         <li><a href="#ant-passo1"><span class="toc-num">1</span> Fazer login</a></li>
         <li><a href="#ant-passo2"><span class="toc-num">2</span> Erro de e-mail</a></li>
@@ -589,10 +417,7 @@ footer{background:var(--black);padding:64px 60px 32px}
   <div class="sidebar-card">
     <h4>Guias relacionados</h4>
     <ul class="related-list">
-      <li>
-        <a href="ajuda-nova-plataforma-senha.html">Recuperar ou alterar senha</a>
-        <span>Nova plataforma</span>
-      </li>
+
       <li>
         <a href="ajuda-como-baixar-app.html">Como instalar o aplicativo</a>
         <span>Android e iOS</span>
@@ -640,6 +465,17 @@ footer{background:var(--black);padding:64px 60px 32px}
         </span>
       </div>
     </div>
+    <div class="footer-col footer-cats">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="cursos.html?cat=velas">Cursos de Velas</a></li>
+        <li><a href="cursos.html?cat=saboaria">Cursos de Saboaria</a></li>
+        <li><a href="cursos.html?cat=flores">Cursos de Flores</a></li>
+        <li><a href="cursos.html?cat=vendas">Cursos de Vendas</a></li>
+        <li><a href="cursos.html?cat=materiais">Materiais Digitais</a></li>
+        <li><a href="cursos.html">Todos os cursos</a></li>
+      </ul>
+    </div>
     <div class="footer-col">
       <h4>Navegação</h4>
       <ul>
@@ -653,6 +489,7 @@ footer{background:var(--black);padding:64px 60px 32px}
     <div class="footer-col">
       <h4>Empresa</h4>
       <ul>
+        <li><a href="compra-segura.html" style="color:var(--green)">🔒 Compra Segura</a></li>
         <li><a href="seja-instrutora.html">Seja instrutora</a></li>
         <li><a href="pack-completo.html">Pack Completo</a></li>
         <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
@@ -670,22 +507,7 @@ footer{background:var(--black);padding:64px 60px 32px}
 <script>
 if(localStorage.getItem('cookie')) document.getElementById('cookieBar').style.display='none';
 document.getElementById('navToggle').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');});
-
-function switchPlataforma(plat, btn) {
-  document.querySelectorAll('.platform-tab').forEach(function(t){t.classList.remove('active')});
-  document.querySelectorAll('.tab-content').forEach(function(c){c.classList.remove('active')});
-  document.querySelectorAll('.toc-group').forEach(function(g){g.classList.remove('active')});
-  btn.classList.add('active');
-  document.getElementById('content-' + plat).classList.add('active');
-  document.getElementById('toc-' + plat).classList.add('active');
-  window.scrollTo({top: document.querySelector('.platform-tabs').offsetTop - 100, behavior:'smooth'});
-}
-
 // Auto-abrir aba via URL hash
-if(window.location.hash === '#anterior') {
-  switchPlataforma('anterior', document.getElementById('tab-anterior'));
-}
-
 function vote(btn, val) {
   document.querySelectorAll('.helpful-btn').forEach(function(b){b.classList.remove('voted')});
   btn.classList.add('voted');
@@ -693,5 +515,5 @@ function vote(btn, val) {
   btn.textContent = val==='sim' ? '✅ Ótimo! Bons estudos!' : '📩 Redirecionando para o suporte…';
 }
 </script>
-</body>
+<style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style></body>
 </html>

@@ -43,6 +43,9 @@ body { font-family:'Montserrat',Arial,Helvetica,sans-serif; background:var(--whi
 .nav-links a { font-size:13px; font-weight:600; text-decoration:none; color:var(--gray-mid); text-transform:uppercase; letter-spacing:.06em; transition:color .15s; }
 .nav-links a:hover,.nav-links a.active { color:var(--blue); }
 .nav-cta { background:var(--blue); color:var(--white) !important; padding:9px 22px; border-radius:6px; font-weight:700 !important; }
+.nav-cta:hover { background:#3A72D4!important; }
+.nav-login { border:2px solid var(--blue); color:var(--blue)!important; padding:7px 20px; border-radius:6px; font-weight:700!important; transition:all .15s!important; }
+.nav-login:hover { background:var(--blue); color:var(--white)!important; }
 .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; z-index:101; }
 .nav-toggle span { display:block; width:22px; height:2px; background:var(--black); border-radius:2px; transition:transform .2s,opacity .2s; }
 .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
@@ -143,7 +146,7 @@ body { font-family:'Montserrat',Arial,Helvetica,sans-serif; background:var(--whi
 
 /* FOOTER */
 footer{background:var(--black);padding:64px 60px 32px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
 .footer-brand-col a.footer-brand{font-size:22px;font-weight:900;color:var(--white);text-decoration:none;letter-spacing:-.5px;display:block;margin-bottom:14px}
 .footer-brand-col a.footer-brand span{color:var(--blue)}
 .footer-brand-col p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;max-width:280px;margin-bottom:20px}
@@ -172,12 +175,13 @@ footer{background:var(--black);padding:64px 60px 32px}
 }
 @media(max-width:768px){
   .nav{padding:16px 24px;position:relative}
-  .nav-toggle{display:flex}
+  .nav-toggle{display:flex !important}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;gap:0;padding:8px 0 16px;border-bottom:1px solid rgba(0,0,0,0.1);box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:99}
-  .nav-links.open{display:flex}
+  .nav-links.open{display:flex !important}
   .nav-links li{width:100%}
   .nav-links a{display:block;padding:12px 24px;font-size:14px}
   .nav-links .nav-cta{margin:8px 16px 0;text-align:center;display:block;border-radius:6px}
+  .nav-links .nav-login{margin:4px 16px!important;text-align:center!important;display:block!important;border-radius:6px!important;border:2px solid var(--blue)!important;padding:8px 22px!important}
   .breadcrumb{padding:12px 20px}
   .page-hero{padding:40px 24px 44px}
   .platform-tab { padding:14px 12px; font-size:13px; }
@@ -208,6 +212,7 @@ footer{background:var(--black);padding:64px 60px 32px}
     <li><a href="contato.html">Contato</a></li>
     <li><a href="ajuda.html" class="active">Ajuda</a></li>
     <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
+    <li><a href="https://membros.handify.com.br/login" target="_blank" rel="noopener" class="nav-login">Acessar</a></li>
     <li><a href="pack-completo.html" class="nav-cta">Começar agora</a></li>
   </ul>
 </nav>
@@ -225,7 +230,7 @@ footer{background:var(--black);padding:64px 60px 32px}
   <div class="hero-meta">
     <span>⏱ 2 min</span>
     <span>📅 Atualizado em maio de 2026</span>
-    <span>✨ Nova plataforma & Anterior</span>
+    <span>🖥 Plataforma Handify</span>
   </div>
 </section>
 
@@ -235,86 +240,10 @@ footer{background:var(--black);padding:64px 60px 32px}
   <a href="ajuda.html" class="back-link">← Voltar para a Central de Ajuda</a>
 
   <!-- TABS -->
-  <div class="platform-tabs" id="platformTabs">
-    <button class="platform-tab active" id="tab-nova" onclick="switchPlataforma('nova', this)">
-      ✨ Nova Plataforma
-      <span class="tab-sub">portal.handify.com.br</span>
-    </button>
-    <button class="platform-tab" id="tab-anterior" onclick="switchPlataforma('anterior', this)">
-      Plataforma Anterior
-      <span class="tab-sub">ATÉ JUL/2026</span>
-    </button>
-  </div>
-
   <!-- ===== ABA: NOVA PLATAFORMA ===== -->
-  <div class="tab-content active" id="content-nova">
-
-    <!-- PASSO 1 -->
-    <div class="step-block" id="nova-passo1">
-      <div class="step-header">
-        <div class="step-num">1</div>
-        <div class="step-title">Abra o curso</div>
-      </div>
-      <p class="step-desc">Na página inicial da plataforma, role para baixo e encontre o curso que você comprou. Clique na capa do curso para abri-lo.</p>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-pdf-01-curso.png" alt="Página inicial da nova plataforma com capas dos cursos, um deles circulado em vermelho">
-        <p class="img-caption">Clique na capa do seu curso para acessá-lo</p>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <!-- PASSO 2 -->
-    <div class="step-block" id="nova-passo2">
-      <div class="step-header">
-        <div class="step-num">2</div>
-        <div class="step-title">Abra a aula</div>
-      </div>
-      <p class="step-desc">Dentro do curso, clique na aula que contém os materiais que você precisa. A aula será aberta com o vídeo no centro da tela e a lista de aulas no lado direito.</p>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-pdf-02-aula.png" alt="Curso aberto com vídeo em exibição e lista de aulas na lateral direita">
-        <p class="img-caption">Clique na aula para abri-la</p>
-      </div>
-    </div>
-
-    <hr class="step-divider">
-
-    <!-- PASSO 3 -->
-    <div class="step-block" id="nova-passo3">
-      <div class="step-header">
-        <div class="step-num">3</div>
-        <div class="step-title">Role a página para baixo</div>
-      </div>
-      <p class="step-desc">Com a aula aberta, role a página para baixo. Abaixo do vídeo você verá as informações da aula.</p>
-    </div>
-
-    <hr class="step-divider">
-
-    <!-- PASSO 4 -->
-    <div class="step-block" id="nova-passo4">
-      <div class="step-header">
-        <div class="step-num ok">4</div>
-        <div class="step-title">Em "Informações", clique no arquivo para baixar</div>
-      </div>
-      <p class="step-desc">Na seção <strong>Informações</strong>, você verá todos os arquivos disponíveis para aquela aula. <strong>Clique no nome do arquivo</strong> para fazer o download direto para o seu dispositivo.</p>
-      <div class="screenshot-wrap landscape">
-        <img src="/prints/nova-pdf-03-informacoes.png" alt="Seção Informações da aula com arquivo PDF circulado em vermelho e botão Avaliar ao lado">
-        <p class="img-caption">Clique no arquivo em "Informações" para baixá-lo</p>
-      </div>
-      <div class="alert blue">
-        <span class="alert-icon">💡</span>
-        <div class="alert-body"><p>Nem todas as aulas possuem materiais de apoio. Se a seção <strong>Informações</strong> não exibir nenhum arquivo, significa que aquela aula não tem material disponível para download.</p></div>
-      </div>
-      <div class="alert green">
-        <span class="alert-icon">✅</span>
-        <div class="alert-body"><p>O arquivo ficará salvo na pasta de <strong>Downloads</strong> do seu dispositivo e poderá ser acessado a qualquer momento, mesmo sem internet.</p></div>
-      </div>
-    </div>
-
-  </div><!-- /tab-content nova -->
 
   <!-- ===== ABA: PLATAFORMA ANTERIOR ===== -->
-  <div class="tab-content" id="content-anterior">
+  <div id="content-anterior">
 
     <!-- PASSO 1 -->
     <div class="step-block" id="ant-passo1">
@@ -382,17 +311,8 @@ footer{background:var(--black);padding:64px 60px 32px}
     <h4>Neste guia</h4>
 
     <!-- TOC: Nova Plataforma -->
-    <div class="toc-group active" id="toc-nova">
-      <ul class="toc-list">
-        <li><a href="#nova-passo1"><span class="toc-num">1</span> Abrir o curso</a></li>
-        <li><a href="#nova-passo2"><span class="toc-num">2</span> Abrir a aula</a></li>
-        <li><a href="#nova-passo3"><span class="toc-num">3</span> Rolar para baixo</a></li>
-        <li><a href="#nova-passo4"><span class="toc-num">4</span> Baixar em Informações</a></li>
-      </ul>
-    </div>
-
     <!-- TOC: Plataforma Anterior -->
-    <div class="toc-group" id="toc-anterior">
+    <div id="toc-anterior">
       <ul class="toc-list">
         <li><a href="#ant-passo1"><span class="toc-num">1</span> Abrir a aula</a></li>
         <li><a href="#ant-passo2"><span class="toc-num">2</span> Rolar para baixo</a></li>
@@ -457,6 +377,17 @@ footer{background:var(--black);padding:64px 60px 32px}
         </span>
       </div>
     </div>
+    <div class="footer-col footer-cats">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="cursos.html?cat=velas">Cursos de Velas</a></li>
+        <li><a href="cursos.html?cat=saboaria">Cursos de Saboaria</a></li>
+        <li><a href="cursos.html?cat=flores">Cursos de Flores</a></li>
+        <li><a href="cursos.html?cat=vendas">Cursos de Vendas</a></li>
+        <li><a href="cursos.html?cat=materiais">Materiais Digitais</a></li>
+        <li><a href="cursos.html">Todos os cursos</a></li>
+      </ul>
+    </div>
     <div class="footer-col">
       <h4>Navegação</h4>
       <ul>
@@ -470,6 +401,7 @@ footer{background:var(--black);padding:64px 60px 32px}
     <div class="footer-col">
       <h4>Empresa</h4>
       <ul>
+        <li><a href="compra-segura.html" style="color:var(--green)">🔒 Compra Segura</a></li>
         <li><a href="seja-instrutora.html">Seja instrutora</a></li>
         <li><a href="pack-completo.html">Pack Completo</a></li>
         <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
@@ -487,21 +419,6 @@ footer{background:var(--black);padding:64px 60px 32px}
 <script>
 if(localStorage.getItem('cookie')) document.getElementById('cookieBar').style.display='none';
 document.getElementById('navToggle').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');});
-
-function switchPlataforma(plat, btn) {
-  document.querySelectorAll('.platform-tab').forEach(function(t){ t.classList.remove('active'); });
-  document.querySelectorAll('.tab-content').forEach(function(c){ c.classList.remove('active'); });
-  document.querySelectorAll('.toc-group').forEach(function(g){ g.classList.remove('active'); });
-  btn.classList.add('active');
-  document.getElementById('content-' + plat).classList.add('active');
-  document.getElementById('toc-' + plat).classList.add('active');
-  window.scrollTo({ top: document.getElementById('platformTabs').offsetTop - 100, behavior: 'smooth' });
-}
-
-if(window.location.hash === '#anterior') {
-  switchPlataforma('anterior', document.getElementById('tab-anterior'));
-}
-
 function vote(btn, val) {
   document.querySelectorAll('.helpful-btn').forEach(function(b){ b.classList.remove('voted'); });
   btn.classList.add('voted');
@@ -509,5 +426,5 @@ function vote(btn, val) {
   btn.textContent = val === 'sim' ? '✅ Ótimo! Bons estudos!' : '📩 Redirecionando para o suporte…';
 }
 </script>
-</body>
+<style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style></body>
 </html>

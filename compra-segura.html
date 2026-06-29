@@ -1,0 +1,530 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compra 100% Segura — Handify</title>
+<meta name="description" content="Entenda por que o banco manda aviso de possível golpe no Pix e por que aparece PAYT no pagamento. A Handify é uma empresa real e registrada. CNPJ: 59.081.684/0001-46.">
+<meta property="og:title" content="Compra 100% Segura — Handify">
+<meta property="og:description" content="Entenda o aviso do banco no Pix, por que aparece PAYT, e veja os resultados reais de nossas alunas.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue:#5288EF; --green:#A8E8A9; --black:#0F0F0F; --gray-dark:#2D2D2D;
+  --gray-mid:#6B7280; --off-white:#F5F5F0; --blue-light:#EEF3FD;
+  --yellow:#F5CE3E; --white:#FFFFFF;
+  --green-ok:#22C55E; --green-light:#F0FDF4;
+  --orange:#F97316; --orange-light:#FFF7ED;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',Arial,Helvetica,sans-serif;background:var(--white);color:var(--gray-dark);font-size:16px;line-height:1.7}
+.brand-stripe{height:6px;background:linear-gradient(90deg,var(--blue) 33.3%,var(--green) 33.3% 66.6%,var(--yellow) 66.6%)}
+
+/* NAV */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid rgba(0,0,0,0.08);position:sticky;top:0;background:var(--white);z-index:100;box-shadow:0 1px 12px rgba(0,0,0,0.05)}
+.nav-brand{font-size:22px;font-weight:900;letter-spacing:-.5px;color:var(--black);text-decoration:none}
+.nav-brand span{color:var(--blue)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-size:13px;font-weight:600;text-decoration:none;color:var(--gray-mid);text-transform:uppercase;letter-spacing:.06em;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+.nav-cta{background:var(--blue);color:var(--white)!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
+.nav-cta:hover { background:#3A72D4!important; }
+.nav-login { border:2px solid var(--blue); color:var(--blue)!important; padding:7px 20px; border-radius:6px; font-weight:700!important; transition:all .15s!important; }
+.nav-login:hover { background:var(--blue); color:var(--white)!important; }
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* BREADCRUMB */
+.breadcrumb{padding:14px 60px;background:var(--off-white);border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;color:var(--gray-mid);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.breadcrumb a{color:var(--blue);text-decoration:none;font-weight:600}
+.breadcrumb a:hover{text-decoration:underline}
+
+/* HERO */
+.page-hero{background:var(--black);padding:64px 60px 72px;text-align:center}
+.hero-icon{font-size:56px;margin-bottom:20px;line-height:1}
+.hero-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--green);margin-bottom:14px}
+.page-hero h1{font-size:clamp(32px,5vw,52px);font-weight:900;color:var(--white);letter-spacing:-.5px;line-height:1.1;max-width:700px;margin:0 auto 16px}
+.page-hero h1 .accent{color:var(--green)}
+.page-hero p{font-size:17px;color:var(--gray-mid);max-width:520px;margin:0 auto;line-height:1.65}
+
+/* SECTIONS */
+.section{padding:72px 60px}
+.section-inner{max-width:820px;margin:0 auto}
+.section-alt{background:var(--off-white)}
+.section-dark{background:var(--black)}
+
+.section-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--blue);margin-bottom:14px}
+.section h2{font-size:clamp(26px,4vw,36px);font-weight:900;color:var(--black);letter-spacing:-.4px;line-height:1.2;margin-bottom:20px}
+.section-dark h2{color:var(--white)}
+.section-dark .section-eyebrow{color:var(--green)}
+.section p.lead{font-size:17px;color:var(--gray-dark);line-height:1.75;margin-bottom:28px}
+.section-alt p.lead{color:var(--gray-dark)}
+.section-dark p.lead{color:rgba(255,255,255,0.7)}
+
+/* ALERT BOX */
+.alert-box{border-radius:16px;padding:24px 28px;margin:28px 0;display:flex;gap:18px;align-items:flex-start;border:1px solid}
+.alert-box.orange{background:var(--orange-light);border-color:rgba(249,115,22,.2)}
+.alert-box.green{background:var(--green-light);border-color:rgba(34,197,94,.25)}
+.alert-box.blue{background:var(--blue-light);border-color:rgba(82,136,239,.2)}
+.alert-icon{font-size:24px;flex-shrink:0;margin-top:1px}
+.alert-box h4{font-size:15px;font-weight:700;color:var(--black);margin-bottom:4px}
+.alert-box p{font-size:14px;color:var(--gray-dark);line-height:1.65}
+.alert-box.orange h4{color:#9a3412}
+.alert-box.orange p{color:#7c2d12}
+
+/* PAYT CARD */
+.payt-card{background:var(--white);border:2px solid rgba(82,136,239,.3);border-radius:16px;padding:28px 32px;margin:28px 0}
+.payt-card-header{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.payt-card-header .payt-icon{font-size:36px;flex-shrink:0}
+.payt-card-header h4{font-size:16px;font-weight:900;color:var(--black);line-height:1.3}
+.payt-card-header h4 span{display:block;font-size:12px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.payt-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.payt-compare-item{background:var(--off-white);border-radius:10px;padding:14px 16px}
+.payt-compare-item .label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-mid);margin-bottom:6px}
+.payt-compare-item p{font-size:13px;color:var(--gray-dark);line-height:1.5}
+.payt-compare-item strong{color:var(--black)}
+
+/* DEP IMAGES */
+.dep-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.dep-img{}
+.dep-img img{width:100%;height:auto;display:block}
+.dep-img-full{margin:16px 0}
+.dep-img-full img{width:100%;height:auto;display:block}
+.dep-caption{font-size:12px;color:var(--gray-mid);text-align:center;padding:10px 0 0;font-style:italic}
+
+/* GUARANTEE */
+.guarantee-block{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:40px;text-align:center;max-width:600px;margin:0 auto}
+.guarantee-block .g-num{font-size:80px;font-weight:900;color:var(--green);line-height:1;margin-bottom:8px}
+.guarantee-block h3{font-size:24px;font-weight:900;color:var(--white);margin-bottom:16px}
+.guarantee-block p{font-size:15px;color:rgba(255,255,255,0.65);line-height:1.7}
+.guarantee-block .g-badge{display:inline-block;margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;background:rgba(168,232,169,.15);color:var(--green);padding:6px 16px;border-radius:20px;border:1px solid rgba(168,232,169,.3)}
+
+/* CTA BAND */
+.cta-band{background:var(--blue);padding:64px 60px;text-align:center}
+.cta-band h2{font-size:clamp(26px,4vw,36px);font-weight:900;color:var(--white);letter-spacing:-.4px;margin-bottom:12px}
+.cta-band p{font-size:17px;color:rgba(255,255,255,0.8);margin-bottom:32px}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--blue);padding:16px 36px;border-radius:8px;font-weight:900;font-size:16px;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,0.15)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,0.2)}
+.cta-trust{font-size:12px;color:rgba(255,255,255,0.5);margin-top:16px}
+
+/* PARTNER LOGOS */
+.partner-logos{display:flex;align-items:center;justify-content:center;gap:32px;margin-top:40px;flex-wrap:wrap}
+.partner-logo-item{text-align:center;flex:1;min-width:180px;max-width:240px}
+.partner-img{display:block;margin:0 auto 14px;width:auto}
+.partner-img-ak{height:68px;border-radius:16px}
+.partner-img-h{height:84px}
+.partner-label{display:block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gray-mid);margin-bottom:6px}
+.partner-logo-item strong{display:block;font-size:14px;font-weight:800;color:var(--black);margin-bottom:3px}
+.partner-meta{font-size:12px;color:var(--gray-mid);line-height:1.6}
+.partner-connector{text-align:center;flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 8px}
+.partner-connector::before,.partner-connector::after{content:'';display:block;width:1px;height:28px;background:rgba(0,0,0,0.15)}
+.partner-connector span{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-mid);white-space:nowrap}
+
+/* ANTIPIRACY */
+.antipiracy-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0}
+.antipiracy-item{background:var(--white);border:1px solid rgba(0,0,0,0.07);border-radius:12px;padding:24px}
+.antipiracy-item .ap-icon{font-size:28px;margin-bottom:10px}
+.antipiracy-item h4{font-size:15px;font-weight:700;color:var(--black);margin-bottom:8px}
+.antipiracy-item p{font-size:14px;color:var(--gray-dark);line-height:1.6}
+.antipiracy-contacts{margin-top:32px;padding-top:24px;border-top:1px solid rgba(0,0,0,0.08)}
+.ap-contacts-title{font-size:12px;font-weight:700;color:var(--gray-mid);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px}
+.ap-contacts-grid{display:flex;flex-wrap:wrap;gap:12px}
+.ap-contact-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;transition:opacity .15s}
+.ap-contact-btn:hover{opacity:.88}
+.ap-whatsapp{background:#25D366;color:#fff}
+.ap-instagram{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
+.ap-email{background:var(--off-white);color:var(--gray-dark);border:1px solid rgba(0,0,0,0.1)}
+/* COOKIE */
+.cookie-bar{position:fixed;bottom:0;left:0;right:0;background:var(--black);border-top:1px solid rgba(255,255,255,0.1);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;z-index:9999;box-shadow:0 -4px 24px rgba(0,0,0,0.2)}
+.cookie-bar p{font-size:12px;color:rgba(255,255,255,0.6);max-width:560px;line-height:1.5}
+.cookie-bar p a{color:var(--blue);text-decoration:none}
+.cookie-btn{background:var(--blue);color:var(--white);border:none;padding:10px 24px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;font-family:'Montserrat',Arial,sans-serif}
+
+/* FOOTER */
+footer{background:var(--black);padding:64px 60px 32px}
+.footer-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-brand-col .footer-brand{font-size:22px;font-weight:900;color:var(--white);text-decoration:none;letter-spacing:-.5px;display:block;margin-bottom:12px}
+.footer-brand-col .footer-brand span{color:var(--blue)}
+.footer-brand-col p{font-size:13px;color:var(--gray-mid);line-height:1.7;max-width:260px}
+.footer-social{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.footer-social-link{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.65);text-decoration:none;transition:color .15s}
+.footer-social-link:hover{color:var(--white)}
+.footer-email{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-mid)}
+.footer-col h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-mid);margin-bottom:16px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .15s}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-bottom{max-width:1140px;margin:32px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:var(--gray-mid)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav{padding:16px 24px;position:relative}
+  .nav-toggle{display:flex !important}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;gap:0;padding:8px 0 16px;border-bottom:1px solid rgba(0,0,0,0.1);box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:99}
+  .nav-links.open{display:flex !important}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:12px 24px;font-size:14px}
+  .nav-links .nav-cta{margin:8px 16px 0;text-align:center;display:block;border-radius:6px}
+  .nav-links .nav-login{margin:4px 16px!important;text-align:center!important;display:block!important;border-radius:6px!important;border:2px solid var(--blue)!important;padding:8px 22px!important}
+  .breadcrumb{padding:12px 20px}
+  .page-hero{padding:48px 24px 56px}
+  .section{padding:52px 24px}
+  .dep-grid{grid-template-columns:1fr}
+  .dep-img-full{margin-left:-24px;margin-right:-24px;width:calc(100% + 48px)}
+  .payt-compare{grid-template-columns:1fr}
+  .payt-card{padding:20px}
+  .cta-band{padding:48px 24px}
+  footer{padding:48px 24px 28px}
+  .footer-grid{grid-template-columns:1fr;gap:32px;padding:0 0 32px}
+  .footer-bottom{flex-direction:column;text-align:center;gap:8px}
+  .cookie-bar{flex-direction:column;text-align:center;padding:16px 20px}
+  .guarantee-block{padding:28px 20px}
+  .antipiracy-grid{grid-template-columns:1fr}
+  .ap-contacts-grid{flex-direction:column}
+  .guarantee-block .g-num{font-size:64px}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr !important}
+}
+</style>
+</head>
+<body>
+
+<div class="cookie-bar" id="cookieBar">
+  <p>Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa <a href="termos-de-uso.html">Política de Privacidade</a>.</p>
+  <button class="cookie-btn" onclick="document.getElementById('cookieBar').style.display='none';localStorage.setItem('cookie','1')">Entendi</button>
+</div>
+
+<div class="brand-stripe"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">HANDIFY<span>.</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cursos.html">Cursos</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="ajuda.html">Ajuda</a></li>
+    <li><a href="https://membros.handify.com.br/login" target="_blank" rel="noopener" class="nav-login">Acessar</a></li>
+    <li><a href="pack-completo.html" class="nav-cta">Começar agora</a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span>&rsaquo;</span>
+  <a href="ajuda.html">Ajuda</a>
+  <span>&rsaquo;</span>
+  <span>Compra Segura</span>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-icon">&#x1F6E1;&#xFE0F;</div>
+  <div class="hero-eyebrow">Transparência total</div>
+  <h1>Sua compra é <span class="accent">100% segura</span></h1>
+  <p>A Handify é uma empresa registrada no Brasil. Aqui você encontra tudo o que precisa saber antes de comprar com total tranquilidade.</p>
+</section>
+
+
+<!-- SOBRE A EMPRESA -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-eyebrow">Quem está por trás da Handify</div>
+    <h2>A Handify pertence à Alaskan Academy</h2>
+    <p class="lead">A plataforma Handify é uma marca da <strong>ALASKAN ACADEMY LTDA</strong>, empresa brasileira fundada em 2024, com foco no ramo educacional. Registrada no CNPJ <strong>59.081.684/0001-46</strong>, desenvolvemos plataformas digitais de ensino para capacitar pessoas com habilidades práticas e criativas.</p>
+
+    <div class="partner-logos">
+      <div class="partner-logo-item">
+        <img src="logo-alaskan.png" alt="Alaskan Academy" class="partner-img partner-img-ak">
+        <span class="partner-label">Empresa proprietária</span>
+        <strong>ALASKAN ACADEMY LTDA</strong>
+        <span class="partner-meta">CNPJ 59.081.684/0001-46<br>Fundada em 2024 &middot; Educação digital</span>
+      </div>
+      <div class="partner-connector">
+        <span>possui a marca</span>
+      </div>
+      <div class="partner-logo-item">
+        <img src="logo-handify.png" alt="Handify" class="partner-img partner-img-h">
+        <span class="partner-label">Plataforma de cursos</span>
+        <strong>HANDIFY&trade;</strong>
+        <span class="partner-meta">Plataforma brasileira de<br>cursos de artesanato</span>
+      </div>
+    </div>
+
+    <div class="alert-box blue" style="margin-top:40px">
+      <span class="alert-icon">&#x1F3DB;&#xFE0F;</span>
+      <div>
+        <h4>Empresa 100% brasileira, regularizada</h4>
+        <p>A Alaskan Academy é uma empresa de educação digital registrada na Receita Federal, com CNPJ ativo desde 2024. Desenvolvemos a Handify como nossa plataforma principal para democratizar o acesso ao aprendizado criativo e artesanal no Brasil.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;padding-top:32px;border-top:2px solid rgba(249,115,22,.25)">
+      <div class="section-eyebrow" style="color:var(--orange)">Aten&ccedil;&atilde;o &mdash; Importante</div>
+      <h3 style="font-size:clamp(20px,3vw,26px);font-weight:900;color:var(--black);letter-spacing:-.3px;margin:10px 0 16px">Cuidado com c&oacute;pias n&atilde;o autorizadas</h3>
+      <p style="font-size:16px;color:var(--gray-dark);line-height:1.7;margin-bottom:24px">Infelizmente existem pessoas que copiam nosso nome, conte&uacute;do ou visual para vender cursos n&atilde;o autorizados. Se voc&ecirc; encontrar algo que se passe por Handify ou Alaskan Academy fora dos nossos canais oficiais, <strong>n&atilde;o compre</strong>.</p>
+
+      <div class="alert-box orange">
+        <span class="alert-icon">&#x26A0;&#xFE0F;</span>
+        <div>
+          <h4>N&atilde;o compre se n&atilde;o for de fonte oficial</h4>
+          <p>Nossos produtos s&atilde;o vendidos <strong>exclusivamente pelo nosso site</strong> e pela p&aacute;gina oficial <strong>@handify.br</strong> no Instagram. Qualquer outro perfil, grupo de WhatsApp ou link externo n&atilde;o &eacute; autorizado por n&oacute;s.</p>
+        </div>
+      </div>
+
+      <div class="antipiracy-grid">
+        <div class="antipiracy-item">
+          <div class="ap-icon">&#x1F50D;</div>
+          <h4>Tem d&uacute;vida se &eacute; leg&iacute;timo?</h4>
+          <p>Antes de comprar, nos chame no WhatsApp ou Instagram e confirmamos na hora se aquele produto ou perfil &eacute; oficial.</p>
+        </div>
+        <div class="antipiracy-item">
+          <div class="ap-icon">&#x1F4E2;</div>
+          <h4>Encontrou uma c&oacute;pia? Denuncie</h4>
+          <p>Envie o link ou print do perfil suspeito. Vamos acionar nosso time jur&iacute;dico e tomar as medidas cab&iacute;veis.</p>
+        </div>
+      </div>
+
+      <div class="antipiracy-contacts">
+        <p class="ap-contacts-title">Canais oficiais para d&uacute;vidas e den&uacute;ncias:</p>
+        <div class="ap-contacts-grid">
+          <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" class="ap-contact-btn ap-whatsapp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://www.instagram.com/handify.br/" target="_blank" rel="noopener" class="ap-contact-btn ap-instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            @handify.br
+          </a>
+          <span class="ap-contact-btn ap-email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contato@handify.com.br
+          </span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<!-- SECAO 1: PIX AVISO BANCO -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Dúvida muito comum</div>
+    <h2>Por que o banco manda mensagem de "possível golpe" no Pix?</h2>
+    <p class="lead">Se você tentou pagar via Pix e recebeu uma mensagem do banco dizendo "atenção, possível golpe" ou "você conhece o destinatário?", entendemos que isso pode assustar. Mas calma &mdash; <strong>isso não quer dizer que a Handify é suspeita</strong>.</p>
+
+    <div class="alert-box orange">
+      <span class="alert-icon">&#x2139;&#xFE0F;</span>
+      <div>
+        <h4>Por que o aviso aparece? Há dois motivos &mdash; ambos normais</h4>
+        <p><strong>1. Obrigação legal:</strong> Desde 2022, o Banco Central exige que todos os bancos exibam alertas em Pix para chaves de CNPJ. Essa mensagem é automática e genérica &mdash; aparece para qualquer empresa, sem exceção.</p>
+        <p style="margin-top:10px"><strong>2. Primeira vez para essa chave:</strong> O aviso também aparece quando você nunca enviou Pix para aquele destinatário antes. Como o pagamento cai para a PAYT (nossa plataforma de pagamentos), é provável que seja sua primeira vez pagando para essa chave &mdash; então o banco automaticamente avisa "você conhece quem está recebendo?". Isso acontece mesmo com amigos e familiares na primeira transferência.</p>
+      </div>
+    </div>
+
+    <p class="lead" style="margin-top:8px">Além disso, há um segundo ponto que costuma gerar dúvida: na hora de pagar, o nome que aparece no Pix <strong>não é "Handify" nem "Alaskan Academy"</strong> &mdash; é <strong>PAYT TECNOLOGIA E EDUCACAO DIGITAL LTDA</strong>. Entenda por que isso é completamente normal.</p>
+
+    <div class="payt-card">
+      <div class="payt-card-header">
+        <span class="payt-icon">&#x1F4B3;</span>
+        <h4>
+          <span>Processador de pagamentos autorizado</span>
+          PAYT TECNOLOGIA E EDUCACAO DIGITAL LTDA
+        </h4>
+      </div>
+      <p style="font-size:15px;color:var(--gray-dark);line-height:1.7;margin-bottom:16px">A PAYT é a empresa fintech licenciada que processa os pagamentos da nossa plataforma de cursos. Ela funciona exatamente como uma "maquininha digital" &mdash; intermediária financeira entre você e a Handify, autorizada pelo Banco Central.</p>
+      <div class="payt-compare">
+        <div class="payt-compare-item">
+          <div class="label">Analogia do dia a dia</div>
+          <p>Quando você paga numa loja física com cartão, a fatura mostra <strong>"STONE*NOMEDAEMPRESA"</strong> ou <strong>"MERCADOPAGO*LOJA"</strong> &mdash; não o nome da loja diretamente. É o mesmo princípio.</p>
+        </div>
+        <div class="payt-compare-item">
+          <div class="label">Como confirmar que está certo</div>
+          <p>Verifique se o nome no Pix e <strong>PAYT TECNOLOGIA E EDUCACAO DIGITAL LTDA</strong> e se o valor bate com o que foi informado. Estando correto, pode pagar tranquila.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert-box green" style="margin-top:8px">
+      <span class="alert-icon">&#x2705;</span>
+      <div>
+        <h4>Após o pagamento</h4>
+        <p>O acesso ao curso é liberado automaticamente pela plataforma assim que o pagamento é confirmado &mdash; geralmente em menos de 5 minutos. Você receberá um e-mail com os dados de acesso.</p>
+      </div>
+    </div>
+
+    <div class="alert-box blue" style="margin-top:8px">
+      <span class="alert-icon">&#x1F4AC;</span>
+      <div>
+        <h4>Ainda com dúvida? Fale com a gente antes de pagar</h4>
+        <p>Nossa equipe responde rapidinho pelo WhatsApp e pode te ajudar a finalizar a compra com total segurança.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECAO 2: OS CURSOS EXISTEM -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-eyebrow">Resultados reais</div>
+    <h2>Os cursos existem &mdash; e as alunas estão produzindo de verdade</h2>
+    <p class="lead">Outra dúvida legítima: "Mas eu vou pagar e realmente receber o curso?" Sim. Assim que o pagamento for confirmado, você recebe acesso imediato à plataforma de aulas. Veja o que nossas alunas estão compartilhando:</p>
+
+    <div class="dep-grid">
+      <div class="dep-img">
+        <img src="dep-velas-1.png" alt="Aluna mostrando vela que fez apos o curso, com mensagem: ficou cheirosa">
+        <p class="dep-caption">Aluna do Curso de Velas &mdash; resultado na primeira tentativa</p>
+      </div>
+      <div class="dep-img">
+        <img src="dep-velas-2.png" alt="Aluna mostrando caixa de velas artesanais que produziu apos o curso">
+        <p class="dep-caption">Produção em escala &mdash; pronta para vender</p>
+      </div>
+    </div>
+
+    <div class="dep-img-full">
+      <img src="dep-saponaria-2.png" alt="Duas alunas mostrando sabonetes artesanais que produziram apos o curso">
+      <p class="dep-caption">Alunas do Curso de Saponaria &mdash; kit profissional e sabonetes coloridos</p>
+    </div>
+
+    <p style="font-size:15px;color:var(--gray-mid);text-align:center;margin:32px 0 16px;font-weight:600;text-transform:uppercase;letter-spacing:.08em">Comentários reais dentro da plataforma de aulas</p>
+
+    <div class="dep-img-full">
+      <img src="dep-saponaria-1.png" alt="Print da plataforma de cursos mostrando comentarios de alunas: super prático adoro, amei, muito bom conteudo, amando tudo">
+      <p class="dep-caption">Comentários reais de alunas dentro da plataforma &mdash; Priscila Lima e Elaine Lelis</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECAO 3: PLATAFORMA -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Dentro da plataforma</div>
+    <h2>Veja como são as aulas por dentro</h2>
+    <p class="lead">A plataforma de cursos da Handify é uma área de membros completa, com aulas em video, módulos organizados, materiais para download e suporte. Veja capturas reais:</p>
+
+    <div class="dep-grid">
+      <div class="dep-img">
+        <img src="plataforma-boas-vindas.png" alt="Tela de boas vindas da plataforma Handify Artesanato com a instrutora em video">
+        <p class="dep-caption">Aula de boas-vindas &mdash; instrutora ao vivo na tela</p>
+      </div>
+      <div class="dep-img">
+        <img src="plataforma-modulos.png" alt="Tela da plataforma mostrando módulos do curso: Aula 1 Materiais, Aula 2 Criacao, Aula 3 Montagem, com video da instrutora">
+        <p class="dep-caption">Módulos organizados &mdash; aulas com video e navegação lateral</p>
+      </div>
+      <div class="dep-img">
+        <img src="plataforma-flores.png" alt="Aula de arranjo de flores dentro da plataforma Handify, com video de centro de mesa">
+        <p class="dep-caption">Curso de Flores &mdash; aula prática de centro de mesa</p>
+      </div>
+      <div class="dep-img">
+        <img src="plataforma-sabonete.png" alt="Aula de sabonete cacho de uva dentro da plataforma, com menu lateral de módulos">
+        <p class="dep-caption">Curso de Saponaria &mdash; sabonete cacho de uva com menu de aulas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECAO 4: GARANTIA -->
+<section class="section section-dark">
+  <div class="section-inner" style="text-align:center">
+    <div class="section-eyebrow">Sem risco nenhum</div>
+    <h2>Garantia incondicional de 7 dias</h2>
+    <p class="lead" style="max-width:560px;margin:0 auto 40px">Se por qualquer motivo você não gostar do curso, devolvemos 100% do valor pago. Sem perguntas, sem burocracia.</p>
+    <div class="guarantee-block">
+      <div class="g-num">7</div>
+      <h3>dias de garantia total</h3>
+      <p>Assista às aulas, baixe os materiais, experimente. Se não atender suas expectativas em 7 dias, basta pedir o reembolso e devolveremos tudo.</p>
+      <span class="g-badge">Código de Defesa do Consumidor &middot; Art. 49</span>
+    </div>
+    <p style="color:rgba(255,255,255,0.45);font-size:13px;margin-top:24px">Para solicitar reembolso, entre em contato pelo WhatsApp ou pelo e-mail <span style="color:rgba(255,255,255,0.7)">contato@handify.com.br</span></p>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Pronta para começar?</h2>
+  <p>Agora que você sabe que está em boas mãos, dê o primeiro passo.</p>
+  <a href="pack-completo.html" class="btn-white">Ver os cursos disponíveis &rarr;</a>
+  <p class="cta-trust">&#x1F512; CNPJ 59.081.684/0001-46 &middot; Pagamento via PAYT &middot; Garantia de 7 dias</p>
+</div>
+
+<div class="brand-stripe"></div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <a href="index.html" class="footer-brand">HANDIFY<span>.</span></a>
+      <p>Plataforma brasileira de cursos de artesanato. Aprenda com quem faz de verdade e transforme sua habilidade em negócio.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/handify.br/" target="_blank" rel="noopener" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @handify.br
+        </a>
+        <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <span class="footer-email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          contato@handify.com.br
+        </span>
+      </div>
+    </div>
+    <div class="footer-col footer-cats">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="cursos.html?cat=velas">Cursos de Velas</a></li>
+        <li><a href="cursos.html?cat=saboaria">Cursos de Saboaria</a></li>
+        <li><a href="cursos.html?cat=flores">Cursos de Flores</a></li>
+        <li><a href="cursos.html?cat=vendas">Cursos de Vendas</a></li>
+        <li><a href="cursos.html?cat=materiais">Materiais Digitais</a></li>
+        <li><a href="cursos.html">Todos os cursos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="ajuda.html">Central de Ajuda</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="compra-segura.html" style="color:var(--green)">&#x1F512; Compra Segura</a></li>
+        <li><a href="seja-instrutora.html">Seja instrutora</a></li>
+        <li><a href="pack-completo.html">Pack Completo</a></li>
+        <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
+        <li><a href="termos-de-uso.html">Termos de uso</a></li>
+        <li><a href="contato.html">Fale conosco</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Handify&trade; &middot; ALASKAN ACADEMY LTDA &middot; CNPJ 59.081.684/0001-46 &middot; Todos os direitos reservados</p>
+    <p>Feito com cuidado no Brasil &#x1F1E7;&#x1F1F7;</p>
+  </div>
+</footer>
+
+<script>
+if(localStorage.getItem('cookie')) document.getElementById('cookieBar').style.display='none';
+document.getElementById('navToggle').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');});
+</script>
+<style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style>
+</body>
+</html>

@@ -61,8 +61,12 @@ body {
 .nav-brand span { color: var(--blue); }
 .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
 .nav-links a { font-size: 13px; font-weight: 600; text-decoration: none; color: var(--gray-mid); text-transform: uppercase; letter-spacing: .06em; transition: color .15s; }
+  .nav-links .nav-login{margin:4px 16px!important;text-align:center!important;display:block!important;border-radius:6px!important;border:2px solid var(--blue)!important;padding:8px 22px!important}
 .nav-links a:hover, .nav-links a.active { color: var(--blue); }
 .nav-cta { background: var(--blue); color: var(--white) !important; padding: 8px 20px; border-radius: 6px; font-weight: 700 !important; }
+.nav-cta:hover { background:#3A72D4!important; }
+.nav-login { border:2px solid var(--blue); color:var(--blue)!important; padding:7px 20px; border-radius:6px; font-weight:700!important; transition:all .15s!important; }
+.nav-login:hover { background:var(--blue); color:var(--white)!important; }
 .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; z-index:101; }
 .nav-toggle span { display:block; width:22px; height:2px; background:var(--black); border-radius:2px; transition:transform .2s,opacity .2s; }
 .nav-toggle.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
@@ -260,9 +264,9 @@ footer { background: var(--black); padding: 64px 60px 32px; }
 }
 @media(max-width:768px) {
   .nav { padding: 16px 24px; position: relative; }
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex !important; }
   .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; gap: 0; padding: 8px 0 16px; border-bottom: 1px solid rgba(0,0,0,0.1); box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 99; }
-  .nav-links.open { display: flex; }
+  .nav-links.open { display: flex !important; }
   .nav-links li { width: 100%; }
   .nav-links a { display: block; padding: 12px 24px; font-size: 14px; }
   .nav-links .nav-cta { margin: 8px 16px 0; text-align: center; display: block; border-radius: 6px; }
@@ -296,6 +300,7 @@ footer { background: var(--black); padding: 64px 60px 32px; }
     <li><a href="contato.html">Contato</a></li>
     <li><a href="ajuda.html">Ajuda</a></li>
     <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
+    <li><a href="https://membros.handify.com.br/login" target="_blank" rel="noopener" class="nav-login">Acessar</a></li>
     <li><a href="pack-completo.html" class="nav-cta">Começar agora</a></li>
   </ul>
 </nav>
@@ -531,6 +536,17 @@ footer { background: var(--black); padding: 64px 60px 32px; }
         </span>
       </div>
     </div>
+    <div class="footer-col footer-cats">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="cursos.html?cat=velas">Cursos de Velas</a></li>
+        <li><a href="cursos.html?cat=saboaria">Cursos de Saboaria</a></li>
+        <li><a href="cursos.html?cat=flores">Cursos de Flores</a></li>
+        <li><a href="cursos.html?cat=vendas">Cursos de Vendas</a></li>
+        <li><a href="cursos.html?cat=materiais">Materiais Digitais</a></li>
+        <li><a href="cursos.html">Todos os cursos</a></li>
+      </ul>
+    </div>
     <div class="footer-col">
       <h4>Navegação</h4>
       <ul>
@@ -544,6 +560,7 @@ footer { background: var(--black); padding: 64px 60px 32px; }
     <div class="footer-col">
       <h4>Empresa</h4>
       <ul>
+        <li><a href="compra-segura.html" style="color:var(--green)">🔒 Compra Segura</a></li>
         <li><a href="seja-instrutora.html">Seja instrutora</a></li>
         <li><a href="pack-completo.html">Pack Completo</a></li>
         <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
@@ -565,5 +582,5 @@ document.getElementById('navToggle').addEventListener('click',function(){
   document.getElementById('navLinks').classList.toggle('open');
 });
 </script>
-</body>
+<style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style></body>
 </html>
