@@ -6,6 +6,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", ".", "--listen", "3456", "--no-clipboard"],
       "port": 3456
+    },
+    {
+      "name": "rev2-superoferta-preview",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5173", "--directory", "D:\\Infoprodutos\\Pasta Sincronizada Google Drive\\Lp Workshop Buquê Rev2 - super oferta"],
+      "port": 5173
     }
   ]
 }
