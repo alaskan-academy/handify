@@ -10,7 +10,7 @@
     {
       "name": "rev2-superoferta-preview",
       "runtimeExecutable": "powershell.exe",
-      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\LUCASV~1\\AppData\\Local\\Temp\\claude\\D--Infoprodutos-Pasta-Sincronizada-Google-Drive-Site-Handify\\8588810b-2902-4355-9d7c-987a5d4243d3\\scratchpad\\static-server.ps1", "-Root", "D:\\Infoprodutos\\Pasta Sincronizada Google Drive\\Lp Workshop Buque Rev2 - super oferta"],
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\LUCASV~1\\AppData\\Local\\Temp\\claude\\D--Infoprodutos-Pasta-Sincronizada-Google-Drive-Site-Handify\\8588810b-2902-4355-9d7c-987a5d4243d3\\scratchpad\\static-server.ps1", "-Root", "D:\\Infoprodutos\\rev2-preview-link"],
       "port": 5173
     }
   ]
