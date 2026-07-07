@@ -14,6 +14,12 @@
       "port": 5173
     },
     {
+      "name": "rev2-confirmacao-preview",
+      "runtimeExecutable": "powershell.exe",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\LUCASV~1\\AppData\\Local\\Temp\\claude\\D--Infoprodutos-Pasta-Sincronizada-Google-Drive-Site-Handify\\8588810b-2902-4355-9d7c-987a5d4243d3\\scratchpad\\static-server.ps1", "-Root", "D:\\Infoprodutos\\rev2b-preview-link", "-Port", "5174"],
+      "port": 5174
+    },
+    {
       "name": "lp-oferta-whatsapp",
       "runtimeExecutable": "powershell.exe",
       "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\Lucas Veiga\\AppData\\Local\\Temp\\claude\\D--Infoprodutos-Pasta-Sincronizada-Google-Drive-Site-Handify\\ea202d17-9741-4568-9193-9e20a2b07a56\\scratchpad\\static-server.ps1", "-Root", "D:\\Infoprodutos\\Pasta Sincronizada Google Drive\\LP Oferta WhatsApp", "-Port", "4567"],
