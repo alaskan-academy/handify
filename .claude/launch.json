@@ -15,8 +15,8 @@
     },
     {
       "name": "lp-oferta-whatsapp",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "D:\\Infoprodutos\\Pasta Sincronizada Google Drive\\LP Oferta WhatsApp", "--listen", "4567", "--no-clipboard"],
+      "runtimeExecutable": "powershell.exe",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\Lucas Veiga\\AppData\\Local\\Temp\\claude\\D--Infoprodutos-Pasta-Sincronizada-Google-Drive-Site-Handify\\ea202d17-9741-4568-9193-9e20a2b07a56\\scratchpad\\static-server.ps1", "-Root", "D:\\Infoprodutos\\Pasta Sincronizada Google Drive\\LP Oferta WhatsApp", "-Port", "4567"],
       "port": 4567
     }
   ]
