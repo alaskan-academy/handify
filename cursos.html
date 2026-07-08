@@ -1,35 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cursos de Artesanato Online — Handify</title>
 <meta name="description" content="10 cursos práticos de velas, saboaria, flores, caixas florais, embalagens, balões e vendas. Acesso vitalício ou Pack Completo anual com comunidade.">
 <meta property="og:title" content="Cursos de Artesanato Online — Handify">
 <meta property="og:description" content="10 cursos práticos de artesanato ensinados por quem vive do que faz. Do primeiro produto à primeira venda.">
 <meta property="og:image" content="https://www.handify.com.br/og-image.jpg">
-<meta property="og:url" content="https://www.handify.com.br/cursos.html">
+<meta property="og:url" content="https://site.handify.com.br/cursos.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://www.handify.com.br/cursos.html">
+<link rel="canonical" href="https://site.handify.com.br/cursos.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/main.css">
 <style>
-:root {
-  --blue: #5288EF;
-  --green: #A8E8A9;
-  --black: #0F0F0F;
-  --gray-dark: #2D2D2D;
-  --gray-mid: #6B7280;
-  --off-white: #F5F5F0;
-  --blue-light: #EEF3FD;
-  --yellow: #F5CE3E;
-  --white: #FFFFFF;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
 body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   background: var(--white);
@@ -71,8 +60,6 @@ body {
   background: var(--blue); color: var(--white) !important;
   padding: 9px 22px; border-radius: 6px; font-weight: 700 !important;
 }
-.nav-login { border:2px solid var(--blue); color:var(--blue)!important; padding:7px 20px; border-radius:6px; font-weight:700!important; transition:all .15s!important; }
-.nav-login:hover { background:var(--blue); color:var(--white)!important; }
 
 /* HERO */
 .hero {
@@ -394,87 +381,7 @@ footer {
   footer { padding: 40px 24px 24px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
-.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}.nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav-toggle.open span:nth-child(2){opacity:0}.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-/* ═══════════════════════════════════════
-   MOBILE RESPONSIVENESS — GLOBAL RULES
-   ═══════════════════════════════════════ */
-@media(max-width:768px){
-  /* NAV */
-  .nav{padding:16px 24px !important;position:relative !important}
-  .nav-links .nav-login{margin:8px 16px 0 !important;text-align:center !important;display:block !important;border-radius:6px !important;border:2px solid var(--blue)!important;padding:9px 20px !important}
-
-  /* FOOTER GRID */
-  footer{padding:48px 24px 28px !important}
-  .footer-grid{grid-template-columns:1fr !important;gap:32px !important;padding:0 0 32px 0 !important}
-  .footer-bottom{flex-direction:column !important;text-align:center !important;gap:8px !important}
-  .footer-brand-col p{max-width:100% !important}
-
-  /* HERO SECTIONS */
-  .hero{padding:56px 24px 48px !important;min-height:auto !important}
-  .hero h1{font-size:clamp(32px,8vw,48px) !important;letter-spacing:-1px !important}
-  .hero-sub{font-size:16px !important}
-  .hero-stats,.hero-actions{gap:20px !important;flex-wrap:wrap !important}
-  .hero-price-main{font-size:36px !important}
-  .hero-price-display{padding:20px 24px !important;width:100% !important}
-  .btn-hero{padding:16px 32px !important;font-size:15px !important;width:100% !important;text-align:center !important}
-
-  /* CONTENT SECTIONS */
-  section{padding:48px 24px !important}
-  .content{padding:40px 24px 64px !important}
-  .page-header{padding:48px 24px 40px !important}
-  .badge-strip{padding:16px 24px !important;gap:10px !important}
-
-  /* GRIDS → SINGLE COLUMN */
-  .pain-grid,
-  .value-grid,
-  .includes-grid,
-  .testimonials-grid,
-  .courses-grid,
-  .blog-grid,
-  .materials-grid,
-  .how-steps,
-  .about-grid,
-  .footer-grid{grid-template-columns:1fr !important}
-
-  /* COURSE / EBOOK BODY */
-  .course-body,.ebook-body{
-    grid-template-columns:1fr !important;
-    padding:40px 24px !important;
-    gap:32px !important
-  }
-  .pricing-sticky{position:static !important;top:auto !important}
-  .learn-list,.topics-list{grid-template-columns:1fr !important}
-
-  /* PRICING CARDS */
-  .pricing-cols{flex-direction:column !important;gap:16px !important}
-
-  /* GUARANTEE */
-  .guarantee-inner{flex-direction:column !important;padding:28px 24px !important;gap:16px !important}
-
-  /* OFFER */
-  .offer-box{padding:32px 24px !important}
-  .offer-price{font-size:48px !important}
-  .value-total{flex-direction:column !important;text-align:center !important;padding:24px !important}
-  .value-total-right{text-align:center !important}
-
-  /* CONTACT */
-  .contact-section{grid-template-columns:1fr !important;padding:40px 24px !important;gap:40px !important}
-  .support-strip{padding:40px 24px !important}
-
-  /* COOKIE BAR */
-  .cookie-bar{flex-direction:column !important;text-align:center !important;padding:16px 20px !important}
-
-  /* BUTTONS */
-  .hero-actions .btn-primary,.hero-actions .btn-ghost{width:100% !important;text-align:center !important}
-
-  /* STAT NUMBERS */
-  .stat-num,.hero-stat strong{font-size:24px !important}
-
-  /* CTA SECTIONS */
-  .cta-section{padding:60px 24px !important}
-  .cta-actions{flex-direction:column !important;align-items:center !important;gap:12px !important}
-}
 </style>
 </head>
 <body>
@@ -482,14 +389,14 @@ footer {
 <div class="brand-stripe"></div>
 
 <nav class="nav">
-  <a href="index.html" class="nav-brand">HANDIFY<span>.</span></a>
+  <a href="/" class="nav-brand">HANDIFY<span>.</span></a>
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="cursos.html" class="active">Cursos</a></li>
-    <li><a href="blog.html">Blog</a></li>
+    <li><a href="/blog">Blog</a></li>
     <li><a href="contato.html">Contato</a></li>
-    <li><a href="ajuda.html">Ajuda</a></li>
+    <li><a href="/ajuda">Ajuda</a></li>
     <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
     <li><a href="https://membros.handify.com.br/login" target="_blank" rel="noopener" class="nav-login">Acessar</a></li>
     <li><a href="pack-completo.html" class="nav-cta">Começar agora</a></li>
@@ -520,7 +427,7 @@ footer {
   <div class="courses-category-title">🕯️ Velas Artesanais</div>
   <div class="courses-grid">
     <div class="course-card">
-      <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.48)), url('velaroma-foto-1.png') center/cover no-repeat">
+      <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.48)), url('/assets/img/velaroma-foto-1.webp') center/cover no-repeat">
         <span class="course-badge">Mais completo</span>
       </div>
       <div class="course-body">
@@ -536,12 +443,12 @@ footer {
         </div>
         <div class="course-footer">
           <span class="course-meta">♾️ Acesso vitalício</span>
-          <div class="course-price">R$47 <span>/ vitalício</span></div>
+          <div class="course-price" data-preco-slug="curso-velaroma-artesanal">R$47 <span>/ vitalício</span></div>
         </div>
       </div>
     </div>
     <div class="course-card featured-full">
-      <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.52)), url('curso-fabrica-velas-lembrancinhas.png') center/cover no-repeat">
+      <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.52)), url('/assets/img/curso-fabrica-velas-lembrancinhas.webp') center/cover no-repeat">
         <span class="course-badge new">🆕 Lançamento</span>
       </div>
       <div class="course-body">
@@ -557,13 +464,13 @@ footer {
           <span class="course-include-tag">♾️ Acesso vitalício</span>
         </div>
         <div class="course-footer">
-          <div class="course-price">R$97 <span>/ vitalício</span></div>
+          <div class="course-price" data-preco-slug="curso-fabrica-das-velas-de-lembrancinha">R$97 <span>/ vitalício</span></div>
           <a href="https://checkout.payt.com.br/31dd522c2c3b51de1f583bae9f69ba9d?utm_source=site-handify&utm_medium=interno&utm_campaign=velas-de-lembrancinha&utm_content=site" class="btn-card-cta" target="_blank" rel="noopener">Comprar agora →</a>
         </div>
       </div>
     </div>
     <div class="course-card">
-      <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('workshop-buque-vela-1.png') center/cover no-repeat">
+      <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/assets/img/workshop-buque-vela-1.webp') center/cover no-repeat">
       </div>
       <div class="course-body">
         <div class="course-category">Velas Artesanais</div>
@@ -576,7 +483,7 @@ footer {
         </div>
         <div class="course-footer">
           <span class="course-meta">♾️ Acesso vitalício</span>
-          <div class="course-price">R$47 <span>/ vitalício</span></div>
+          <div class="course-price" data-preco-slug="workshop-buque">R$47 <span>/ vitalício</span></div>
         </div>
       </div>
     </div>
@@ -587,7 +494,7 @@ footer {
   <div class="courses-category-title">🧼 Saboaria Artesanal</div>
   <div class="courses-grid">
     <div class="course-card">
-      <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.42)), url('saponaria-foto-1.png') center/cover no-repeat">
+      <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.42)), url('/assets/img/saponaria-foto-1.webp') center/cover no-repeat">
         <span class="course-badge">Mais vendido</span>
       </div>
       <div class="course-body">
@@ -603,7 +510,7 @@ footer {
         </div>
         <div class="course-footer">
           <span class="course-meta">♾️ Acesso vitalício</span>
-          <div class="course-price">R$67 <span>/ vitalício</span></div>
+          <div class="course-price" data-preco-slug="curso-saponaria-brasil">R$67 <span>/ vitalício</span></div>
         </div>
       </div>
     </div>
@@ -628,7 +535,7 @@ footer {
         </div>
         <div class="course-footer">
           <span class="course-meta">♾️ Acesso vitalício</span>
-          <div class="course-price course-price-consult">Consultar preço</div>
+          <div class="course-price" data-preco-slug="curso-flores-de-alto-padrao">Consultar preço</div>
         </div>
       </div>
     </div>
@@ -647,7 +554,7 @@ footer {
         </div>
         <div class="course-footer">
           <span class="course-meta">♾️ Acesso vitalício</span>
-          <div class="course-price course-price-consult">Consultar preço</div>
+          <div class="course-price" data-preco-slug="curso-atelie-de-caixas-florais">Consultar preço</div>
         </div>
       </div>
     </div>
@@ -671,12 +578,12 @@ footer {
         </div>
         <div class="course-footer">
           <span class="course-meta">♾️ Acesso vitalício</span>
-          <div class="course-price">R$47 <span>/ vitalício</span></div>
+          <div class="course-price" data-preco-slug="curso-embalagens-premium-na-pratica">R$47 <span>/ vitalício</span></div>
         </div>
       </div>
     </div>
     <div class="course-card">
-      <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.50)), url('venda-no-artesanato-foto1.png') center/cover no-repeat">
+      <div class="course-thumb" style="background: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.50)), url('/assets/img/venda-no-artesanato-foto1.webp') center/cover no-repeat">
       </div>
       <div class="course-body">
         <div class="course-category">Vendas</div>
@@ -689,7 +596,7 @@ footer {
         </div>
         <div class="course-footer">
           <span class="course-meta">♾️ Acesso vitalício</span>
-          <div class="course-price">R$67 <span>/ vitalício</span></div>
+          <div class="course-price" data-preco-slug="curso-vendas-no-artesanato-na-pratica">R$67 <span>/ vitalício</span></div>
         </div>
       </div>
     </div>
@@ -707,7 +614,7 @@ footer {
         </div>
         <div class="course-footer">
           <span class="course-meta">♾️ Acesso vitalício</span>
-          <div class="course-price">R$57 <span>/ vitalício</span></div>
+          <div class="course-price" data-preco-slug="curso-sistema-de-decoracao-de-baloes">R$57 <span>/ vitalício</span></div>
         </div>
       </div>
     </div>
@@ -725,7 +632,7 @@ footer {
         </div>
         <div class="course-footer">
           <span class="course-meta">♾️ Acesso vitalício</span>
-          <div class="course-price">R$47 <span>/ vitalício</span></div>
+          <div class="course-price" data-preco-slug="workshop-primeira-venda-em-7-dias">R$47 <span>/ vitalício</span></div>
         </div>
       </div>
     </div>
@@ -734,67 +641,63 @@ footer {
 
   <div class="course-group" data-cat="materiais">
   <div class="courses-category-title">📚 Materiais Complementares</div>
-  <p class="courses-section-intro">Livros digitais, listas e ferramentas para aprofundar seu conhecimento e acelerar suas vendas — todos por <strong>R$27</strong>.</p>
+  <p class="courses-section-intro">Livros digitais, listas e ferramentas para aprofundar seu conhecimento e acelerar suas vendas — a partir de <strong>R$10</strong>.</p>
   <div class="materials-grid">
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Biblioteca de 100 Assinaturas Aromáticas</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="biblioteca-de-100-assinaturas-aromaticas">R$27</div>
     </div>
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Loja de Velas Online</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="livro-digital-loja-de-velas-online">R$27</div>
     </div>
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Difusores e Aromas para Casa</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="livro-digital-difusores-e-aromas-para-casa">R$27</div>
     </div>
-    <div class="material-card">
-      <div class="mat-type">📋 Lista Premium</div>
-      <h4>Lista de Fornecedores Premium</h4>
-      <div class="mat-price">R$27</div>
-    </div>
+
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Pomadas Medicinais</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="livro-digital-pomadas-medicinais">R$27</div>
     </div>
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Aromaterapia com Plantas Medicinais</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="livro-digital-aromaterapia-com-plantas-medicinais">R$27</div>
     </div>
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Arte Floral em Sabonetes</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="livro-digital-arte-floral-em-sabonetes">R$27</div>
     </div>
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Saboaria Energética: Purificação e Bem-estar</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="livro-digital-saboaria-energetica-purificacao-e-bem-estar">R$27</div>
     </div>
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Beleza Natural com Plantas Medicinais</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="livro-digital-beleza-natural-usando-plantas-medicinais">R$27</div>
     </div>
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Embalagens que Encantam</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="livro-digital-embalagens-que-encantam">R$27</div>
     </div>
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Kit Natal Artesanal — Aromas, Embalagens e Ideias para Lucrar</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="livro-digital-kit-natal-artesanal-aromas-embalagens-e-ideias-para-lucrar">R$27</div>
     </div>
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Natural Dermatológica</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="livro-digital-natural-dermatologica">R$27</div>
     </div>
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
@@ -804,7 +707,7 @@ footer {
     <div class="material-card">
       <div class="mat-type">📖 Livro Digital</div>
       <h4>Guia das Imperfeições de Velas</h4>
-      <div class="mat-price">R$27</div>
+      <div class="mat-price" data-preco-slug="livro-digital-guia-rapido-de-resolver-imperfeicoes-nas-velas">R$27</div>
     </div>
   </div>
   </div><!-- /course-group materiais -->
@@ -862,7 +765,7 @@ footer {
 <footer>
   <div class="footer-grid">
     <div class="footer-brand-col">
-      <a href="index.html" class="footer-brand">HANDIFY<span>.</span></a>
+      <a href="/" class="footer-brand">HANDIFY<span>.</span></a>
       <p>Plataforma brasileira de cursos de artesanato. Aprenda com quem faz de verdade e transforme sua habilidade em negócio.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/handify.br/" target="_blank" rel="noopener" class="footer-social-link">
@@ -893,9 +796,9 @@ footer {
     <div class="footer-col">
       <h4>Navegação</h4>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="cursos.html">Cursos</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="/blog">Blog</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </div>
@@ -904,7 +807,7 @@ footer {
       <ul>
         <li><a href="compra-segura.html" style="color:var(--green)">🔒 Compra Segura</a></li>
         <li><a href="seja-instrutora.html">Seja instrutora</a></li>
-        <li><a href="ajuda.html">Ajuda</a></li><li><a href="direitos-autorais.html">Direitos Autorais</a></li>
+        <li><a href="/ajuda">Ajuda</a></li><li><a href="direitos-autorais.html">Direitos Autorais</a></li>
         <li><a href="termos-de-uso.html">Termos de uso</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
@@ -927,7 +830,6 @@ footer {
 .cookie-bar p a{color:var(--blue);text-decoration:underline}
 .cookie-btn{background:var(--blue);color:#fff;border:none;padding:10px 24px;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;transition:opacity .15s;flex-shrink:0}
 .cookie-btn:hover{opacity:.85}
-.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}.nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav-toggle.open span:nth-child(2){opacity:0}.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 </style>
 <script>if(localStorage.getItem('hf_cookies'))document.getElementById('cookieBar').style.display='none'</script>
@@ -982,7 +884,7 @@ footer {
     'Biblioteca de 100 Assinaturas Aromáticas': 'ebook-100-assinaturas-aromaticas.html',
     'Loja de Velas Online': 'ebook-loja-velas-online.html',
     'Difusores e Aromas para Casa': 'ebook-difusores-aromas-casa.html',
-    'Lista de Fornecedores Premium': 'ebook-lista-fornecedores-premium.html',
+
     'Pomadas Medicinais': 'ebook-pomadas-medicinais.html',
     'Aromaterapia com Plantas Medicinais': 'ebook-aromaterapia-plantas-medicinais.html',
     'Arte Floral em Sabonetes': 'ebook-arte-floral-sabonetes.html',
@@ -1018,8 +920,6 @@ footer {
 </script>
 
 <script>document.getElementById('navToggle').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');});</script>
-<style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style></body>
+<style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style><script src="/assets/js/produtos.js"></script></body>
 </html>
-
-
 
