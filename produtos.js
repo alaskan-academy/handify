@@ -19,6 +19,7 @@
         el.textContent = produto.preco;
       }
     });
+    document.dispatchEvent(new CustomEvent('hdf:precos'));
   }
 
   function buscarEAplicar() {

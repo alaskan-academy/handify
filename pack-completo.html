@@ -377,7 +377,7 @@ footer{background:var(--black);padding:64px 60px 36px}
   <p class="hero-sub">10 cursos completos + 12 materiais digitais + comunidade exclusiva + novos lançamentos — tudo em um único plano acessível.</p>
   <img src="Banner 1 por 1.webp" alt="Pack Completo Handify" style="width:100%;max-width:520px;border-radius:16px;margin:32px auto 0;display:block;box-shadow:0 8px 40px rgba(0,0,0,0.4)">
   <div class="hero-price-display">
-    <p class="hero-price-from">de R$897/ano</p>
+    <p class="hero-price-from">de <span class="js-total-original">R$817</span>/ano</p>
     <p class="hero-price-main">12x de R$30,41</p>
     <p class="hero-price-label">por mês · acesso anual</p>
     <p class="hero-price-or">ou R$297 à vista</p>
@@ -467,7 +467,7 @@ footer{background:var(--black);padding:64px 60px 36px}
     <div class="value-total">
       <div class="value-total-left">
         <p>Se comprado separadamente</p>
-        <strong>R$817</strong>
+        <strong id="js-total-separado">R$817</strong>
       </div>
       <div class="value-total-right">
         <p>No Pack Completo</p>
@@ -762,7 +762,7 @@ footer{background:var(--black);padding:64px 60px 36px}
     <img src="Banner 1 por 1.webp" alt="Pack Completo Handify" style="width:100%;max-width:480px;border-radius:16px;margin:28px auto 0;display:block;box-shadow:0 8px 40px rgba(0,0,0,0.4)">
 
     <div class="offer-box">
-      <p class="offer-from">de R$897/ano</p>
+      <p class="offer-from">de <span class="js-total-original">R$817</span>/ano</p>
       <p class="offer-price">12x de R$30,41</p>
       <p class="offer-price-month">por mês · cobrado anualmente</p>
       <p class="offer-price-or">ou R$297 à vista — economia de R$600</p>
@@ -834,7 +834,7 @@ footer{background:var(--black);padding:64px 60px 36px}
     <img src="Banner 1 por 1.webp" alt="Pack Completo Handify" style="width:100%;max-width:480px;border-radius:16px;margin:28px auto 0;display:block;box-shadow:0 8px 40px rgba(0,0,0,0.4)">
 
     <div class="offer-box">
-      <p class="offer-from">de R$897/ano</p>
+      <p class="offer-from">de <span class="js-total-original">R$817</span>/ano</p>
       <p class="offer-price">12x de R$30,41</p>
       <p class="offer-price-month">por mês · cobrado anualmente</p>
       <p class="offer-price-or">ou R$297 à vista — economia de R$600</p>
@@ -977,7 +977,21 @@ document.querySelectorAll('.faq-q').forEach(function(btn){
   });
 });
 </script>
-<style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style><script src="produtos.js"></script></body>
+<style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style><script src="produtos.js"></script><script>
+document.addEventListener('hdf:precos', function () {
+  var total = 0;
+  document.querySelectorAll('.value-item-price[data-preco-slug]').forEach(function (el) {
+    var txt = el.textContent.replace('R$', '').replace('.', '').replace(',', '.');
+    var val = parseFloat(txt);
+    if (!isNaN(val)) total += val;
+  });
+  if (total <= 0) return;
+  var fmt = 'R$' + total.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  var el = document.getElementById('js-total-separado');
+  if (el) el.textContent = fmt;
+  document.querySelectorAll('.js-total-original').forEach(function (el) { el.textContent = fmt; });
+});
+</script></body>
 </html>
 
 
