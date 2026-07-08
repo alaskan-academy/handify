@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -32,6 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/main.css">
 <style>
 :root {
   --blue: #5288EF;
@@ -44,7 +45,6 @@
   --yellow: #F5CE3E;
   --white: #FFFFFF;
 }
-* { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Montserrat', Arial, sans-serif; background: var(--white); color: var(--gray-dark); font-size: 16px; line-height: 1.7; }
 .brand-stripe { height: 6px; background: linear-gradient(90deg, var(--blue) 33.3%, var(--green) 33.3% 66.6%, var(--yellow) 66.6%); }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 60px; border-bottom: 1px solid rgba(0,0,0,0.08); position: sticky; top: 0; background: var(--white); z-index: 100; box-shadow: 0 1px 12px rgba(0,0,0,0.05); }
@@ -55,8 +55,6 @@ body { font-family: 'Montserrat', Arial, sans-serif; background: var(--white); c
 .nav-links a:hover { color: var(--blue); }
 .nav-cta { background: var(--blue); color: var(--white) !important; padding: 9px 22px; border-radius: 6px; font-weight: 700 !important; }
 .nav-cta:hover { background:#3A72D4!important; }
-.nav-login { border:2px solid var(--blue); color:var(--blue)!important; padding:7px 20px; border-radius:6px; font-weight:700!important; transition:all .15s!important; }
-.nav-login:hover { background:var(--blue); color:var(--white)!important; }
 
 /* HERO */
 .hero {
@@ -153,43 +151,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; background: var(--white); c
 footer { background: var(--black); color: var(--white); padding: 48px 60px 24px; margin-top: 0; }
 .footer-bottom { max-width: 1140px; margin: 32px auto 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
 .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.35); }
-.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}.nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav-toggle.open span:nth-child(2){opacity:0}.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-/* ── FOOTER ── */
-footer{background:var(--black);padding:64px 60px 36px}
-.footer-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
-.footer-brand-col .footer-brand{font-size:22px;font-weight:900;color:var(--white);letter-spacing:-.5px;margin-bottom:12px;display:block;text-decoration:none}
-.footer-brand-col .footer-brand span{color:var(--blue)}
-.footer-brand-col p{font-size:13px;color:var(--gray-mid);line-height:1.7;max-width:260px}
-.footer-col h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-mid);margin-bottom:16px}
-.footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:10px}
-.footer-col ul li a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .15s}
-.footer-col ul li a:hover{color:var(--white)}
-.footer-bottom{max-width:1140px;margin:32px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-bottom p{font-size:12px;color:var(--gray-mid)}
-.footer-social{display:flex;flex-direction:column;gap:10px;margin-top:16px}
-.footer-social-link{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);text-decoration:none;font-size:13px;transition:color .15s}
-.footer-social-link:hover{color:var(--white)}
-.footer-email{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-mid)}
 
-/* ═══════════════════════════════════════
-   MOBILE RESPONSIVENESS — GLOBAL RULES
-   ═══════════════════════════════════════ */
-@media(max-width:768px){
-  .nav{padding:16px 24px !important;position:relative !important}
-  footer{padding:48px 24px 28px !important}
-  .footer-grid{grid-template-columns:1fr !important;gap:32px !important;padding:0 0 32px 0 !important}
-  .footer-bottom{flex-direction:column !important;text-align:center !important;gap:8px !important}
-  .footer-brand-col p{max-width:100% !important}
-  .hero{padding:56px 24px 48px !important;min-height:auto !important}
-  .hero h1{font-size:clamp(32px,8vw,48px) !important;letter-spacing:-1px !important}
-  .course-body,.ebook-body{grid-template-columns:1fr !important;padding:40px 24px !important;gap:32px !important}
-  .pricing-sticky{position:static !important;top:auto !important}
-  .learn-list,.topics-list{grid-template-columns:1fr !important}
-  .includes-grid{grid-template-columns:1fr !important}
-  .module-body ul{grid-template-columns:1fr !important}
-  .cookie-bar{flex-direction:column !important;text-align:center !important;padding:16px 20px !important}
-}
 </style>
 </head>
 <body>

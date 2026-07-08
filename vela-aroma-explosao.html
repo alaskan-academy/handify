@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -42,6 +42,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/main.css">
 <style>
 :root {
   --blue: #5288EF;
@@ -54,8 +55,6 @@
   --yellow: #F5CE3E;
   --white: #FFFFFF;
 }
-
-* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -90,8 +89,6 @@ body {
 .nav-links a:hover { color: var(--blue); }
 .nav-cta { background: var(--blue); color: var(--white) !important; padding: 8px 20px; border-radius: 6px; font-weight: 700 !important; }
 .nav-cta:hover { background:#3A72D4!important; }
-.nav-login { border:2px solid var(--blue); color:var(--blue)!important; padding:7px 20px; border-radius:6px; font-weight:700!important; transition:all .15s!important; }
-.nav-login:hover { background:var(--blue); color:var(--white)!important; }
 .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; z-index:101; }
 .nav-toggle span { display:block; width:22px; height:2px; background:var(--black); border-radius:2px; transition:transform .2s,opacity .2s; }
 .nav-toggle.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
@@ -319,25 +316,6 @@ footer { background: var(--black); padding: 64px 60px 36px; }
   .final-cta-btns { flex-direction: column; align-items: center; }
 }
 
-/* ═══════════════════════════════════════
-   MOBILE RESPONSIVENESS — GLOBAL RULES
-   ═══════════════════════════════════════ */
-@media(max-width:768px){
-  .nav{padding:16px 24px !important;position:relative !important}
-  footer{padding:48px 24px 28px !important}
-  .footer-grid{grid-template-columns:1fr !important;gap:32px !important;padding:0 0 32px 0 !important}
-  .footer-bottom{flex-direction:column !important;text-align:center !important;gap:8px !important}
-  .footer-brand-col p{max-width:100% !important}
-  .hero{padding:56px 24px 48px !important;min-height:auto !important}
-  .hero h1{font-size:clamp(30px,8vw,44px) !important;letter-spacing:-0.5px !important}
-  .hero-sub{font-size:16px !important}
-  section{padding:48px 24px !important}
-  .inline-cta{flex-direction:column !important;gap:16px !important}
-  .data-table{font-size:12px !important}
-  .data-table tbody td,.data-table thead th{padding:10px 12px !important}
-  .cookie-bar{flex-direction:column !important;text-align:center !important;padding:16px 20px !important}
-  .pull-quote p{font-size:16px !important}
-}
 </style>
 </head>
 <body>
@@ -790,7 +768,4 @@ document.getElementById('navToggle').addEventListener('click', function(){
 </script>
 <style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style></body>
 </html>
-
-
-
 

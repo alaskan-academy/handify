@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -42,6 +42,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/main.css">
 <style>
 :root {
   --blue: #5288EF;
@@ -54,8 +55,6 @@
   --yellow: #F5CE3E;
   --white: #FFFFFF;
 }
-
-* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -90,8 +89,6 @@ body {
 .nav-links a:hover, .nav-links a.active { color: var(--blue); }
 .nav-cta { background: var(--blue); color: var(--white) !important; padding: 8px 20px; border-radius: 6px; font-weight: 700 !important; }
 .nav-cta:hover { background:#3A72D4!important; }
-.nav-login { border:2px solid var(--blue); color:var(--blue)!important; padding:7px 20px; border-radius:6px; font-weight:700!important; transition:all .15s!important; }
-.nav-login:hover { background:var(--blue); color:var(--white)!important; }
 .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; z-index:101; }
 .nav-toggle span { display:block; width:22px; height:2px; background:var(--black); border-radius:2px; transition:transform .2s,opacity .2s; }
 .nav-toggle.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
