@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "handify",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", ".", "--listen", "3456", "--no-clipboard"],
+      "runtimeExecutable": "powershell.exe",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\LUCASV~1\\AppData\\Local\\Temp\\claude\\D--Infoprodutos-Pasta-Sincronizada-Google-Drive-Site-Handify\\c212c810-d5c3-4524-961d-41b3cf4e7c69\\scratchpad\\static-server.ps1", "-Port", "3456"],
       "port": 3456
     },
     {
