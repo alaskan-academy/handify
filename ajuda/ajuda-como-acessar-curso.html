@@ -11,17 +11,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/main.css">
 <style>
-:root {
-  --blue: #5288EF;
-  --green: #A8E8A9;
-  --black: #0F0F0F;
-  --gray-dark: #2D2D2D;
-  --gray-mid: #6B7280;
-  --off-white: #F5F5F0;
-  --blue-light: #EEF3FD;
-  --yellow: #F5CE3E;
-  --white: #FFFFFF;
-}
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Montserrat', Arial, Helvetica, sans-serif; background: var(--white); color: var(--gray-dark); font-size: 16px; line-height: 1.7; }
 
@@ -115,7 +104,7 @@ body { font-family: 'Montserrat', Arial, Helvetica, sans-serif; background: var(
   font-size: 13px; font-weight: 600;
 }
 .screenshot .icon { font-size: 32px; margin-bottom: 8px; display: block; }
-/* Real screenshots: replace .screenshot with <img src="..." alt="..." class="screenshot-img"> */
+/* Real screenshots: replace .screenshot with <img loading="lazy" src="..." alt="..." class="screenshot-img"> */
 .screenshot-img {
   width: 100%; border-radius: 12px;
   border: 1px solid rgba(0,0,0,0.08);
@@ -319,7 +308,7 @@ footer { background: var(--black); padding: 64px 60px 32px; }
         <div class="step-body">
           <h3>Verifique seu e-mail</h3>
           <p>Após a confirmação do pagamento, você recebe um e-mail com o assunto <strong>"Seu acesso à Handify está pronto"</strong>. Confira também a caixa de spam caso não encontre na caixa de entrada.</p>
-          <!-- Substitua o bloco abaixo por uma imagem real: <img src="/prints/email-acesso.png" alt="E-mail de acesso" class="screenshot-img"> -->
+          <!-- Substitua o bloco abaixo por uma imagem real: <img loading="lazy" src="/prints/email-acesso.png" alt="E-mail de acesso" class="screenshot-img"> -->
           <div class="screenshot">
             <span class="icon">📧</span>
             Print do e-mail de boas-vindas<br><small style="opacity:.6">(adicione o print aqui: prints/email-acesso.png)</small>
