@@ -19,6 +19,19 @@
         el.textContent = produto.preco;
       }
     });
+
+    // Soma total de todos os produtos para elementos [data-preco-pack-total]
+    var els = document.querySelectorAll('[data-preco-pack-total]');
+    if (els.length) {
+      var total = 0;
+      produtos.forEach(function (p) {
+        var n = parseFloat(String(p.preco).replace('R$', '').replace('.', '').replace(',', '.'));
+        if (!isNaN(n)) total += n;
+      });
+      var fmt = 'R$' + total.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+      els.forEach(function (el) { el.textContent = fmt; });
+    }
+
     document.dispatchEvent(new CustomEvent('hdf:precos'));
   }
 
