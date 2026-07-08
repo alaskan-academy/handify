@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Saponaria Brasil — Handify</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --blue:#5288EF;--green:#A8E8A9;--yellow:#F5CE3E;--black:#0F0F0F;--gray-dark:#2D2D2D;--gray-mid:#6B7280;--off-white:#F5F5F0;--blue-light:#EEF3FD;--white:#FFFFFF; }
+    * { margin:0;padding:0;box-sizing:border-box; }
+    body { font-family:'Montserrat',Arial,Helvetica,sans-serif;background:var(--off-white);color:var(--gray-dark);font-size:16px;line-height:1.6; }
+    .brand-stripe { display:flex;height:5px; }
+    .brand-stripe span { flex:1; }
+    .brand-stripe span:nth-child(1) { background:var(--blue); }
+    .brand-stripe span:nth-child(2) { background:var(--green); }
+    .brand-stripe span:nth-child(3) { background:var(--yellow); }
+    .page { max-width:480px;margin:0 auto;padding:0 16px 40px; }
+    .nav { padding:16px 0 8px;display:flex;align-items:center;justify-content:space-between; }
+    .nav a { font-size:14px;color:var(--blue);text-decoration:none;font-weight:600; }
+    .nav img { height:28px; }
+    .hero { text-align:center;padding:20px 0 24px; }
+    .hero-photo { width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid var(--blue-light);margin-bottom:16px; }
+    .expert-tag { font-size:12px;color:var(--gray-mid);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px; }
+    .hero h1 { font-size:26px;font-weight:900;color:var(--black);line-height:1.25;margin-bottom:10px; }
+    .hero h1 .accent { color:var(--blue); }
+    .hero-sub { font-size:15px;color:var(--gray-mid);line-height:1.55; }
+    .section { background:var(--white);border-radius:16px;padding:24px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.04); }
+    .section-title { font-size:17px;font-weight:700;color:var(--black);margin-bottom:16px; }
+    .check-list { list-style:none;display:flex;flex-direction:column;gap:12px; }
+    .check-list li { font-size:15px;color:var(--gray-dark);padding-left:28px;position:relative;line-height:1.4; }
+    .check-list li::before { content:"✓";position:absolute;left:0;color:var(--blue);font-weight:700; }
+    .modules { display:flex;flex-direction:column;gap:12px; }
+    .module { background:var(--off-white);border-radius:10px;padding:14px 16px;border-left:3px solid var(--blue); }
+    .module-name { font-size:14px;font-weight:700;color:var(--black);margin-bottom:6px; }
+    .module-desc { font-size:13px;color:var(--gray-mid);line-height:1.5; }
+    .module-desc ul { list-style:none;display:flex;flex-direction:column;gap:4px;margin-top:4px; }
+    .module-desc ul li { padding-left:14px;position:relative; }
+    .module-desc ul li::before { content:"·";position:absolute;left:0;color:var(--blue);font-weight:700; }
+    .faq { display:flex;flex-direction:column;gap:18px; }
+    .faq-item { border-left:3px solid var(--blue);padding-left:16px; }
+    .faq-q { font-size:15px;font-weight:700;color:var(--black);margin-bottom:6px;font-style:italic; }
+    .faq-a { font-size:14px;color:var(--gray-dark);line-height:1.55; }
+    .cta-box { background:var(--white);border-radius:16px;padding:28px 24px;margin-bottom:14px;box-shadow:0 4px 20px rgba(82,136,239,0.13);border:2px solid var(--blue-light);text-align:center; }
+    .cta-label { font-size:13px;color:var(--gray-mid);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px; }
+    .cta-price { font-size:48px;font-weight:900;color:var(--blue);line-height:1;margin-bottom:4px; }
+    .cta-detail { font-size:13px;color:var(--gray-mid);margin-bottom:24px; }
+    .btn-cta { display:block;width:100%;background:var(--blue);color:#fff;text-align:center;padding:20px;border-radius:10px;font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;text-decoration:none;transition:background 0.2s,transform 0.2s;margin-bottom:14px; }
+    .btn-cta:hover { background:#3d6fd4;transform:translateY(-1px); }
+    .security { font-size:13px;color:var(--gray-mid);display:flex;align-items:center;justify-content:center;gap:6px; }
+    .whatsapp-section { background:var(--white);border-radius:16px;padding:24px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.04);text-align:center; }
+    .whatsapp-section p { font-size:15px;color:var(--gray-mid);margin-bottom:18px;line-height:1.5; }
+    .btn-whatsapp { display:inline-block;background:#25D366;color:#fff;padding:16px 32px;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;text-decoration:none;transition:background 0.2s,transform 0.2s; }
+    .btn-whatsapp:hover { background:#1da851;transform:translateY(-1px); }
+    .highlights { display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:20px; }
+    .highlight-item { background:var(--blue-light);border:1px solid rgba(82,136,239,0.2);color:var(--blue);font-size:12px;font-weight:700;padding:9px 14px;border-radius:100px; }
+    footer { text-align:center;padding:28px 0 16px;color:var(--gray-mid);font-size:12px; }
+  </style>
+</head>
+<body>
+  <div class="brand-stripe"><span></span><span></span><span></span></div>
+  <div class="page">
+    <nav class="nav">
+      <a href="bio.html">← Todos os cursos</a>
+      <img src="logo-handify.png" alt="Handify">
+    </nav>
+
+    <div class="hero">
+      <img src="saponaria-foto-1.png" alt="Saponaria Brasil" class="hero-photo">
+      <p class="expert-tag">Com Viviane Dornelles</p>
+      <h1>Do zero ao sabonete artesanal que <span class="accent">você vende em casa</span></h1>
+      <p class="hero-sub">Curso completo de saboaria glicerinada para iniciantes — receitas práticas, embalagens e tudo para começar a faturar</p>
+    </div>
+
+    <div class="highlights">
+      <div class="highlight-item">♾️ Acesso vitalício</div>
+      <div class="highlight-item">📋 Lista de fornecedores</div>
+      <div class="highlight-item">🎬 Vídeo aula + apostilas</div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">💛 Esse curso é pra você que...</h2>
+      <ul class="check-list">
+        <li>Nunca fez sabonetes e quer aprender do absoluto zero</li>
+        <li>Quer ter uma renda extra sem precisar sair de casa</li>
+        <li>Quer aprender receitas variadas — do básico ao que fatura mais</li>
+        <li>Busca uma atividade criativa com potencial de lucro real</li>
+        <li>Quer aprender no seu ritmo, pelo celular, quando tiver tempo</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">📚 O que você vai aprender</h2>
+      <div class="modules">
+        <div class="module">
+          <p class="module-name">Módulo 1 — Bem-vinda à Saboaria</p>
+          <div class="module-desc"><ul>
+            <li>Boas-vindas e visão geral do curso</li>
+            <li>Acesso ao grupo de suporte no WhatsApp</li>
+            <li>Lista completa de materiais com links de fornecedores</li>
+            <li>Cuidados de segurança para trabalhar com os ingredientes</li>
+          </ul></div>
+        </div>
+        <div class="module">
+          <p class="module-name">Módulo 2 — Simples, Barato e Pronto para Vender</p>
+          <div class="module-desc">Receitas de entrada com boa saída no mercado:<ul>
+            <li>Sabonete hidratante (o mais fácil para começar)</li>
+            <li>Café e coco (muito procurado)</li>
+            <li>Lavanda (favorito de presentes)</li>
+            <li>Carvão ativado (purificante, alta demanda)</li>
+          </ul></div>
+        </div>
+        <div class="module">
+          <p class="module-name">Módulo 3 — Receitas que Faturam Mais</p>
+          <div class="module-desc">Receitas diferenciadas com maior valor de venda:<ul>
+            <li>Cacho de uvas — o mais buscado e pesquisado pelas clientes</li>
+            <li>Melancia e flores secas (visual atrativo)</li>
+            <li>Cristal transparente e marmorizados</li>
+            <li>Favo de mel, massageador e bucha vegetal</li>
+          </ul></div>
+        </div>
+        <div class="module">
+          <p class="module-name">Módulo 4 — Entenda os Ingredientes</p>
+          <div class="module-desc"><ul>
+            <li>Diferenças entre as bases glicerinadas disponíveis</li>
+            <li>Como escolher corantes, essências e aditivos</li>
+            <li>O que cada ingrediente faz na receita (e o que pode substituir)</li>
+          </ul></div>
+        </div>
+        <div class="module">
+          <p class="module-name">Módulo 5 — Formatos e Moldes</p>
+          <div class="module-desc"><ul>
+            <li>Como usar formas de silicone profissionais</li>
+            <li>Como adaptar moldes caseiros que você já tem em casa</li>
+            <li>Dicas para desenformar sem quebrar o sabonete</li>
+          </ul></div>
+        </div>
+        <div class="module">
+          <p class="module-name">Módulo 6 — Vendas, Kits e Precificação</p>
+          <div class="module-desc"><ul>
+            <li>Como montar kits presenteáveis para datas comemorativas</li>
+            <li>Estratégias para vender no Dia das Mães, Natal e Páscoa</li>
+            <li>Como precificar corretamente para ter lucro de verdade</li>
+            <li>Calculadora de lucro incluída (ferramenta HTML)</li>
+          </ul></div>
+        </div>
+        <div class="module">
+          <p class="module-name">Módulo 7 — Bônus</p>
+          <div class="module-desc"><ul>
+            <li>Como fazer sabonetes líquidos</li>
+            <li>Correção dos erros mais comuns (e como evitar)</li>
+            <li>Embalagens bonitas e acessíveis para valorizar o produto</li>
+            <li>FAQ completo com as dúvidas mais frequentes das alunas</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">❓ Suas dúvidas respondidas</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <p class="faq-q">"Nunca fiz sabonete na vida. Consigo mesmo?"</p>
+          <p class="faq-a">Com certeza! O Módulo 1 começa com boas-vindas e materiais básicos. Viviane ensina tudo passo a passo, com vídeos claros feitos para quem nunca tocou numa base glicerinada.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">"O acesso expira? Vou perder as aulas?"</p>
+          <p class="faq-a">Não! O acesso é vitalício. Você assiste quantas vezes quiser, para sempre — no celular, computador ou tablet, onde e quando for melhor pra você.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">"Se eu tiver dúvidas durante o curso, como peço ajuda?"</p>
+          <p class="faq-a">O suporte é feito direto na plataforma Handify. Você envia sua dúvida e nossa equipe responde — além disso, no Módulo 1 você já entra no grupo de WhatsApp das alunas.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">"Quanto preciso investir em materiais para começar?"</p>
+          <p class="faq-a">Para fazer as primeiras receitas, o investimento em materiais fica em torno de R$150 a R$300 — base glicerinada, corantes, essências e moldes básicos. A lista completa de fornecedores está no Módulo 1.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">"Tenho medo de comprar pela internet"</p>
+          <p class="faq-a">O pagamento é feito em uma plataforma 100% segura. Se por qualquer motivo você não gostar do curso, tem 7 dias para pedir o reembolso completo — sem burocracia, sem perguntas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">💬 O que nossas alunas dizem</h2>
+      <img src="dep-saponaria-1.png" alt="Depoimento de aluna Handify" style="width:100%;border-radius:12px;">
+    </div>
+
+    <div class="cta-box">
+      <p class="cta-label">Comece hoje por apenas</p>
+      <div class="cta-price" data-preco-slug="curso-saponaria-brasil">R$67</div>
+      <p class="cta-detail">Acesso imediato e vitalício · Vídeos + PDFs + Calculadora de lucro</p>
+      <a href="https://payt.site/eGCODx3?utm_source=instagram&utm_medium=bio&utm_campaign=saponaria" class="btn-cta" target="_blank" rel="noopener noreferrer">QUERO APRENDER AGORA</a>
+      <p class="security">🔒 Pagamento seguro · Garantia de 7 dias</p>
+    </div>
+
+    <div class="whatsapp-section">
+      <h2 class="section-title" style="text-align:center;">💬 Ainda tem dúvidas?</h2>
+      <p>Fala com a gente pelo WhatsApp — respondemos rapidinho e te ajudamos a decidir com segurança!</p>
+      <a href="https://wa.me/message/CQ4UVMW3QHNRO1" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+    </div>
+
+  </div>
+  <footer><p>© 2026 Handify · Todos os direitos reservados</p></footer>
+  <div class="brand-stripe"><span></span><span></span><span></span></div>
+  <script src="produtos.js"></script>
+</body>
+</html>
