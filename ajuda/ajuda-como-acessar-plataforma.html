@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como acessar a plataforma Handify — Central de Ajuda</title>
+<meta name="description" content="Passo a passo para acessar a nova área de membros da Handify (portal.handify.com.br) ou a plataforma anterior.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/main.css">
+<style>
+:root {
+  --blue:#5288EF; --green:#A8E8A9; --black:#0F0F0F; --gray-dark:#2D2D2D;
+  --gray-mid:#6B7280; --off-white:#F5F5F0; --blue-light:#EEF3FD;
+  --yellow:#F5CE3E; --white:#FFFFFF;
+  --red:#EF4444; --red-light:#FEF2F2;
+  --orange:#F97316; --orange-light:#FFF7ED;
+  --green-ok:#22C55E; --green-light:#F0FDF4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',Arial,Helvetica,sans-serif;background:var(--white);color:var(--gray-dark);font-size:16px;line-height:1.7}
+.brand-stripe{height:6px;background:linear-gradient(90deg,var(--blue) 33.3%,var(--green) 33.3% 66.6%,var(--yellow) 66.6%)}
+
+/* NAV */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid rgba(0,0,0,0.08);position:sticky;top:0;background:var(--white);z-index:100;box-shadow:0 1px 12px rgba(0,0,0,0.05)}
+.nav-brand{font-size:22px;font-weight:900;letter-spacing:-.5px;color:var(--black);text-decoration:none}
+.nav-brand span{color:var(--blue)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-size:13px;font-weight:600;text-decoration:none;color:var(--gray-mid);text-transform:uppercase;letter-spacing:.06em;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+.nav-cta{background:var(--blue);color:var(--white)!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
+.nav-cta:hover { background:#3A72D4!important; }
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:101}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .2s,opacity .2s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* BREADCRUMB */
+.breadcrumb{padding:14px 60px;background:var(--off-white);border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;color:var(--gray-mid);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.breadcrumb a{color:var(--blue);text-decoration:none;font-weight:600}
+.breadcrumb a:hover{text-decoration:underline}
+
+/* HERO */
+.page-hero{background:var(--black);padding:52px 60px 56px}
+.hero-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--blue);margin-bottom:12px}
+.page-hero h1{font-size:clamp(28px,4vw,42px);font-weight:900;color:var(--off-white);letter-spacing:-.5px;line-height:1.15;max-width:640px;margin-bottom:12px}
+.page-hero p{font-size:15px;color:var(--gray-mid);max-width:520px;line-height:1.6}
+.hero-meta{display:flex;gap:20px;margin-top:20px;flex-wrap:wrap}
+.hero-meta span{font-size:12px;color:rgba(255,255,255,0.35)}
+
+/* LAYOUT */
+.page-wrap{max-width:1060px;margin:0 auto;padding:56px 60px 80px;display:grid;grid-template-columns:1fr 260px;gap:60px;align-items:start}
+
+/* PLATFORM TABS */
+
+/* TAB CONTENT */
+
+/* STEP */
+.step-block{margin-bottom:48px}
+.step-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px}
+.step-num{width:40px;height:40px;border-radius:50%;background:var(--blue);color:var(--white);font-weight:900;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-num.warn{background:var(--orange)}
+.step-num.ok{background:var(--green-ok)}
+.step-title{font-size:18px;font-weight:700;color:var(--black);line-height:1.3;margin-top:6px}
+.step-desc{font-size:15px;color:var(--gray-dark);line-height:1.8;margin-bottom:14px}
+.step-desc strong{color:var(--black);font-weight:700}
+.step-divider{border:none;border-top:1px solid rgba(0,0,0,0.08);margin:40px 0}
+
+/* ALERTS */
+.alert{border-radius:12px;padding:18px 22px;margin:16px 0;display:flex;gap:14px;align-items:flex-start}
+.alert-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.alert-body p{font-size:14px;line-height:1.75;margin:0}
+.alert-body p+p{margin-top:8px}
+.alert-body strong{font-weight:700}
+.alert-body a{color:inherit;font-weight:700}
+.alert.blue{background:var(--blue-light);border-left:4px solid var(--blue)}
+.alert.blue .alert-body p{color:#1e3a8a}
+.alert.blue .alert-body a{color:var(--blue)}
+.alert.orange{background:var(--orange-light);border-left:4px solid var(--orange)}
+.alert.orange .alert-body p{color:#7c2d12}
+.alert.orange .alert-body a{color:var(--orange)}
+.alert.green{background:var(--green-light);border-left:4px solid var(--green-ok)}
+.alert.green .alert-body p{color:#14532d}
+.alert.red{background:var(--red-light);border-left:4px solid var(--red)}
+.alert.red .alert-body p{color:#7f1d1d}
+
+/* CHANNEL PILLS */
+.channel-pills{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:20px;font-size:13px;font-weight:700}
+.pill.email{background:#EEF3FD;color:#1e3a8a}
+.pill.whatsapp{background:var(--green-light);color:#14532d}
+
+/* COURSE TYPE CARDS */
+.course-types{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.course-type{border-radius:12px;padding:18px 20px}
+.course-type.video{background:linear-gradient(135deg,#EEF3FD,#dbeafe);border:1.5px solid #93c5fd}
+.course-type.complementar{background:var(--off-white);border:1.5px solid rgba(0,0,0,0.1)}
+.course-type-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+.course-type.video .course-type-label{color:var(--blue)}
+.course-type.complementar .course-type-label{color:var(--gray-mid)}
+.course-type h5{font-size:14px;font-weight:700;color:var(--black);margin-bottom:6px}
+.course-type p{font-size:13px;color:var(--gray-dark);line-height:1.6}
+
+/* SUPORTE BTN */
+.suporte-btn{display:inline-flex;align-items:center;gap:8px;background:var(--green-ok);color:var(--white);padding:11px 22px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;margin-top:12px;transition:opacity .15s}
+.suporte-btn:hover{opacity:.88}
+
+/* SCREENSHOTS */
+.screenshot-wrap{margin:20px 0 0}
+.screenshot-wrap img{display:block;border-radius:0;border:none;box-shadow:none;background:transparent}
+.screenshot-wrap.landscape img{width:100%;max-width:100%}
+.screenshot-wrap.portrait{text-align:center}
+.screenshot-wrap.portrait img{width:100%;max-width:420px;margin:0 auto}
+.img-caption{font-size:11px;color:var(--gray-mid);margin-top:10px;font-style:italic;text-align:center}
+
+/* HELPFUL */
+.helpful-bar{background:var(--off-white);border-radius:12px;padding:22px 28px;margin-top:48px;text-align:center;border:1px solid rgba(0,0,0,0.07)}
+.helpful-bar p{font-size:14px;color:var(--gray-dark);font-weight:600;margin-bottom:14px}
+.helpful-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.helpful-btn{padding:8px 20px;border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;border:1.5px solid rgba(0,0,0,0.12);background:var(--white);color:var(--gray-dark);font-family:'Montserrat',Arial,sans-serif;transition:all .15s}
+.helpful-btn:hover{border-color:var(--blue);color:var(--blue)}
+.helpful-btn.voted{background:var(--blue);color:var(--white);border-color:var(--blue)}
+
+/* SIDEBAR */
+.guide-sidebar{position:sticky;top:88px}
+.sidebar-card{background:var(--off-white);border-radius:14px;padding:22px;margin-bottom:18px;border:1px solid rgba(0,0,0,0.07)}
+.sidebar-card h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-mid);margin-bottom:14px}
+.toc-list{list-style:none}
+.toc-list li{margin-bottom:9px}
+.toc-list a{font-size:13px;color:var(--gray-dark);text-decoration:none;font-weight:500;display:flex;gap:8px;align-items:flex-start;transition:color .15s;line-height:1.4}
+.toc-list a:hover{color:var(--blue)}
+.toc-num{color:var(--blue);font-weight:700;flex-shrink:0;font-size:12px;margin-top:1px}
+
+.related-list{list-style:none}
+.related-list li{margin-bottom:10px;border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:10px}
+.related-list li:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
+.related-list a{font-size:13px;color:var(--gray-dark);text-decoration:none;font-weight:600;line-height:1.4;display:block;transition:color .15s}
+.related-list a:hover{color:var(--blue)}
+.related-list span{font-size:11px;color:var(--gray-mid);display:block;margin-top:2px}
+.sidebar-cta{background:var(--blue);border-radius:14px;padding:22px;color:var(--white);margin-bottom:18px}
+.sidebar-cta p{font-size:13px;color:rgba(255,255,255,0.75);margin-bottom:14px;line-height:1.5}
+.sidebar-cta a{display:block;text-align:center;background:var(--white);color:var(--blue);padding:10px 16px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;transition:opacity .15s}
+.sidebar-cta a:hover{opacity:.9}
+
+/* FOOTER */
+footer{background:var(--black);padding:64px 60px 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-brand-col a.footer-brand{font-size:22px;font-weight:900;color:var(--white);text-decoration:none;letter-spacing:-.5px;display:block;margin-bottom:14px}
+.footer-brand-col a.footer-brand span{color:var(--blue)}
+.footer-brand-col p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;max-width:280px;margin-bottom:20px}
+.footer-social{display:flex;flex-direction:column;gap:10px}
+.footer-social-link{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .15s}
+.footer-social-link:hover{color:var(--white)}
+.footer-email{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5)}
+.footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.35);margin-bottom:18px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .15s}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,0.25)}
+
+/* COOKIE */
+.cookie-bar{position:fixed;bottom:0;left:0;right:0;background:var(--black);border-top:1px solid rgba(255,255,255,0.1);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;z-index:9999;box-shadow:0 -4px 24px rgba(0,0,0,0.2)}
+.cookie-bar p{font-size:12px;color:rgba(255,255,255,0.6);max-width:560px;line-height:1.5}
+.cookie-bar p a{color:var(--blue);text-decoration:none}
+.cookie-btn{background:var(--blue);color:var(--white);border:none;padding:10px 24px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap;font-family:'Montserrat',Arial,sans-serif}
+
+/* MOBILE */
+@media(max-width:900px){
+  .page-wrap{grid-template-columns:1fr;gap:40px;padding:36px 24px 60px}
+  .guide-sidebar{position:static}
+  .course-types{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nav{padding:16px 24px;position:relative}
+  .nav-toggle{display:flex !important}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;gap:0;padding:8px 0 16px;border-bottom:1px solid rgba(0,0,0,0.1);box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:99}
+  .nav-links.open{display:flex !important}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:12px 24px;font-size:14px}
+  .nav-links .nav-cta{margin:8px 16px 0;text-align:center;display:block;border-radius:6px}
+  .nav-links .nav-login{margin:4px 16px!important;text-align:center!important;display:block!important;border-radius:6px!important;border:2px solid var(--blue)!important;padding:8px 22px!important}
+  .breadcrumb{padding:12px 20px}
+  .page-hero{padding:40px 24px 44px}
+  
+  
+  .screenshot-wrap img{max-width:100%}
+  footer{padding:48px 24px 28px}
+  .footer-grid{grid-template-columns:1fr;gap:32px;padding:0 0 32px}
+  .footer-bottom{flex-direction:column;text-align:center;gap:8px}
+  .cookie-bar{flex-direction:column;text-align:center;padding:16px 20px}
+}
+</style>
+</head>
+<body>
+
+<div class="cookie-bar" id="cookieBar">
+  <p>Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa <a href="termos-de-uso.html">Política de Privacidade</a>.</p>
+  <button class="cookie-btn" onclick="document.getElementById('cookieBar').style.display='none';localStorage.setItem('cookie','1')">Entendi</button>
+</div>
+
+<div class="brand-stripe"></div>
+
+<nav class="nav">
+  <a href="/" class="nav-brand">HANDIFY<span>.</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Home</a></li>
+    <li><a href="cursos.html">Cursos</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="/ajuda" class="active">Ajuda</a></li>
+    <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
+    <li><a href="https://membros.handify.com.br/login" target="_blank" rel="noopener" class="nav-login">Acessar</a></li>
+    <li><a href="pack-completo.html" class="nav-cta">Começar agora</a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/ajuda">Central de Ajuda</a>
+  <span>›</span>
+  <span>Como acessar a plataforma</span>
+</div>
+
+<section class="page-hero">
+  <div class="hero-eyebrow">Guia de Acesso</div>
+  <h1>Como acessar a plataforma e seus cursos</h1>
+  <p>Selecione abaixo qual plataforma você está usando — o guia se adapta automaticamente para você.</p>
+  <div class="hero-meta">
+    <span>⏱ 3 min de leitura</span>
+    <span>📅 Atualizado em maio de 2026</span>
+  </div>
+</section>
+
+<div class="page-wrap">
+<article class="guide-content">
+
+  <div id="content-anterior">
+
+    <div class="alert blue" style="margin-bottom:36px">
+      <span class="alert-icon">ℹ️</span>
+      <div class="alert-body"><p>Acesse a plataforma em <strong>acesso.handify.com.br</strong> com o e-mail e senha utilizados na compra.</p></div>
+    </div>
+
+    <div class="step-block" id="ant-passo1">
+      <div class="step-header">
+        <div class="step-num">1</div>
+        <div class="step-title">Faça o login com o e-mail usado na compra</div>
+      </div>
+      <p class="step-desc">Acesse <a href="https://acesso.handify.com.br/app" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700;text-decoration:underline;text-underline-offset:3px">acesso.handify.com.br/app</a> e digite o e-mail que você usou na compra no campo <strong>Email</strong>. Depois clique em <strong>Entrar</strong>.</p>
+      <div class="alert blue">
+        <span class="alert-icon">💡</span>
+        <div class="alert-body"><p>Use exatamente o mesmo e-mail da compra — inclusive a mesma grafia. Um espaço a mais ou letra errada já impede o acesso.</p></div>
+      </div>
+      <div class="screenshot-wrap landscape">
+        <img src="/prints/acesso-01-login.png" alt="Tela de login da Handify com campo Email circulado em vermelho">
+        <p class="img-caption">Tela de login — insira o e-mail da compra no campo indicado</p>
+      </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <div class="step-block" id="ant-passo2">
+      <div class="step-header">
+        <div class="step-num warn">2</div>
+        <div class="step-title">Apareceu o erro "Email não encontrado ou sem acesso"?</div>
+      </div>
+      <p class="step-desc">Se você ver essa mensagem, o e-mail digitado é diferente do que foi usado na compra.</p>
+      <div class="screenshot-wrap landscape">
+        <img src="/prints/acesso-02-erro.png" alt="Mensagem de erro: Email não encontrado ou sem acesso">
+        <p class="img-caption">Mensagem exibida quando o e-mail não coincide com o da compra</p>
+      </div>
+      <div class="alert orange" style="margin-top:20px">
+        <span class="alert-icon">⚠️</span>
+        <div class="alert-body">
+          <p><strong>Isso pode acontecer porque:</strong></p>
+          <p>• E-mail digitado com erro na compra (ex: gmail.com.br em vez de gmail.com)<br>• Você tem mais de um e-mail e usou outro<br>• Houve um espaço extra no cadastro</p>
+        </div>
+      </div>
+      <div class="alert green">
+        <span class="alert-icon">✅</span>
+        <div class="alert-body"><p><strong>Conseguimos corrigir isso pra você.</strong> Basta nos chamar no suporte com seu nome completo e o e-mail correto.</p></div>
+      </div>
+      <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" class="suporte-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Chamar o suporte no WhatsApp
+      </a>
+    </div>
+
+    <hr class="step-divider">
+
+    <div class="step-block" id="ant-passo3">
+      <div class="step-header">
+        <div class="step-num">3</div>
+        <div class="step-title">Ative as notificações</div>
+      </div>
+      <p class="step-desc">No primeiro acesso, a plataforma pedirá para ativar as notificações. <strong>Recomendamos ativar</strong> — assim você recebe atualizações e novos conteúdos em tempo real.</p>
+      <div class="screenshot-wrap portrait">
+        <img src="/prints/acesso-03-notificacoes.png" alt="Tela pedindo para ativar notificações">
+        <p class="img-caption">Clique em "Ativar notificações"</p>
+      </div>
+      <p class="step-desc" style="margin-top:20px">Em seguida, clique em <strong>"Permitir"</strong> na permissão do sistema.</p>
+      <div class="screenshot-wrap portrait">
+        <img src="/prints/acesso-04-permissao.png" alt="Permissão do sistema para notificações">
+        <p class="img-caption">Clique em "Permitir" para confirmar</p>
+      </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <div class="step-block" id="ant-passo4">
+      <div class="step-header">
+        <div class="step-num">4</div>
+        <div class="step-title">Apareceu a tela "Como instalar o aplicativo"?</div>
+      </div>
+      <p class="step-desc">Pode aparecer uma janela explicando como instalar o app. Por enquanto, clique em <strong>"Não mostrar novamente"</strong> para fechar e continuar.</p>
+      <div class="screenshot-wrap portrait">
+        <img src="/prints/acesso-05-instalar-modal.png" alt="Modal de instalar app com botão Não mostrar novamente">
+        <p class="img-caption">Clique em "Não mostrar novamente" para fechar</p>
+      </div>
+      <div class="alert blue" style="margin-top:20px">
+        <span class="alert-icon">📱</span>
+        <div class="alert-body"><p>Quer instalar o app de verdade? <a href="/ajuda/ajuda-como-baixar-app" style="color:var(--blue);font-weight:700">Ver guia completo de como baixar o aplicativo →</a></p></div>
+      </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <div class="step-block" id="ant-passo5">
+      <div class="step-header">
+        <div class="step-num ok">5</div>
+        <div class="step-title">Você está dentro! Encontre o seu curso</div>
+      </div>
+      <p class="step-desc">A tela inicial mostra banners e destaques no topo — mas o que você precisa agora é encontrar o curso que comprou.</p>
+      <div class="alert blue">
+        <span class="alert-icon">👇</span>
+        <div class="alert-body"><p><strong>Role a página para baixo e procure pelo nome do seu curso. Quando encontrar, clique nele para começar.</strong></p></div>
+      </div>
+      <div class="screenshot-wrap landscape">
+        <img src="/prints/acesso-06-home.png" alt="Tela inicial da plataforma Handify">
+        <p class="img-caption">Home da plataforma — role para baixo para ver todos os seus cursos</p>
+      </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <div class="step-block" id="ant-passo6">
+      <div class="step-header">
+        <div class="step-num warn">6</div>
+        <div class="step-title">Cursos com cadeado 🔒 — o que significa?</div>
+      </div>
+      <p class="step-desc">Cursos com capa mais escura e cadeado são conteúdos que ainda não foram adquiridos.</p>
+      <div class="screenshot-wrap landscape">
+        <img src="/prints/acesso-07-cadeado.png" alt="Cursos na plataforma: alguns desbloqueados e um com cadeado">
+        <p class="img-caption">Cursos com cadeado = ainda não adquiridos</p>
+      </div>
+      <div class="alert orange" style="margin-top:20px">
+        <span class="alert-icon">⚠️</span>
+        <div class="alert-body">
+          <p><strong>Comprou o curso e ele ainda está bloqueado?</strong> Às vezes leva alguns minutos para o acesso ser liberado. Se continuar bloqueado após 30 minutos, envie no suporte:</p>
+          <p>• Comprovante de pagamento · Nome completo · E-mail da compra</p>
+        </div>
+      </div>
+      <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" class="suporte-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Falar com o suporte
+      </a>
+    </div>
+
+    <div class="helpful-bar">
+      <p>Este guia resolveu o seu problema?</p>
+      <div class="helpful-btns">
+        <button class="helpful-btn" onclick="vote(this,'sim')">👍 Sim, consegui acessar!</button>
+        <button class="helpful-btn" onclick="vote(this,'nao')">👎 Ainda preciso de ajuda</button>
+      </div>
+    </div>
+
+  </div><!-- /anterior -->
+
+</article>
+
+<!-- SIDEBAR -->
+<aside class="guide-sidebar">
+  <div class="sidebar-card">
+    <h4>Neste guia</h4>
+    <div id="toc-anterior">
+      <ul class="toc-list">
+        <li><a href="#ant-passo1"><span class="toc-num">1</span> Fazer login</a></li>
+        <li><a href="#ant-passo2"><span class="toc-num">2</span> Erro de e-mail</a></li>
+        <li><a href="#ant-passo3"><span class="toc-num">3</span> Ativar notificações</a></li>
+        <li><a href="#ant-passo4"><span class="toc-num">4</span> Tela de instalar app</a></li>
+        <li><a href="#ant-passo5"><span class="toc-num">5</span> Encontrar o curso</a></li>
+        <li><a href="#ant-passo6"><span class="toc-num">6</span> Cursos com cadeado</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sidebar-cta">
+    <p>Quer ter todos os cursos e e-books da Handify de uma vez só?</p>
+    <a href="pack-completo.html">Ver Pack Completo →</a>
+  </div>
+
+  <div class="sidebar-card">
+    <h4>Guias relacionados</h4>
+    <ul class="related-list">
+
+      <li>
+        <a href="/ajuda/ajuda-como-baixar-app">Como instalar o aplicativo</a>
+        <span>Android e iOS</span>
+      </li>
+      <li>
+        <a href="/ajuda/ajuda-como-emitir-certificado">Como emitir o certificado</a>
+        <span>Certificados</span>
+      </li>
+      <li>
+        <a href="/ajuda">Ver toda a Central de Ajuda →</a>
+        <span>Central de Ajuda</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sidebar-card" style="background:#fff8ed;border-color:#f97316;">
+    <h4 style="color:#c2410c">Precisa de suporte?</h4>
+    <p style="font-size:13px;color:#7c2d12;margin-bottom:14px;line-height:1.6">Nossa equipe responde em menos de 24h nos dias úteis.</p>
+    <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;background:#22c55e;color:#fff;padding:10px 14px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;justify-content:center">
+      💬 WhatsApp
+    </a>
+  </div>
+</aside>
+</div><!-- /page-wrap -->
+
+<div class="brand-stripe"></div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <a href="/" class="footer-brand">HANDIFY<span>.</span></a>
+      <p>Plataforma brasileira de cursos de artesanato. Aprenda com quem faz de verdade e transforme sua habilidade em negócio.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/handify.br/" target="_blank" rel="noopener" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @handify.br
+        </a>
+        <a href="https://wa.me/message/55BGJEW54GCGC1" target="_blank" rel="noopener" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <span class="footer-email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          contato@handify.com.br
+        </span>
+      </div>
+    </div>
+    <div class="footer-col footer-cats">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="cursos.html?cat=velas">Cursos de Velas</a></li>
+        <li><a href="cursos.html?cat=saboaria">Cursos de Saboaria</a></li>
+        <li><a href="cursos.html?cat=flores">Cursos de Flores</a></li>
+        <li><a href="cursos.html?cat=vendas">Cursos de Vendas</a></li>
+        <li><a href="cursos.html?cat=materiais">Materiais Digitais</a></li>
+        <li><a href="cursos.html">Todos os cursos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/ajuda">Central de Ajuda</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="compra-segura.html" style="color:var(--green)">🔒 Compra Segura</a></li>
+        <li><a href="seja-instrutora.html">Seja instrutora</a></li>
+        <li><a href="pack-completo.html">Pack Completo</a></li>
+        <li><a href="direitos-autorais.html">Direitos Autorais</a></li>
+        <li><a href="termos-de-uso.html">Termos de uso</a></li>
+        <li><a href="contato.html">Fale conosco</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Handify™ · Todos os direitos reservados</p>
+    <p>Feito com cuidado no Brasil 🇧🇷</p>
+  </div>
+</footer>
+
+<script>
+if(localStorage.getItem('cookie')) document.getElementById('cookieBar').style.display='none';
+document.getElementById('navToggle').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');});
+// Auto-abrir aba via URL hash
+function vote(btn, val) {
+  document.querySelectorAll('.helpful-btn').forEach(function(b){b.classList.remove('voted')});
+  btn.classList.add('voted');
+  if(val==='nao') window.open('https://wa.me/message/55BGJEW54GCGC1','_blank');
+  btn.textContent = val==='sim' ? '✅ Ótimo! Bons estudos!' : '📩 Redirecionando para o suporte…';
+}
+</script>
+<style>.footer-cats h4{color:var(--blue) !important;letter-spacing:.12em}.footer-cats ul li a{color:rgba(255,255,255,0.95) !important;font-weight:600;font-size:14px}.footer-cats ul li a:hover{color:var(--blue) !important}.footer-cats ul li{margin-bottom:13px}</style></body>
+</html>
