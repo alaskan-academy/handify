@@ -57,6 +57,14 @@
     .btn-whatsapp:hover { background:#1da851;transform:translateY(-1px); }
     .highlights { display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:20px; }
     .highlight-item { background:var(--blue-light);border:1px solid rgba(82,136,239,0.2);color:var(--blue);font-size:12px;font-weight:700;padding:9px 14px;border-radius:100px; }
+    .includes-grid { display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px; }
+    .include-item { background:var(--blue-light);border-radius:10px;padding:12px 14px;font-size:13px;font-weight:600;color:var(--blue);line-height:1.4; }
+    .instructor-card { display:flex;gap:16px;align-items:flex-start; }
+    .instructor-avatar { font-size:40px;flex-shrink:0; }
+    .instructor-info { display:flex;flex-direction:column;gap:4px; }
+    .instructor-info strong { font-size:15px;color:var(--black); }
+    .instructor-info span { font-size:12px;color:var(--blue);font-weight:600;text-transform:uppercase;letter-spacing:0.06em; }
+    .instructor-info p { font-size:13px;color:var(--gray-mid);line-height:1.6;margin-top:4px; }
     footer { text-align:center;padding:28px 0 16px;color:var(--gray-mid);font-size:12px; }
   </style>
 </head>
@@ -72,13 +80,14 @@
       <img src="workshop-buque-vela-1.png" alt="Workshop Buquê de Velas" class="hero-photo">
       <p class="expert-tag">Com Laura Martins</p>
       <h1>Faça buquês de velas que <span class="accent">encantam e vendem</span></h1>
-      <p class="hero-sub">Um workshop prático para aprender uma técnica bonita e transformar em presentes ou renda extra — mesmo sem experiência</p>
+      <p class="hero-sub">Para quem quer aprender rápido e já sair aplicando. Em 2 aulas objetivas, a Prof. Laura Martins te leva do derretimento da cera até o buquê embalado de forma profissional, pronto para presentear ou vender.</p>
     </div>
 
     <div class="highlights">
+      <div class="highlight-item">📹 6 aulas em vídeo</div>
+      <div class="highlight-item">🎁 Ferramentas bônus</div>
       <div class="highlight-item">♾️ Acesso vitalício</div>
-      <div class="highlight-item">📋 Lista de fornecedores</div>
-      <div class="highlight-item">🎬 Vídeo aula + apostilas</div>
+      <div class="highlight-item">🎓 Certificado</div>
     </div>
 
     <div class="section">
@@ -94,27 +103,34 @@
 
     <div class="section">
       <h2 class="section-title">📚 O que você vai aprender</h2>
-      <div class="modules">
-        <div class="module">
-          <p class="module-name">Aula 1 — Técnica Completa: Do Preparo ao Buquê Finalizado</p>
-          <div class="module-desc"><ul>
-            <li>Lista de materiais com fornecedores indicados; como organizar a bancada antes de começar</li>
-            <li>Preparo dos moldes, corte e centralização dos pavios — tamanho certo por diâmetro da flor</li>
-            <li>Aquecimento dos moldes e controle de temperatura no derretimento da cera e adição do corante</li>
-            <li>Técnica do centro rosado (margaridas) e técnica de degradê (rosas) — cada flor tem seu método</li>
-            <li>Despejo correto, eliminação de bolhas e inserção do palito no momento exato (ponto de gel)</li>
-            <li>Segunda camada de nivelamento e desmoldagem sem quebrar as pétalas</li>
-            <li>Montagem do buquê: espuma floral, distribuição de alturas e elementos decorativos secos</li>
-          </ul></div>
-        </div>
-        <div class="module">
-          <p class="module-name">Aula 2 — Próximos Passos e Como Evoluir na Prática</p>
-          <div class="module-desc"><ul>
-            <li>O que fazer depois de criar o seu primeiro buquê</li>
-            <li>Como continuar desenvolvendo sua técnica e refinando o acabamento</li>
-            <li>Como compartilhar suas criações, receber feedback e aprender com outras artesãs</li>
-            <li>Recursos e suporte disponíveis para você continuar evoluindo com segurança</li>
-          </ul></div>
+      <ul class="check-list">
+        <li>Técnica de derretimento e temperatura ideal</li>
+        <li>Combinação de cores e fragrâncias para buquê</li>
+        <li>Montagem e estrutura do buquê</li>
+        <li>Acabamento e embalagem profissional</li>
+        <li>Dicas de apresentação para venda</li>
+        <li>Cuidados e conservação do produto</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">✅ O que está incluído</h2>
+      <div class="includes-grid">
+        <div class="include-item">📹 6 aulas em vídeo + ferramentas bônus</div>
+        <div class="include-item">♾️ Acesso vitalício</div>
+        <div class="include-item">📱 Acesso no celular e computador</div>
+        <div class="include-item">🎓 Certificado de conclusão</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">👩‍🏫 Instrutora</h2>
+      <div class="instructor-card">
+        <div class="instructor-avatar">💐</div>
+        <div class="instructor-info">
+          <strong>Laura Martins</strong>
+          <span>Especialista em Buquês Artesanais</span>
+          <p>Laura é artesã especializada em buquês de velas e flores artificiais. Com uma linguagem prática e didática, ela ensina técnicas que funcionam desde a primeira tentativa — sem desperdício de material.</p>
         </div>
       </div>
     </div>
